@@ -30,41 +30,31 @@ class UnityCertSimulator {
     
     async loadQuestionBanks() {
         try {
-            console.log('Intentando cargar preguntas de Programmer...');
             const programmerResponse = await fetch('questions_programmer.json');
             if (programmerResponse.ok) {
                 const programmerData = await programmerResponse.json();
-                console.log('Datos cargados de Programmer:', programmerData);
-                this.questionBanks.programmer = programmerData;
-                console.log(`Cargadas ${this.questionBanks.programmer.length} preguntas de Programmer`);
-            } else {
-                console.error('Error al cargar questions_programmer.json:', programmerResponse.status);
+                if (Array.isArray(programmerData)) {
+                    this.questionBanks.programmer = programmerData;
+                }
             }
             
-            console.log('Intentando cargar preguntas de Artist...');
             const artistResponse = await fetch('questions_artist.json');
             if (artistResponse.ok) {
                 const artistData = await artistResponse.json();
-                console.log('Datos cargados de Artist:', artistData);
-                this.questionBanks.artist = artistData;
-                console.log(`Cargadas ${this.questionBanks.artist.length} preguntas de Artist`);
-            } else {
-                console.error('Error al cargar questions_artist.json:', artistResponse.status);
-            }
-            
-            if (this.questionBanks.programmer.length === 0) {
-                console.warn('No se pudieron cargar las preguntas de Programmer, usando preguntas de ejemplo');
-                this.createFallbackQuestions('programmer');
-            }
-            
-            if (this.questionBanks.artist.length === 0) {
-                console.warn('No se pudieron cargar las preguntas de Artist, usando preguntas de ejemplo');
-                this.createFallbackQuestions('artist');
+                if (Array.isArray(artistData)) {
+                    this.questionBanks.artist = artistData;
+                }
             }
             
         } catch (error) {
             console.error('Error cargando las preguntas:', error);
+        }
+        
+        if (this.questionBanks.programmer.length === 0) {
             this.createFallbackQuestions('programmer');
+        }
+        
+        if (this.questionBanks.artist.length === 0) {
             this.createFallbackQuestions('artist');
         }
     }
