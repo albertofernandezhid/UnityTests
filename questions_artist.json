@@ -1,0 +1,3602 @@
+[
+  {
+    "id": 1,
+    "question": "What is the primary purpose of the PBR (Physically Based Rendering) workflow in Unity?",
+    "options": [
+      "To optimize game performance on mobile devices",
+      "To create 2D sprite animations",
+      "To create realistic materials that react consistently to different lighting conditions",
+      "To manage audio spatialization"
+    ],
+    "correctAnswer": 2,
+    "explanation": "PBR uses physical principles to simulate how light interacts with materials, creating realistic and consistent results across various lighting environments."
+  },
+  {
+    "id": 2,
+    "question": "When importing a texture that has a transparent background, which option should be enabled in the Import Settings?",
+    "options": [
+      "Generate Mip Maps",
+      "Alpha is Transparency",
+      "Wrap Mode: Repeat",
+      "Read/Write Enabled"
+    ],
+    "correctAnswer": 1,
+    "explanation": "'Alpha is Transparency' tells Unity to use the alpha channel of the texture to define transparent areas, essential for sprites or textures with non-solid backgrounds."
+  },
+  {
+    "id": 3,
+    "question": "Which tool is used to slice a sprite sheet into individual sprites in Unity?",
+    "options": [
+      "Animation Window",
+      "Sprite Editor",
+      "Texture Importer",
+      "Sprite Renderer"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The Sprite Editor allows you to slice sprite sheets into individual sprites, set pivots, and define borders for 2D deformation."
+  },
+  {
+    "id": 4,
+    "question": "What type of light is most efficient for illuminating large outdoor areas like an open landscape?",
+    "options": [
+      "Area Light",
+      "Point Light",
+      "Directional Light",
+      "Spot Light"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Directional Light simulates sunlight and illuminates the entire scene uniformly from a specific direction, making it ideal for large outdoor environments."
+  },
+  {
+    "id": 5,
+    "question": "Which texture map in a PBR material defines the surface color without lighting information?",
+    "options": [
+      "Albedo Map",
+      "Height Map",
+      "Normal Map",
+      "Metallic Map"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The Albedo Map contains the base color of the material, free from shadows or highlights."
+  },
+  {
+    "id": 6,
+    "question": "What is the purpose of a Normal Map in a material?",
+    "options": [
+      "To define the surface color",
+      "To add emissive effects",
+      "To control reflectivity",
+      "To simulate surface details and grooves without adding geometry"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Normal Maps simulate small surface details by altering how light interacts with the surface, giving the illusion of depth without extra polygons."
+  },
+  {
+    "id": 7,
+    "question": "Which component must be added to a GameObject for it to be visible in the Scene?",
+    "options": [
+      "Audio Source",
+      "Collider",
+      "Rigidbody",
+      "Mesh Renderer"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The Mesh Renderer component takes the geometry from the Mesh Filter and renders it using a Material, making the object visible."
+  },
+  {
+    "id": 8,
+    "question": "What does the 'Metallic' slider in a Standard Shader control?",
+    "options": [
+      "The smoothness of the surface",
+      "The color intensity",
+      "How much the surface behaves like a metal (affecting reflections)",
+      "The transparency level"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The Metallic value determines whether the material is metallic (1) or non-metallic (0), which affects how it reflects environmental lighting."
+  },
+  {
+    "id": 9,
+    "question": "Which window in Unity is used to create and edit animations for GameObjects?",
+    "options": [
+      "Sprite Editor",
+      "Animation Window",
+      "Timeline Window",
+      "Animator Window"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The Animation Window is used to create and modify animation clips by recording changes to GameObject properties over time."
+  },
+  {
+    "id": 10,
+    "question": "What is a 'Prefab' in Unity?",
+    "options": [
+      "A type of script for animation",
+      "A tool for baking lightmaps",
+      "A special effect for particles",
+      "A pre-configured GameObject template that can be reused"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Prefabs are reusable GameObject templates stored in the Project window, allowing consistent instantiation across scenes."
+  },
+  {
+    "id": 11,
+    "question": "Which render pipeline is optimized for high-end graphics and is fully programmable?",
+    "options": [
+      "Universal Render Pipeline (URP)",
+      "Built-in Render Pipeline",
+      "High Definition Render Pipeline (HDRP)",
+      "Legacy Render Pipeline"
+    ],
+    "correctAnswer": 2,
+    "explanation": "HDRP is designed for high-fidelity graphics on platforms with powerful hardware, offering advanced lighting and shading features."
+  },
+  {
+    "id": 12,
+    "question": "What is the purpose of the 'Canvas' component in Unity's UI system?",
+    "options": [
+      "To create particle effects",
+      "To manage audio sources",
+      "To draw 3D models",
+      "To act as a container for all UI elements"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The Canvas is the root component for UI elements; it determines how UI is rendered and scaled on screen."
+  },
+  {
+    "id": 13,
+    "question": "Which UI component is used to display non-interactive text?",
+    "options": [
+      "Input Field",
+      "TextMeshPro - Text",
+      "Scrollbar",
+      "Button"
+    ],
+    "correctAnswer": 1,
+    "explanation": "TextMeshPro - Text is the modern, high-quality text component for displaying read-only text in UI."
+  },
+  {
+    "id": 14,
+    "question": "What does the 'Pivot' setting in a Sprite's import settings define?",
+    "options": [
+      "The animation speed",
+      "The collision shape",
+      "The rotation center of the sprite",
+      "The texture resolution"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The Pivot defines the local origin point of the sprite, which affects rotation, scaling, and placement."
+  },
+  {
+    "id": 15,
+    "question": "Which lighting technique pre-calculates lighting and shadows into textures?",
+    "options": [
+      "Real-time Lighting",
+      "Dynamic Lighting",
+      "Mixed Lighting",
+      "Baked Lighting"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Baked Lighting pre-calculates static lighting and stores it in lightmaps, improving performance at runtime."
+  },
+  {
+    "id": 16,
+    "question": "What is the function of the 'Sorting Layer' in 2D rendering?",
+    "options": [
+      "To organize assets in the Project window",
+      "To control animation order",
+      "To manage audio layers",
+      "To define the draw order of sprites and 2D objects"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Sorting Layers determine which 2D objects are drawn in front of others; higher layers render on top of lower ones."
+  },
+  {
+    "id": 17,
+    "question": "Which tool is used to paint terrains with textures in Unity?",
+    "options": [
+      "ProBuilder",
+      "Tilemap Editor",
+      "Terrain Tool",
+      "Particle System"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The Terrain Tool includes a paint brush for applying different textures (splatmaps) to terrain surfaces."
+  },
+  {
+    "id": 18,
+    "question": "What does the 'Emission' property in a material do?",
+    "options": [
+      "Makes the material transparent",
+      "Increases the material's reflectivity",
+      "Adds a bumpy surface",
+      "Causes the material to emit its own light"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Emission makes a material appear to glow by emitting light, which can affect nearby objects if Global Illumination is enabled."
+  },
+  {
+    "id": 19,
+    "question": "Which component is necessary for a 2D sprite to collide with other 2D objects?",
+    "options": [
+      "Sprite Renderer",
+      "Animator",
+      "Rigidbody2D",
+      "Box Collider 2D"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A 2D Collider (like Box Collider 2D) defines the shape for physics collisions. A Rigidbody2D is also needed for dynamic collisions."
+  },
+  {
+    "id": 20,
+    "question": "What is the purpose of the 'Skybox' in a Scene?",
+    "options": [
+      "To create indoor lighting",
+      "To optimize particle effects",
+      "To manage UI scaling",
+      "To serve as the background or distant environment"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A Skybox is a 6-sided or panoramic texture that surrounds the scene, providing a distant background like sky, mountains, or space."
+  },
+  {
+    "id": 21,
+    "question": "Which panel in the Unity Editor allows you to view and edit the properties of a selected GameObject?",
+    "options": [
+      "Project",
+      "Console",
+      "Hierarchy",
+      "Inspector"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The Inspector displays and allows editing of all components and properties of the currently selected GameObject or asset."
+  },
+  {
+    "id": 22,
+    "question": "What does the 'Wrap Mode' setting on a texture control?",
+    "options": [
+      "The texture's resolution",
+      "The color space",
+      "How the texture repeats when UV coordinates exceed 0-1 range",
+      "The alpha transparency"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Wrap Mode determines if a texture repeats (tiles), clamps (stretches edges), or mirrors beyond its standard UV coordinates."
+  },
+  {
+    "id": 23,
+    "question": "Which component allows a UI element to respond to mouse clicks?",
+    "options": [
+      "Image",
+      "Rect Transform",
+      "Button",
+      "Canvas Renderer"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The Button component includes built-in click detection and visual states (normal, highlighted, pressed)."
+  },
+  {
+    "id": 24,
+    "question": "What is the main advantage of using a 'Sprite Atlas'?",
+    "options": [
+      "Increases texture resolution",
+      "Automatically animates sprites",
+      "Reduces draw calls by combining multiple sprites into one texture",
+      "Adds collision to sprites"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Sprite Atlases pack multiple sprites into a single texture, reducing draw calls and improving rendering performance."
+  },
+  {
+    "id": 25,
+    "question": "Which shader type is best for a mobile game due to its simplicity and performance?",
+    "options": [
+      "Standard Shader",
+      "Terrain Shader",
+      "Particle Shader",
+      "Unlit Shader"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Unlit Shaders don't calculate lighting, making them faster and ideal for mobile or stylized games where lighting isn't needed."
+  },
+  {
+    "id": 26,
+    "question": "What does the 'Rig' tab in a model's Import Settings allow you to configure?",
+    "options": [
+      "Animation clips",
+      "The model's skeleton and avatar for animation",
+      "Texture import quality",
+      "Collider generation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The Rig tab is where you set up the model's skeleton (e.g., Humanoid or Generic) and create an Avatar for animation."
+  },
+  {
+    "id": 27,
+    "question": "Which feature allows you to create a smooth transition between two animation states?",
+    "options": [
+      "Blend Tree",
+      "State Machine Behaviour",
+      "Transition",
+      "Animation Event"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Transitions in the Animator Controller define how and when to move from one animation state to another, often with blending."
+  },
+  {
+    "id": 28,
+    "question": "What is a 'Material' in Unity?",
+    "options": [
+      "A type of light",
+      "An asset that defines the surface properties of a 3D object",
+      "A 3D mesh file",
+      "A script for physics"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A Material is an asset that uses a Shader to define how a surface appears (color, texture, reflectivity, etc.)."
+  },
+  {
+    "id": 29,
+    "question": "Which post-processing effect adds a soft glow around bright areas?",
+    "options": [
+      "Vignette",
+      "Motion Blur",
+      "Chromatic Aberration",
+      "Bloom"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Bloom creates a glowing halo around bright pixels, simulating light overflow or camera lens effects."
+  },
+  {
+    "id": 30,
+    "question": "What does the 'LOD Group' component do?",
+    "options": [
+      "Groups GameObjects for batch rendering",
+      "Manages level loading",
+      "Swaps models with lower-poly versions at a distance",
+      "Controls audio levels"
+    ],
+    "correctAnswer": 2,
+    "explanation": "LOD (Level of Detail) Group automatically switches between different detail versions of a model based on distance from camera."
+  },
+  {
+    "id": 31,
+    "question": "Which component is used to create a particle effect like fire or smoke?",
+    "options": [
+      "Trail Renderer",
+      "Lens Flare",
+      "Line Renderer",
+      "Particle System"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Particle System is the component for creating and controlling particle effects such as fire, smoke, magic, and explosions."
+  },
+  {
+    "id": 32,
+    "question": "What is the purpose of the 'Rect Transform' on a UI element?",
+    "options": [
+      "It defines the 3D position",
+      "It adds collision to buttons",
+      "It controls animation speed",
+      "It replaces the Transform for UI, providing anchors and pivots"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Rect Transform is the UI version of Transform; it includes anchors, pivots, and stretch properties for responsive UI layout."
+  },
+  {
+    "id": 33,
+    "question": "Which texture compression format is best for reducing memory usage on Android?",
+    "options": [
+      "RGBA 32-bit",
+      "Truecolor",
+      "ASTC",
+      "RGB 24-bit"
+    ],
+    "correctAnswer": 2,
+    "explanation": "ASTC (Adaptive Scalable Texture Compression) is efficient for Android, offering good quality with low memory usage."
+  },
+  {
+    "id": 34,
+    "question": "What does the 'Smoothness' slider in a Standard Shader affect?",
+    "options": [
+      "The color brightness",
+      "The transparency",
+      "The emission intensity",
+      "The sharpness of reflections and specular highlights"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Smoothness controls how sharp or blurry reflections appear, and how tight or broad specular highlights are."
+  },
+  {
+    "id": 35,
+    "question": "Which tool allows you to create and edit 3D geometry directly inside Unity?",
+    "options": [
+      "Sprite Editor",
+      "Animation Rigging",
+      "Terrain Tool",
+      "ProBuilder"
+    ],
+    "correctAnswer": 3,
+    "explanation": "ProBuilder is an integrated 3D modeling tool that lets you create, edit, and texture geometry within the Unity Editor."
+  },
+  {
+    "id": 36,
+    "question": "What is the function of an 'Avatar' in humanoid animation?",
+    "options": [
+      "It's the character's texture",
+      "It controls facial expressions",
+      "It's a type of particle effect",
+      "It maps the model's bones to a standard humanoid skeleton"
+    ],
+    "correctAnswer": 3,
+    "explanation": "An Avatar is a humanoid skeleton definition that allows retargeting animations between different humanoid models."
+  },
+  {
+    "id": 37,
+    "question": "Which component allows a Camera to follow a moving GameObject smoothly?",
+    "options": [
+      "Audio Listener",
+      "Hinge Joint",
+      "Cinemachine Virtual Camera",
+      "Wind Zone"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Cinemachine Virtual Camera provides advanced camera behaviors like follow, look-at, and noise without scripting."
+  },
+  {
+    "id": 38,
+    "question": "What does the 'Generate Mip Maps' option do for a texture?",
+    "options": [
+      "Adds transparency",
+      "Increases resolution",
+      "Creates smaller versions for distant objects to reduce aliasing",
+      "Converts to a sprite"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Mip Maps are progressively smaller versions of a texture used at a distance to improve performance and reduce visual artifacts."
+  },
+  {
+    "id": 39,
+    "question": "Which render mode for a Canvas makes UI elements render in world space as part of the 3D scene?",
+    "options": [
+      "Screen Space - Overlay",
+      "World Space",
+      "Screen Space - Camera",
+      "Overlay Space"
+    ],
+    "correctAnswer": 1,
+    "explanation": "World Space Canvas allows UI elements to be placed in the 3D world, useful for in-game signs, health bars, or VR/AR interfaces."
+  },
+  {
+    "id": 40,
+    "question": "What is the purpose of 'Light Probes'?",
+    "options": [
+      "To cast shadows",
+      "To create lens flares",
+      "To generate reflections",
+      "To sample ambient light for dynamic objects in baked lighting"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Light Probes capture baked lighting information at specific points, allowing dynamic objects to blend with the static light environment."
+  },
+  {
+    "id": 41,
+    "question": "Which component is used to create a trail behind a moving object?",
+    "options": [
+      "Line Renderer",
+      "Halo",
+      "Particle System",
+      "Trail Renderer"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Trail Renderer draws a textured trail along the path of a moving GameObject, ideal for laser beams, sword slashes, or motion lines."
+  },
+  {
+    "id": 42,
+    "question": "What does the 'Alpha Channel' of a texture typically store?",
+    "options": [
+      "Red color data",
+      "Height map data",
+      "Reflection intensity",
+      "Transparency or opacity information"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The alpha channel (the 'A' in RGBA) often stores transparency values, where 0 is fully transparent and 1 (or 255) is opaque."
+  },
+  {
+    "id": 43,
+    "question": "Which lighting mode combines real-time and baked lighting for static and dynamic objects?",
+    "options": [
+      "Subtractive",
+      "Realtime",
+      "Mixed",
+      "Baked"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Mixed Lighting uses baked light for static objects and real-time light for dynamic objects, offering a balance of quality and performance."
+  },
+  {
+    "id": 44,
+    "question": "What is the main benefit of using 'Texture Atlasing'?",
+    "options": [
+      "Higher texture resolution",
+      "Better compression",
+      "Automatic animation",
+      "Fewer draw calls and better batching"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Texture Atlasing combines multiple small textures into one larger texture, reducing draw calls and improving rendering efficiency."
+  },
+  {
+    "id": 45,
+    "question": "Which component is required for a 3D object to receive shadows?",
+    "options": [
+      "Audio Source",
+      "Light",
+      "Collider",
+      "Mesh Renderer with 'Receive Shadows' enabled"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The Mesh Renderer has a 'Receive Shadows' checkbox; it must be enabled for the object to display shadows cast by other objects."
+  },
+  {
+    "id": 46,
+    "question": "What does the 'Occlusion Culling' feature do?",
+    "options": [
+      "Reduces texture memory",
+      "Increases shadow quality",
+      "Prevents rendering of objects hidden behind others",
+      "Optimizes audio playback"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Occlusion Culling skips rendering objects that are not visible because they're behind other objects, improving performance."
+  },
+  {
+    "id": 47,
+    "question": "Which tool is used to paint vertex colors on a 3D model in Unity?",
+    "options": [
+      "ProBuilder",
+      "Terrain Tool",
+      "Polybrush",
+      "Sprite Editor"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Polybrush (or Vertex Color tools in ProBuilder) allows painting colors directly onto a model's vertices for effects like weathering or gradients."
+  },
+  {
+    "id": 48,
+    "question": "What is a 'Shader Graph'?",
+    "options": [
+      "A chart of performance statistics",
+      "A type of particle system",
+      "A UI layout tool",
+      "A tool for creating shaders using a visual node-based interface"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Shader Graph lets artists create custom shaders without writing code by connecting nodes in a visual graph editor."
+  },
+  {
+    "id": 49,
+    "question": "Which setting controls how a texture is filtered when viewed at an angle or scaled?",
+    "options": [
+      "Aniso Level",
+      "Wrap Mode",
+      "Max Size",
+      "Filter Mode"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Filter Mode (Point, Bilinear, Trilinear) determines how textures are interpolated when scaled or viewed obliquely."
+  },
+  {
+    "id": 50,
+    "question": "What is the purpose of the 'Mask' component in UI?",
+    "options": [
+      "To add click functionality",
+      "To animate transitions",
+      "To hide UI elements outside a defined shape",
+      "To change font style"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Mask restricts the visibility of child UI elements to the area defined by the parent's shape (e.g., for scrollable lists or circular portraits)."
+  },
+  {
+    "id": 51,
+    "question": "What is the purpose of the 'Tiling' property in a material's texture settings?",
+    "options": [
+      "To rotate the texture",
+      "To adjust transparency",
+      "To control how many times the texture repeats across the surface",
+      "To change texture resolution"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The Tiling value determines how many times a texture repeats along the U (horizontal) and V (vertical) axes of a material's surface."
+  },
+  {
+    "id": 52,
+    "question": "Which component would you use to create a scrolling background in a 2D game?",
+    "options": [
+      "Animation Clip",
+      "Parallax Scroller",
+      "Scroll Rect",
+      "Texture Scroller script with Material offset"
+    ],
+    "correctAnswer": 3,
+    "explanation": "A script that modifies a material's texture offset over time creates the illusion of a scrolling or moving background."
+  },
+  {
+    "id": 53,
+    "question": "What does the 'Ambient Occlusion' map add to a material?",
+    "options": [
+      "Emissive glow",
+      "Reflectivity information",
+      "Transparency details",
+      "Soft shadows in crevices and corners"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Ambient Occlusion maps simulate how exposed surfaces are to ambient lighting, adding contact shadows in cracks and folds."
+  },
+  {
+    "id": 54,
+    "question": "Which post-processing effect darkens the edges of the screen to draw focus to the center?",
+    "options": [
+      "Bloom",
+      "Depth of Field",
+      "Chromatic Aberration",
+      "Vignette"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Vignette darkens the periphery of the screen, creating a cinematic look and directing attention toward the center."
+  },
+  {
+    "id": 55,
+    "question": "What is the 'UV Channel' used for in 3D models?",
+    "options": [
+      "To determine collision boundaries",
+      "To store vertex colors",
+      "To control bone weights",
+      "To define how textures are mapped onto the model's surface"
+    ],
+    "correctAnswer": 3,
+    "explanation": "UV coordinates map 2D textures onto 3D surfaces by defining which part of the texture corresponds to each vertex."
+  },
+  {
+    "id": 56,
+    "question": "Which lighting setting provides overall scene illumination without a specific light source?",
+    "options": [
+      "Directional Light",
+      "Spot Light",
+      "Point Light",
+      "Ambient Light"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Ambient Light is a global, uniform illumination that affects all objects in the scene, simulating indirect lighting."
+  },
+  {
+    "id": 57,
+    "question": "What does the 'Alpha Cutoff' value do in a material using the Cutout rendering mode?",
+    "options": [
+      "Controls transparency smoothness",
+      "Adjusts emission intensity",
+      "Changes texture tiling",
+      "Determines at what alpha value pixels become completely transparent"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Alpha Cutoff sets a threshold where pixels with alpha below the value are discarded, creating hard transparency edges."
+  },
+  {
+    "id": 58,
+    "question": "Which tool is used to create grid-based 2D levels with reusable tiles?",
+    "options": [
+      "Sprite Editor",
+      "ProBuilder",
+      "Tilemap System",
+      "Terrain Tool"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The Tilemap system allows artists to paint levels using reusable tiles on a grid, ideal for 2D platformers or RPGs."
+  },
+  {
+    "id": 59,
+    "question": "What is a 'Lightmap'?",
+    "options": [
+      "A shader for emissive materials",
+      "A texture that stores pre-calculated lighting information",
+      "A type of particle effect",
+      "A UI element for brightness control"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Lightmaps are textures that store baked lighting information for static objects, allowing complex lighting without runtime cost."
+  },
+  {
+    "id": 60,
+    "question": "Which component allows UI elements to automatically resize based on their content?",
+    "options": [
+      "Layout Group",
+      "Aspect Ratio Fitter",
+      "Content Size Fitter",
+      "Canvas Scaler"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Content Size Fitter automatically adjusts the size of a UI element to fit its content (text or child elements)."
+  },
+  {
+    "id": 61,
+    "question": "What does the 'Rendering Mode' setting control in a material?",
+    "options": [
+      "Shader complexity",
+      "Texture compression",
+      "Animation speed",
+      "How the material interacts with transparency and lighting"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Rendering Mode determines if a material is Opaque, Transparent, Cutout, or Fade, affecting alpha blending and rendering order."
+  },
+  {
+    "id": 62,
+    "question": "Which animation feature allows smooth blending between multiple animations based on parameters?",
+    "options": [
+      "Animation Events",
+      "State Machines",
+      "Blend Trees",
+      "Avatar Masks"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Blend Trees interpolate between multiple animation clips based on numeric parameters (like speed or direction)."
+  },
+  {
+    "id": 63,
+    "question": "What is the purpose of a 'Reflection Probe'?",
+    "options": [
+      "To create fog effects",
+      "To cast shadows",
+      "To emit light",
+      "To capture surroundings for realistic reflections"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Reflection Probes capture a 360-degree view of their surroundings to generate accurate reflections on reflective materials."
+  },
+  {
+    "id": 64,
+    "question": "Which texture compression is best for iOS devices?",
+    "options": [
+      "ETC2",
+      "DXT",
+      "ASTC",
+      "PVRTC"
+    ],
+    "correctAnswer": 3,
+    "explanation": "PVRTC (PowerVR Texture Compression) is optimized for iOS devices using PowerVR GPUs, offering good performance."
+  },
+  {
+    "id": 65,
+    "question": "What does the 'Bumpiness' property affect in a material?",
+    "options": [
+      "Transparency",
+      "Color saturation",
+      "Emissive brightness",
+      "The intensity of normal map effects"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Bumpiness (or Normal Map scale) controls how pronounced the normal map effect appears on the surface."
+  },
+  {
+    "id": 66,
+    "question": "Which component would you add to create a wind effect on vegetation?",
+    "options": [
+      "Trail Renderer",
+      "Particle System",
+      "Wind Zone",
+      "Lens Flare"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Wind Zone affects terrain vegetation and objects with Cloth components, creating natural wind movement."
+  },
+  {
+    "id": 67,
+    "question": "What is the 'Canvas Scaler' component used for?",
+    "options": [
+      "To animate UI elements",
+      "To add collision to UI",
+      "To change UI colors",
+      "To make UI scale appropriately across different screen resolutions"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Canvas Scaler ensures UI elements maintain consistent sizing and layout across various screen sizes and resolutions."
+  },
+  {
+    "id": 68,
+    "question": "Which post-processing effect simulates camera focus by blurring objects based on distance?",
+    "options": [
+      "Motion Blur",
+      "Color Grading",
+      "Bloom",
+      "Depth of Field"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Depth of Field blurs objects that are too close or too far from the focal point, mimicking real camera optics."
+  },
+  {
+    "id": 69,
+    "question": "What does the 'Sorting Order' property control in a Sprite Renderer?",
+    "options": [
+      "Texture quality",
+      "Animation priority",
+      "Collision detection order",
+      "Draw order within the same Sorting Layer"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Sorting Order determines render priority within a Sorting Layer; higher values render on top of lower values."
+  },
+  {
+    "id": 70,
+    "question": "Which tool is used to create custom shapes for 2D collisions?",
+    "options": [
+      "Edge Collider 2D",
+      "Box Collider 2D",
+      "Polygon Collider 2D editor",
+      "Circle Collider 2D"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Polygon Collider 2D allows you to manually create custom collision shapes by editing vertices to match sprite contours."
+  },
+  {
+    "id": 71,
+    "question": "What is 'Global Illumination' (GI)?",
+    "options": [
+      "A texture compression method",
+      "A single directional light",
+      "A post-processing effect",
+      "A system that simulates how light bounces between surfaces"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Global Illumination calculates indirect lighting - how light reflects off surfaces to illuminate other surfaces."
+  },
+  {
+    "id": 72,
+    "question": "Which component allows different parts of a character to animate independently?",
+    "options": [
+      "Blend Trees",
+      "Animation Clips",
+      "Animator Layers",
+      "State Machines"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Animator Layers enable separate animation tracks for different body parts (e.g., upper body shooting while lower body runs)."
+  },
+  {
+    "id": 73,
+    "question": "What does the 'Anisotropic Filtering' setting improve?",
+    "options": [
+      "Shadow resolution",
+      "Particle count",
+      "Audio quality",
+      "Texture quality on surfaces viewed at oblique angles"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Anisotropic Filtering enhances texture clarity on surfaces viewed at sharp angles (like floors or roads in racing games)."
+  },
+  {
+    "id": 74,
+    "question": "Which type of light is best for creating a flashlight effect?",
+    "options": [
+      "Area Light",
+      "Directional Light",
+      "Point Light",
+      "Spot Light"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Spot Lights emit light in a cone shape, perfect for flashlights, headlights, or stage lighting effects."
+  },
+  {
+    "id": 75,
+    "question": "What is the purpose of the 'Sprite Packer'?",
+    "options": [
+      "To create sprite collisions",
+      "To edit sprite pivots",
+      "To animate sprites",
+      "To automatically generate sprite atlases to reduce draw calls"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Sprite Packer automatically combines multiple sprites into atlases at build time for better rendering performance."
+  },
+  {
+    "id": 76,
+    "question": "Which shader property would you adjust to make water appear more reflective?",
+    "options": [
+      "Albedo",
+      "Emission",
+      "Metallic",
+      "Smoothness"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Increasing Smoothness makes reflections sharper and clearer, essential for materials like water, glass, or polished metal."
+  },
+  {
+    "id": 77,
+    "question": "What does the 'Pixel Perfect' setting on a Canvas do?",
+    "options": [
+      "Increases texture resolution",
+      "Adds anti-aliasing",
+      "Makes UI elements align to pixel grid to prevent blurriness",
+      "Enables transparency"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Pixel Perfect ensures UI elements snap to whole pixel values, preventing sub-pixel blurring for crisp 2D graphics."
+  },
+  {
+    "id": 78,
+    "question": "Which animation technique records property changes over time directly in the editor?",
+    "options": [
+      "Procedural Animation",
+      "Inverse Kinematics",
+      "Keyframe Animation",
+      "Motion Capture"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Keyframe Animation involves setting property values at specific times, with Unity interpolating between them."
+  },
+  {
+    "id": 79,
+    "question": "What is a 'Sub-Emitters' module used for in a Particle System?",
+    "options": [
+      "To change particle color",
+      "To control gravity",
+      "To adjust texture scrolling",
+      "To spawn additional particle systems at certain events"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Sub-Emitters create secondary particle effects triggered by main particle events (birth, collision, death)."
+  },
+  {
+    "id": 80,
+    "question": "Which component helps maintain consistent scale for UI across different aspect ratios?",
+    "options": [
+      "Canvas Scaler",
+      "Layout Group",
+      "Aspect Ratio Fitter",
+      "Rect Transform"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Aspect Ratio Fitter constrains a UI element to specific aspect ratios, useful for maintaining consistent proportions."
+  },
+  {
+    "id": 81,
+    "question": "What does 'Mip Map Bias' control?",
+    "options": [
+      "Texture rotation",
+      "Color balance",
+      "Animation speed",
+      "Which mip level is selected at certain distances"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Mip Map Bias offsets the distance at which different mip levels are used, useful for fine-tuning texture sharpness."
+  },
+  {
+    "id": 82,
+    "question": "Which render pipeline is designed to be scalable across mobile, console, and PC?",
+    "options": [
+      "Legacy Render Pipeline",
+      "Built-in Render Pipeline",
+      "High Definition Render Pipeline (HDRP)",
+      "Universal Render Pipeline (URP)"
+    ],
+    "correctAnswer": 3,
+    "explanation": "URP is optimized for performance across a wide range of platforms while maintaining good visual quality."
+  },
+  {
+    "id": 83,
+    "question": "What is the purpose of 'Avatar Masks' in animation?",
+    "options": [
+      "To hide the character model",
+      "To change character textures",
+      "To control facial expressions",
+      "To define which body parts are affected by an animation layer"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Avatar Masks specify which bones or body parts an animation layer affects, allowing isolated animation (e.g., upper body only)."
+  },
+  {
+    "id": 84,
+    "question": "Which texture map controls which parts of a surface are metallic versus non-metallic?",
+    "options": [
+      "Height Map",
+      "Normal Map",
+      "Metallic Map",
+      "Albedo Map"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Metallic Maps use grayscale values where white = fully metallic and black = non-metallic, allowing mixed materials."
+  },
+  {
+    "id": 85,
+    "question": "What does the 'Fresnel Effect' simulate in materials?",
+    "options": [
+      "Color change over time",
+      "Random texture variation",
+      "Procedural bump patterns",
+      "Increased reflectivity at grazing angles"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The Fresnel Effect makes surfaces more reflective at glancing angles, observable in water, glass, and many real-world materials."
+  },
+  {
+    "id": 86,
+    "question": "Which component creates a line between two points in 3D space?",
+    "options": [
+      "Light",
+      "Trail Renderer",
+      "Particle System",
+      "Line Renderer"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Line Renderer draws a line through 3D space defined by multiple points, useful for lasers, tethers, or drawing tools."
+  },
+  {
+    "id": 87,
+    "question": "What is 'Texture Streaming' used for?",
+    "options": [
+      "To animate textures",
+      "To compress audio",
+      "To optimize shaders",
+      "To reduce initial load times by loading textures as needed"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Texture Streaming loads higher mip levels of textures only when needed, reducing memory usage and initial load times."
+  },
+  {
+    "id": 88,
+    "question": "Which animation feature allows triggering code at specific points in an animation?",
+    "options": [
+      "State Transitions",
+      "Blend Trees",
+      "Animation Events",
+      "Avatar Masks"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Animation Events let you call functions at specific times during an animation, useful for footstep sounds or attack effects."
+  },
+  {
+    "id": 89,
+    "question": "What does the 'Render Queue' value control in a shader?",
+    "options": [
+      "Texture quality",
+      "Light intensity",
+      "Animation priority",
+      "The order in which objects are rendered"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Render Queue determines drawing order; lower values render first, affecting transparency blending and visual correctness."
+  },
+  {
+    "id": 90,
+    "question": "Which tool is used to paint foliage onto terrains?",
+    "options": [
+      "Sprite Editor",
+      "ProBuilder",
+      "Terrain Paint Trees tool",
+      "Particle System"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The Terrain system's Paint Trees tool places tree and vegetation prefabs with adjustable density, size, and color variation."
+  },
+  {
+    "id": 91,
+    "question": "What is 'Subsurface Scattering' (SSS) used to simulate?",
+    "options": [
+      "Metal corrosion",
+      "Water waves",
+      "Fire effects",
+      "Light penetrating and scattering through translucent materials"
+    ],
+    "correctAnswer": 3,
+    "explanation": "SSS simulates how light penetrates materials like skin, wax, or marble and scatters beneath the surface."
+  },
+  {
+    "id": 92,
+    "question": "Which component allows creating a mirror or reflective surface?",
+    "options": [
+      "Reflection Probe",
+      "Planar Reflection script",
+      "Standard Shader with high smoothness",
+      "All of the above"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Mirrors require a combination: Reflection Probes capture surroundings, planar reflections for flat surfaces, and reflective materials."
+  },
+  {
+    "id": 93,
+    "question": "What does 'GPU Instancing' improve?",
+    "options": [
+      "Texture loading speed",
+      "Audio latency",
+      "Physics calculations",
+      "Draw call performance for identical objects"
+    ],
+    "correctAnswer": 3,
+    "explanation": "GPU Instancing renders multiple copies of the same mesh/material in a single draw call, dramatically improving performance."
+  },
+  {
+    "id": 94,
+    "question": "Which post-processing effect splits color channels to create a prism-like aberration?",
+    "options": [
+      "Bloom",
+      "Grain",
+      "Vignette",
+      "Chromatic Aberration"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Chromatic Aberration separates RGB channels slightly, mimicking camera lens distortion or psychedelic effects."
+  },
+  {
+    "id": 95,
+    "question": "What is the purpose of the 'Animation Rigging' package?",
+    "options": [
+      "To compress animation files",
+      "To bake lighting",
+      "To create procedural animation at runtime",
+      "To set up inverse kinematics for more natural movement"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Animation Rigging provides tools for IK (Inverse Kinematics), allowing characters to interact realistically with environments."
+  },
+  {
+    "id": 96,
+    "question": "Which texture setting is crucial for preventing seams on repeating textures?",
+    "options": [
+      "Filter Mode: Trilinear",
+      "Aniso Level: 16",
+      "Generate Mip Maps",
+      "Wrap Mode: Repeat"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Wrap Mode set to Repeat allows textures to tile seamlessly across large surfaces without visible edges."
+  },
+  {
+    "id": 97,
+    "question": "What does the 'Shadow Distance' setting control?",
+    "options": [
+      "Shadow color intensity",
+      "Shadow resolution",
+      "Shadow blur amount",
+      "How far shadows are rendered from the camera"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Shadow Distance determines the maximum distance at which shadows are rendered; beyond this, shadows fade out to save performance."
+  },
+  {
+    "id": 98,
+    "question": "Which tool is used to create and edit animation curves?",
+    "options": [
+      "Animation Window",
+      "Curve Editor",
+      "Graph Editor",
+      "All of the above"
+    ],
+    "correctAnswer": 3,
+    "explanation": "All these tools allow editing animation curves: Animation Window for clips, Curve Editor for detailed curve manipulation, Graph Editor in Shader Graph."
+  },
+  {
+    "id": 99,
+    "question": "What is 'Forward Rendering' best suited for?",
+    "options": [
+      "High-end PC with complex lighting",
+      "Mobile platforms with limited lights",
+      "2D games only",
+      "Scenes with many real-time lights"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Forward Rendering handles a limited number of lights per object efficiently, making it suitable for mobile or simpler scenes."
+  },
+  {
+    "id": 100,
+    "question": "Which feature allows blending between different terrain textures based on height or slope?",
+    "options": [
+      "Global Illumination",
+      "Texture painting with brushes",
+      "Vertex coloring",
+      "Terrain Layers blending"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Terrain Layers can be configured to blend based on height, slope, or other factors, creating natural transitions between materials."
+  },
+  {
+    "id": 101,
+    "question": "What does the 'Lens Flare' component create?",
+    "options": [
+      "Light scattering effects when looking at bright lights",
+      "Camera shake",
+      "Depth-based blurring",
+      "Color correction"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Lens Flare simulates optical artifacts caused by bright light sources hitting a camera lens, adding cinematic realism."
+  },
+  {
+    "id": 102,
+    "question": "Which animation parameter type is best for binary states like 'IsGrounded'?",
+    "options": [
+      "Trigger",
+      "Bool",
+      "Float",
+      "Integer"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Boolean parameters represent true/false states and are ideal for conditions like grounded, jumping, or attacking."
+  },
+  {
+    "id": 103,
+    "question": "What is 'Deferred Rendering' optimized for?",
+    "options": [
+      "Mobile performance",
+      "Scenes with many dynamic lights",
+      "2D sprite rendering",
+      "UI elements only"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Deferred Rendering excels with numerous lights because it separates geometry from lighting calculations."
+  },
+  {
+    "id": 104,
+    "question": "Which component allows creating a glowing outline effect around objects?",
+    "options": [
+      "Bloom post-processing",
+      "All of the above",
+      "Emission material with post-processing",
+      "Outline Shader"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Outlines can be achieved via custom outline shaders, bloom on emissive materials, or specialized post-processing effects."
+  },
+  {
+    "id": 105,
+    "question": "What does the 'Batching' feature improve?",
+    "options": [
+      "Draw call efficiency by combining objects",
+      "Texture loading",
+      "Audio playback",
+      "Physics simulation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Batching combines multiple objects into fewer draw calls when they share materials, improving rendering performance."
+  },
+  {
+    "id": 106,
+    "question": "Which tool is used to create vertex animations for simple object movements?",
+    "options": [
+      "Particle System",
+      "Trail Renderer",
+      "Shape keys/blend shapes",
+      "ProBuilder with animation"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Blend Shapes (Shape Keys) allow vertex-level deformations for facial expressions or simple morphing animations."
+  },
+  {
+    "id": 107,
+    "question": "What is 'Screen Space Ambient Occlusion' (SSAO)?",
+    "options": [
+      "Adds contact shadows in screen space for enhanced depth perception",
+      "Adjusts screen brightness",
+      "Creates lens flares",
+      "Adds motion blur"
+    ],
+    "correctAnswer": 0,
+    "explanation": "SSAO approximates ambient occlusion in screen space, darkening crevices and contacts between objects for added depth."
+  },
+  {
+    "id": 108,
+    "question": "Which lighting technique provides the most realistic soft shadows?",
+    "options": [
+      "Ray-traced shadows",
+      "Hard Shadows",
+      "Soft Shadows with high resolution",
+      "Baked shadows"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Ray-traced shadows provide physically accurate soft shadows with proper penumbras, though computationally expensive."
+  },
+  {
+    "id": 109,
+    "question": "What does the 'Sprite Renderer's 'Draw Mode' control?",
+    "options": [
+      "Animation speed",
+      "How the sprite stretches or tiles when resized",
+      "Collision shape",
+      "Sorting layer"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Draw Mode options (Simple, Sliced, Tiled) determine how sprites behave when their Rect Transform is scaled."
+  },
+  {
+    "id": 110,
+    "question": "Which post-processing effect simulates camera motion blur?",
+    "options": [
+      "Motion Blur",
+      "Depth of Field",
+      "Chromatic Aberration",
+      "Vignette"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Motion Blur adds directional blur based on camera or object movement, enhancing the sense of speed."
+  },
+  {
+    "id": 111,
+    "question": "What is 'Tessellation' used for in graphics?",
+    "options": [
+      "To compress textures",
+      "To subdivide surfaces for more geometric detail",
+      "To animate vertices",
+      "To create particle effects"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Tessellation dynamically adds triangles to surfaces, enabling detailed displacement mapping and smoother curves."
+  },
+  {
+    "id": 112,
+    "question": "Which component would you use for a health bar that follows a character in 3D space?",
+    "options": [
+      "Both B and C",
+      "Screen Space - Overlay Canvas",
+      "Billboard shader",
+      "World Space Canvas"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A World Space Canvas placed above the character with a billboard shader keeps the health bar facing the camera."
+  },
+  {
+    "id": 113,
+    "question": "What does 'Anti-aliasing' reduce in rendered images?",
+    "options": [
+      "Texture loading times",
+      "Jagged edges (stair-stepping) on diagonal lines",
+      "Shadow resolution",
+      "Animation jitter"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Anti-aliasing smooths jagged pixel edges (aliasing) by blending colors along boundaries."
+  },
+  {
+    "id": 114,
+    "question": "Which animation feature allows realistic foot placement on uneven terrain?",
+    "options": [
+      "Inverse Kinematics (IK)",
+      "Forward Kinematics",
+      "Blend Trees",
+      "Animation Events"
+    ],
+    "correctAnswer": 0,
+    "explanation": "IK automatically adjusts leg bone positions so feet naturally contact uneven surfaces."
+  },
+  {
+    "id": 115,
+    "question": "What is 'Color Grading' in post-processing?",
+    "options": [
+      "Adding texture details",
+      "Increasing polygon count",
+      "Adjusting overall color tone and mood of the scene",
+      "Optimizing draw calls"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Color Grading adjusts hue, saturation, contrast, and luminance to establish visual style or mood."
+  },
+  {
+    "id": 116,
+    "question": "Which component creates a halo effect around light sources?",
+    "options": [
+      "Both B and C",
+      "Bloom",
+      "Halo",
+      "Lens Flare"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The Halo component creates simple circular glows, while Bloom adds more sophisticated glowing effects."
+  },
+  {
+    "id": 117,
+    "question": "What does 'Dynamic Batching' automatically do?",
+    "options": [
+      "Bakes lighting",
+      "Combines small moving objects at runtime to reduce draw calls",
+      "Compresses textures",
+      "Optimizes animations"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Dynamic Batching automatically batches small moving objects that share materials, improving performance."
+  },
+  {
+    "id": 118,
+    "question": "Which tool is used to create custom particle shapes?",
+    "options": [
+      "Sprite Editor",
+      "Particle Shape module with custom meshes",
+      "ProBuilder",
+      "Terrain Tool"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The Shape module in Particle System can use custom meshes to define emission volumes and particle shapes."
+  },
+  {
+    "id": 119,
+    "question": "What is the purpose of 'Render Textures'?",
+    "options": [
+      "To render camera views onto surfaces (like security monitors)",
+      "To increase texture resolution",
+      "To animate sprites",
+      "To bake lighting"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Render Textures capture camera output, allowing display on materials (TV screens, mirrors, mini-maps)."
+  },
+  {
+    "id": 120,
+    "question": "Which lighting setting controls how sharp or soft shadow edges appear?",
+    "options": [
+      "Shadow Type (Hard/Soft)",
+      "Shadow Resolution",
+      "Shadow Distance",
+      "Shadow Strength"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Shadow Type toggles between Hard Shadows (crisp edges) and Soft Shadows (blurred edges for realism)."
+  },
+  {
+    "id": 121,
+    "question": "What does the 'Animation Clip's 'Loop Time' property do?",
+    "options": [
+      "Speeds up animation",
+      "Makes the animation repeat continuously",
+      "Reverses animation",
+      "Adds keyframes"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Loop Time causes an animation to restart automatically when it reaches the end, ideal for idle or walk cycles."
+  },
+  {
+    "id": 122,
+    "question": "Which component would you use for a minimap in the corner of the screen?",
+    "options": [
+      "World Space Canvas",
+      "3D Camera",
+      "Screen Space - Overlay Canvas with Render Texture",
+      "Particle System"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A Render Texture from an overhead camera displayed on a UI Image in an Overlay Canvas creates an effective minimap."
+  },
+  {
+    "id": 123,
+    "question": "What is 'Parallax Mapping' used for?",
+    "options": [
+      "To create illusion of depth on flat surfaces",
+      "To animate textures",
+      "To blend terrains",
+      "To create reflections"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Parallax Mapping offsets texture coordinates based on view angle and height maps, simulating depth without geometry."
+  },
+  {
+    "id": 124,
+    "question": "Which post-processing effect adds film-like grain to the image?",
+    "options": [
+      "Vignette",
+      "Grain",
+      "Chromatic Aberration",
+      "Bloom"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Grain adds randomized noise to simulate film grain, useful for vintage or gritty visual styles."
+  },
+  {
+    "id": 125,
+    "question": "What does the 'Animator's 'CrossFade' function do?",
+    "options": [
+      "Smoothly blends from current animation to a new one",
+      "Speeds up animations",
+      "Adds IK controls",
+      "Bakes animation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "CrossFade creates a smooth transition between animations over a specified time, avoiding abrupt changes."
+  },
+  {
+    "id": 126,
+    "question": "Which texture setting helps with texture clarity on distant surfaces?",
+    "options": [
+      "Anisotropic Filtering",
+      "Compression Quality",
+      "Max Size",
+      "Mip Maps"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Anisotropic Filtering preserves texture detail on surfaces viewed at extreme angles, like floors extending into distance."
+  },
+  {
+    "id": 127,
+    "question": "What is the purpose of 'Occlusion Culling' data baking?",
+    "options": [
+      "To bake lighting",
+      "To compress textures",
+      "To pre-calculate visibility between objects for runtime optimization",
+      "To generate collisions"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Baked Occlusion Culling data stores visibility information so only visible objects are rendered at runtime."
+  },
+  {
+    "id": 128,
+    "question": "Which component creates a glowing trail behind fast-moving objects?",
+    "options": [
+      "Line Renderer",
+      "Both B and C",
+      "Trail Renderer with emissive material",
+      "Particle System"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Both Trail Renderer with glowing materials and Particle Systems can create effective motion trails."
+  },
+  {
+    "id": 129,
+    "question": "What does 'HDR (High Dynamic Range)' enable for lighting?",
+    "options": [
+      "Brighter than 1.0 intensity values for more realistic lighting",
+      "Higher texture resolution",
+      "More polygon detail",
+      "Faster rendering"
+    ],
+    "correctAnswer": 0,
+    "explanation": "HDR allows light intensity beyond the 0-1 range, essential for bloom effects and realistic high-contrast lighting."
+  },
+  {
+    "id": 130,
+    "question": "Which animation technique is best for facial expression blending?",
+    "options": [
+      "Bone animation",
+      "Blend Shapes",
+      "Sprite animation",
+      "Particle animation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Blend Shapes (Morph Targets) allow smooth interpolation between facial expressions by deforming vertices."
+  },
+  {
+    "id": 131,
+    "question": "What is the purpose of 'Light Cookies'?",
+    "options": [
+      "To bake lighting faster",
+      "To project patterns or shapes from lights",
+      "To create lens flares",
+      "To adjust shadow color"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Light Cookies are grayscale textures that shape light emission, creating patterns like window blinds, foliage shadows, or gobo effects."
+  },
+  {
+    "id": 132,
+    "question": "Which rendering path is generally fastest for mobile games?",
+    "options": [
+      "Both B and C",
+      "Deferred Rendering",
+      "Vertex Lit",
+      "Forward Rendering"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Forward Rendering and Vertex Lit are efficient for mobile; Vertex Lit is fastest but with limited lighting features."
+  },
+  {
+    "id": 133,
+    "question": "What does the 'Particle System's 'Start Lifetime' control?",
+    "options": [
+      "System duration",
+      "How long each particle exists before disappearing",
+      "Emission rate",
+      "Particle speed"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Start Lifetime determines the duration in seconds that individual particles remain active after emission."
+  },
+  {
+    "id": 134,
+    "question": "Which tool is used to create 2D skeletal animations?",
+    "options": [
+      "2D Animation package with Bone Tool",
+      "Sprite Editor",
+      "ProBuilder",
+      "Animation Window only"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The 2D Animation package provides Bone Tool for creating armatures and animating 2D characters with inverse kinematics."
+  },
+  {
+    "id": 135,
+    "question": "What is 'Screen Space Reflections' (SSR)?",
+    "options": [
+      "A type of shadow",
+      "A technique for rendering reflections using screen space data",
+      "A texture compression method",
+      "An animation technique"
+    ],
+    "correctAnswer": 1,
+    "explanation": "SSR generates reflections by analyzing the rendered screen, efficient but limited to what's currently visible."
+  },
+  {
+    "id": 136,
+    "question": "Which component would you use for a interactive dialogue box in a 2D game?",
+    "options": [
+      "World Space Text",
+      "UI Panel with TextMeshPro",
+      "3D Text Mesh",
+      "Sprite with text texture"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A UI Panel with TextMeshPro offers crisp, scalable text with rich formatting for dialogue systems."
+  },
+  {
+    "id": 137,
+    "question": "What does 'Alpha Testing' provide in shaders?",
+    "options": [
+      "Per-pixel transparency with hard edges",
+      "Smooth transparency blending",
+      "Emissive effects",
+      "Bump mapping"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Alpha Testing discards pixels below an alpha threshold, creating sharp transparent edges (like foliage or chain fences)."
+  },
+  {
+    "id": 138,
+    "question": "Which post-processing effect mimics the human eye's adaptation to brightness changes?",
+    "options": [
+      "Bloom",
+      "Auto Exposure",
+      "Motion Blur",
+      "Chromatic Aberration"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Auto Exposure dynamically adjusts image exposure based on scene brightness, simulating eye adaptation."
+  },
+  {
+    "id": 139,
+    "question": "What is 'GPU Skinning' used for?",
+    "options": [
+      "To apply textures",
+      "To offload character animation calculations to the GPU",
+      "To create shadows",
+      "To bake lighting"
+    ],
+    "correctAnswer": 1,
+    "explanation": "GPU Skinning moves bone transformation calculations from CPU to GPU, improving performance for animated characters."
+  },
+  {
+    "id": 140,
+    "question": "Which texture compression is lossless and maintains full quality?",
+    "options": [
+      "RGBA 32-bit (Truecolor)",
+      "ASTC",
+      "PVRTC",
+      "DXT"
+    ],
+    "correctAnswer": 0,
+    "explanation": "RGBA 32-bit (Truecolor) preserves all color data without compression artifacts, at the cost of larger file size."
+  },
+  {
+    "id": 141,
+    "question": "What does the 'Terrain's 'Heightmap' define?",
+    "options": [
+      "The elevation data of the terrain surface",
+      "Texture placement",
+      "Tree distribution",
+      "Water level"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A heightmap is a grayscale texture where pixel brightness determines terrain height at each point."
+  },
+  {
+    "id": 142,
+    "question": "Which animation feature allows overriding specific bones while preserving base animation?",
+    "options": [
+      "Animation Layers with Override",
+      "Blend Trees",
+      "State Machines",
+      "Animation Events"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Override Layers completely replace animations on specific bones, while Additive Layers combine with base animations."
+  },
+  {
+    "id": 143,
+    "question": "What is 'Specularity' in materials?",
+    "options": [
+      "The base color",
+      "The shininess and highlight intensity",
+      "Transparency",
+      "Emission strength"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Specularity controls the size and intensity of specular highlights, representing surface shininess."
+  },
+  {
+    "id": 144,
+    "question": "Which component creates a visible beam of light (like a spotlight cone)?",
+    "options": [
+      "Spot Light with visible cone",
+      "Particle System",
+      "Trail Renderer",
+      "Line Renderer"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Spot Lights can have their cone visually rendered, useful for flashlight beams or stage lighting effects."
+  },
+  {
+    "id": 145,
+    "question": "What does 'Render Scale' control in URP/HDRP?",
+    "options": [
+      "Internal rendering resolution relative to screen size",
+      "Texture resolution",
+      "UI scale",
+      "Animation speed"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Render Scale adjusts resolution of the rendered frame before upscaling, balancing quality and performance."
+  },
+  {
+    "id": 146,
+    "question": "Which tool is used to create wind-affected grass on terrains?",
+    "options": [
+      "ProBuilder",
+      "Terrain Detail Paint tool",
+      "Particle System",
+      "Sprite Editor"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The Terrain's Paint Details tool places grass and detail meshes that respond to wind zones."
+  },
+  {
+    "id": 147,
+    "question": "What is 'Subsurface Scattering' best used for?",
+    "options": [
+      "Realistic skin, wax, and organic materials",
+      "Metal surfaces",
+      "Water effects",
+      "Fire simulations"
+    ],
+    "correctAnswer": 0,
+    "explanation": "SSS simulates light penetration in translucent materials, essential for believable human skin, leaves, and marble."
+  },
+  {
+    "id": 148,
+    "question": "Which post-processing effect adds slight color distortion at screen edges?",
+    "options": [
+      "Chromatic Aberration",
+      "Vignette with color tint",
+      "Bloom",
+      "Color Grading"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Vignette can include color tinting for artistic effects, while Chromatic Aberration separates RGB channels."
+  },
+  {
+    "id": 149,
+    "question": "What does the 'Animation Clip's 'Additive' reference pose option do?",
+    "options": [
+      "Makes animation add to rather than replace base pose",
+      "Speeds up animation",
+      "Reverses animation",
+      "Loops animation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Additive animation layers apply differences from a reference pose, useful for overlay animations like injury limps."
+  },
+  {
+    "id": 150,
+    "question": "Which component creates realistic water surfaces with reflections and waves?",
+    "options": [
+      "Water prefab with specialized shader",
+      "Standard shader with high smoothness",
+      "Particle System",
+      "Terrain water tool"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Unity's water systems or asset store packages provide complex shaders with reflection, refraction, and wave simulation."
+  },
+  {
+    "id": 151,
+    "question": "Which node in Shader Graph is used to create a procedural checkerboard pattern?",
+    "options": [
+      "Checkerboard Node",
+      "Noise Node with Step",
+      "Tiling and Offset with Fraction",
+      "Both B and C"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Shader Graph includes a dedicated Checkerboard Node that generates a procedural checkerboard pattern based on UV coordinates."
+  },
+  {
+    "id": 152,
+    "question": "What is the purpose of 'Light Probe Proxy Volume' (LPPV)?",
+    "options": [
+      "To increase shadow resolution",
+      "To provide accurate lighting for large dynamic objects",
+      "To create lens flares",
+      "To bake reflections"
+    ],
+    "correctAnswer": 1,
+    "explanation": "LPPV extends Light Probes to work with large dynamic objects by providing volumetric lighting information instead of single-point samples."
+  },
+  {
+    "id": 153,
+    "question": "Which component is essential for creating a 2D character that casts dynamic shadows?",
+    "options": [
+      "Both A and B",
+      "Sprite Renderer with 'Cast Shadows' enabled",
+      "2D Light and Shadow Caster 2D",
+      "Neither - 2D objects cannot cast shadows"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The Shadow Caster 2D component, combined with 2D Lights, enables 2D sprites to cast and receive dynamic shadows."
+  },
+  {
+    "id": 154,
+    "question": "What does the 'UI Navigation' system control?",
+    "options": [
+      "UI animation paths",
+      "Automatic keyboard/controller navigation between UI elements",
+      "Texture streaming for UI",
+      "UI rendering order"
+    ],
+    "correctAnswer": 1,
+    "explanation": "UI Navigation defines how users can navigate between selectable UI elements using keyboard, controller, or directional inputs."
+  },
+  {
+    "id": 155,
+    "question": "Which feature allows animation retargeting between differently proportioned humanoid models?",
+    "options": [
+      "Humanoid Avatar system",
+      "Generic animation",
+      "Animation compression",
+      "Root motion"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The Humanoid Avatar maps bones to a standard skeleton, allowing animations to work on characters with different proportions."
+  },
+  {
+    "id": 156,
+    "question": "What is 'Vertex Painting' primarily used for in ProBuilder?",
+    "options": [
+      "Creating UV maps",
+      "Adding color variation to meshes without textures",
+      "Generating collisions",
+      "Baking lighting"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Vertex Painting applies color directly to mesh vertices, useful for prototyping, gradients, or mask creation."
+  },
+  {
+    "id": 157,
+    "question": "Which Particle System module creates secondary particles when particles collide?",
+    "options": [
+      "Collision module with Sub Emitters",
+      "Emission module",
+      "Shape module",
+      "Velocity over Lifetime"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The Collision module can trigger Sub Emitters to spawn new particles upon collision with objects."
+  },
+  {
+    "id": 158,
+    "question": "What does 'Texture Streaming Mip Map Bias' adjust?",
+    "options": [
+      "Texture rotation",
+      "How aggressively lower mip levels are used for streaming",
+      "Compression ratio",
+      "Animation speed"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Mip Map Bias offsets the mip level selection for streamed textures, balancing memory and quality."
+  },
+  {
+    "id": 159,
+    "question": "Which Cinemachine component creates smooth camera transitions between multiple cameras?",
+    "options": [
+      "Cinemachine Brain",
+      "Cinemachine ClearShot",
+      "Cinemachine State-Driven Camera",
+      "Cinemachine Mixing Camera"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Cinemachine ClearShot automatically chooses and blends between multiple child cameras based on shot quality."
+  },
+  {
+    "id": 160,
+    "question": "What is the main benefit of using 'Addressable Assets' for texture management?",
+    "options": [
+      "Dynamic loading/unloading without direct references",
+      "Automatic compression",
+      "Real-time texture editing",
+      "Built-in animation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Addressable Assets allow loading assets by address/name at runtime, simplifying memory management for large projects."
+  },
+  {
+    "id": 161,
+    "question": "Which Shader Graph node converts world space position to object space?",
+    "options": [
+      "Position Node",
+      "Transform Node (World to Object)",
+      "Normal Vector Node",
+      "UV Node"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The Transform Node can convert between coordinate spaces including World, Object, View, and Tangent spaces."
+  },
+  {
+    "id": 162,
+    "question": "What does 'Reflection Probe Blending' enable?",
+    "options": [
+      "Multiple reflection layers",
+      "Smooth transitions between probe areas",
+      "Real-time probe updates",
+      "Probe resolution scaling"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Reflection Probe Blending creates smooth transitions where objects move between different reflection probe volumes."
+  },
+  {
+    "id": 163,
+    "question": "Which component creates a flexible, deformable 2D shape from a spline?",
+    "options": [
+      "Edge Collider 2D",
+      "Sprite Shape Controller",
+      "Line Renderer",
+      "Trail Renderer"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sprite Shape Controller generates textured 2D shapes along splines, ideal for roads, rivers, or flexible platforms."
+  },
+  {
+    "id": 164,
+    "question": "What does 'UI Input Field's 'Validation' property control?",
+    "options": [
+      "Allowed character types and formats",
+      "Animation when selected",
+      "Background color",
+      "Font size"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Validation restricts input to specific types like integers, decimals, email addresses, or custom patterns."
+  },
+  {
+    "id": 165,
+    "question": "Which animation feature records object property changes in the Timeline window?",
+    "options": [
+      "Animation Track",
+      "Activation Track",
+      "Audio Track",
+      "Control Track"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Animation Tracks in Timeline record and play back GameObject property animations alongside other sequences."
+  },
+  {
+    "id": 166,
+    "question": "What is 'ProBuilder's 'UV Editing' tool used for?",
+    "options": [
+      "Creating vertex colors",
+      "Adjusting texture mapping on probuilder meshes",
+      "Generating lightmaps",
+      "Painting terrain"
+    ],
+    "correctAnswer": 1,
+    "explanation": "ProBuilder's UV Editor allows manual adjustment of texture coordinates for custom meshes created in-editor."
+  },
+  {
+    "id": 167,
+    "question": "Which Particle System feature uses compute shaders for massive particle counts?",
+    "options": [
+      "Visual Effect Graph (VFX Graph)",
+      "Standard Particle System",
+      "Trail Renderer",
+      "Line Renderer"
+    ],
+    "correctAnswer": 0,
+    "explanation": "VFX Graph utilizes compute shaders and GPU processing to handle millions of particles with complex behaviors."
+  },
+  {
+    "id": 168,
+    "question": "What does the 'Memory Profiler' show that the regular Profiler doesn't?",
+    "options": [
+      "Detailed breakdown of texture and mesh memory",
+      "CPU usage per script",
+      "Frame timing",
+      "Draw calls"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Memory Profiler provides asset-level memory analysis, showing exactly which textures, meshes, and assets consume memory."
+  },
+  {
+    "id": 169,
+    "question": "Which Cinemachine extension adds procedural camera shake?",
+    "options": [
+      "CinemachineComposer",
+      "CinemachineBasicMultiChannelPerlin",
+      "CinemachineTransposer",
+      "CinemachineCollider"
+    ],
+    "correctAnswer": 1,
+    "explanation": "CinemachineBasicMultiChannelPerlin adds Perlin noise-based camera shake for earthquake, explosion, or handheld effects."
+  },
+  {
+    "id": 170,
+    "question": "What is the primary advantage of 'Asset Bundles' for artists?",
+    "options": [
+      "Delivering optimized content packages for different platforms/regions",
+      "Automatic texture compression",
+      "Real-time collaboration",
+      "Built-in version control"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Asset Bundles package content for dynamic loading, enabling DLC, platform-specific assets, or reduced initial download size."
+  },
+  {
+    "id": 171,
+    "question": "Which Shader Graph node creates a gradient based on position?",
+    "options": [
+      "Both A and C",
+      "Position Node with Sample Gradient",
+      "Noise Node",
+      "Gradient Node"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Both dedicated Gradient nodes and sampling gradients with position data can create positional color gradients."
+  },
+  {
+    "id": 172,
+    "question": "What does 'Volumetric Lighting' simulate?",
+    "options": [
+      "Shadow resolution",
+      "Light scattering in participating media (fog, dust)",
+      "Reflection intensity",
+      "Texture detail"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Volumetric Lighting creates god rays, light shafts, and atmospheric scattering effects through volumetric particles."
+  },
+  {
+    "id": 173,
+    "question": "Which setting is crucial for pixel art to maintain crisp edges when scaling?",
+    "options": [
+      "Filter Mode: Point (no filter)",
+      "Compression: High Quality",
+      "Generate Mip Maps: Enabled",
+      "Wrap Mode: Clamp"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Point Filter Mode prevents interpolation between pixels, keeping pixel art crisp at any scale."
+  },
+  {
+    "id": 174,
+    "question": "What does 'Scroll Rect's 'Movement Type' control?",
+    "options": [
+      "Scroll speed",
+      "How content behaves when dragged beyond boundaries",
+      "Animation style",
+      "Input sensitivity"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Movement Type (Unrestricted, Elastic, Clamped) defines scroll behavior when reaching content edges."
+  },
+  {
+    "id": 175,
+    "question": "Which animation feature allows code execution based on animation state?",
+    "options": [
+      "Both A and C",
+      "Animation Events",
+      "Blend Trees",
+      "State Machine Behaviours"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Both State Machine Behaviours (per-state scripts) and Animation Events (timeline-based) enable code triggering."
+  },
+  {
+    "id": 176,
+    "question": "What is 'ProBuilder's 'Smoothing Groups' feature for?",
+    "options": [
+      "Controlling edge hardness for automatic normals",
+      "Vertex painting",
+      "UV unwrapping",
+      "Mesh simplification"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Smoothing Groups define which edges appear sharp vs smooth by controlling normal calculation."
+  },
+  {
+    "id": 177,
+    "question": "Which VFX Graph block spawns particles based on mesh vertices?",
+    "options": [
+      "Spawn Over Distance",
+      "GPUEvent On Mesh Vertex",
+      "Constant Spawn Rate",
+      "Burst"
+    ],
+    "correctAnswer": 1,
+    "explanation": "GPUEvent On Mesh Vertex spawns particles at mesh vertex positions, useful for particle-based mesh effects."
+  },
+  {
+    "id": 178,
+    "question": "What does 'Texture Streaming Budget' limit?",
+    "options": [
+      "Texture loading speed",
+      "Compression quality",
+      "Total VRAM used for streamed mip maps",
+      "Animation memory"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Texture Streaming Budget caps the amount of memory allocated for texture mip streaming to prevent VRAM overflow."
+  },
+  {
+    "id": 179,
+    "question": "Which Cinemachine camera type automatically avoids obstacles?",
+    "options": [
+      "CinemachineCollider",
+      "CinemachineComposer",
+      "CinemachineTransposer",
+      "CinemachineFreeLook"
+    ],
+    "correctAnswer": 0,
+    "explanation": "CinemachineCollider prevents camera from clipping through geometry by adjusting position based on collisions."
+  },
+  {
+    "id": 180,
+    "question": "What is the main purpose of 'Version Control' for artists in Unity?",
+    "options": [
+      "Automatic optimization",
+      "Tracking changes to assets and collaborating",
+      "Real-time rendering",
+      "Shader compilation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Version Control (like Git, Plastic SCM) allows artists to collaborate, track revisions, and revert changes safely."
+  },
+  {
+    "id": 181,
+    "question": "Which Shader Graph node creates a dissolve effect with noise?",
+    "options": [
+      "Gradient Node",
+      "Noise Node with Step and Alpha Clip Threshold",
+      "Position Node",
+      "Normal Node"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Combining Noise with Step function and Alpha Clip Threshold creates progressive dissolve effects with organic edges."
+  },
+  {
+    "id": 182,
+    "question": "What does 'Light Layer' culling enable?",
+    "options": [
+      "Lights affecting only specific layers of objects",
+      "Automatic layer creation",
+      "Shadow layer separation",
+      "Reflection layering"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Light Layers allow lights to illuminate only objects on matching layers, enabling complex lighting scenarios."
+  },
+  {
+    "id": 183,
+    "question": "Which 2D feature creates automatic nine-slicing for UI sprites?",
+    "options": [
+      "Image component with 'Sliced' type",
+      "Rect Transform",
+      "Both A and C",
+      "Sprite Editor with Border settings"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Nine-slicing requires both Sprite border definition in Sprite Editor and Image component set to 'Sliced' type."
+  },
+  {
+    "id": 184,
+    "question": "What does 'UI Canvas Group' alpha affect?",
+    "options": [
+      "Only background images",
+      "Text elements only",
+      "Transparency of all child UI elements",
+      "Animation speed"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Canvas Group's Alpha property applies uniform transparency to all children, ideal for fade transitions."
+  },
+  {
+    "id": 185,
+    "question": "Which animation technique preserves foot planting while moving?",
+    "options": [
+      "Inverse Kinematics",
+      "Root Motion",
+      "Animation Retargeting",
+      "Additive Animation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Root Motion extracts movement from animation data, ensuring foot synchronization with ground contact."
+  },
+  {
+    "id": 186,
+    "question": "What is 'ProBuilder's 'Mesh Merge' tool used for?",
+    "options": [
+      "Combining multiple meshes to reduce draw calls",
+      "Creating UV maps",
+      "Vertex painting",
+      "Lightmap generation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Mesh Merge combines selected ProBuilder objects into a single mesh for better rendering performance."
+  },
+  {
+    "id": 187,
+    "question": "Which VFX Graph context processes particle collisions?",
+    "options": [
+      "Initialize Particle",
+      "Update Particle",
+      "Collision Context",
+      "Output Particle"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Collision Context handles particle collisions with depth buffer or specific collision layers."
+  },
+  {
+    "id": 188,
+    "question": "What does 'Draw Call Batching' require to work effectively?",
+    "options": [
+      "Identical materials and similar transforms",
+      "Different materials",
+      "Unique shaders",
+      "Separate lighting"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Static and Dynamic batching require shared materials and similar rendering states to combine draw calls."
+  },
+  {
+    "id": 189,
+    "question": "Which Cinemachine shot selection algorithm chooses based on target visibility?",
+    "options": [
+      "Cinemachine ClearShot",
+      "Cinemachine State-Driven",
+      "Cinemachine Mixing",
+      "Cinemachine FreeLook"
+    ],
+    "correctAnswer": 0,
+    "explanation": "ClearShot evaluates child cameras and selects the one with best target visibility and shot quality."
+  },
+  {
+    "id": 190,
+    "question": "What is 'Pipeline Tools' primary function for artists?",
+    "options": [
+      "Creating shaders",
+      "Automating asset processing workflows",
+      "Animating characters",
+      "Designing UI"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Pipeline Tools automate import, processing, and optimization tasks through custom scripts and editors."
+  },
+  {
+    "id": 191,
+    "question": "Which Shader Graph property type allows runtime material changes?",
+    "options": [
+      "Internal Property",
+      "Static Property",
+      "Exposed Property",
+      "Hidden Property"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Exposed Properties in Shader Graph create material parameters adjustable via code or animation."
+  },
+  {
+    "id": 192,
+    "question": "What does 'Screen Space Contact Shadows' improve?",
+    "options": [
+      "Distant shadow quality",
+      "Reflection accuracy",
+      "Small-scale occlusion between nearby objects",
+      "Texture resolution"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Contact Shadows add fine shadow detail where objects meet surfaces, enhancing depth perception."
+  },
+  {
+    "id": 193,
+    "question": "Which 2D render feature creates glowing outlines around sprites?",
+    "options": [
+      "2D Renderer Data with Outline Pass",
+      "Sprite Renderer with emission",
+      "UI Outline component",
+      "Post-processing bloom"
+    ],
+    "correctAnswer": 0,
+    "explanation": "2D Renderer's Renderer Data can include custom outline passes for sprite effects."
+  },
+  {
+    "id": 194,
+    "question": "What does 'UI Aspect Ratio Fitter' 'Fit Mode' control?",
+    "options": [
+      "Color matching",
+      "How element scales to match aspect ratio constraints",
+      "Animation timing",
+      "Input sensitivity"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Fit Mode (Width Controls Height, Height Controls Width, etc.) determines dimension priority for aspect maintenance."
+  },
+  {
+    "id": 195,
+    "question": "Which animation tool creates procedural walk cycles?",
+    "options": [
+      "Manual keyframing only",
+      "Animation Rigging with Two-Bone IK",
+      "Motion capture",
+      "Sprite animation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Animation Rigging's Two-Bone IK solvers can create procedural walk cycles with foot placement."
+  },
+  {
+    "id": 196,
+    "question": "What is 'LOD Group's 'Cross Fade' feature for?",
+    "options": [
+      "Smooth transitions between LOD levels",
+      "Automatic LOD generation",
+      "Shadow LOD",
+      "Texture LOD"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Cross Fade blends between LOD meshes during transitions to eliminate popping artifacts."
+  },
+  {
+    "id": 197,
+    "question": "Which VFX Graph operator creates swirling vortex motions?",
+    "options": [
+      "Directional Force",
+      "Turbulence Noise",
+      "Vortex Force",
+      "Drag"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Vortex Force applies rotational acceleration around an axis, creating tornado or whirlpool effects."
+  },
+  {
+    "id": 198,
+    "question": "What does 'Frame Debugger' help artists identify?",
+    "options": [
+      "Animation errors",
+      "Unnecessary draw calls and rendering order issues",
+      "Audio latency",
+      "Physics glitches"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Frame Debugger shows exact draw call sequence, helping optimize rendering performance."
+  },
+  {
+    "id": 199,
+    "question": "Which Cinemachine extension creates dolly track camera movements?",
+    "options": [
+      "CinemachineTrackedDolly",
+      "CinemachineComposer",
+      "CinemachineTransposer",
+      "CinemachineNoise"
+    ],
+    "correctAnswer": 0,
+    "explanation": "CinemachineTrackedDolly moves camera along a predefined path (dolly track) with smoothing and look-ahead."
+  },
+  {
+    "id": 200,
+    "question": "What is 'Asset Import Pipeline' customization for?",
+    "options": [
+      "Creating shaders",
+      "Animating characters",
+      "Automating texture/model processing on import",
+      "Designing levels"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Custom import pipelines (via scripts or AssetPostprocessor) automate optimization and setup for imported assets."
+  },
+  {
+    "id": 201,
+    "question": "Which Shader Graph node creates environment reflections?",
+    "options": [
+      "Scene Color Node",
+      "All of the above",
+      "Cubemap Node",
+      "Reflection Probe Node"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Various nodes access reflection data: Reflection Probe for probe samples, Scene Color for screen-space, Cubemap for static."
+  },
+  {
+    "id": 202,
+    "question": "What does 'Adaptive Performance' provide for mobile artists?",
+    "options": [
+      "Higher texture resolution",
+      "Automatic quality scaling based on device capability",
+      "More particles",
+      "Complex shaders"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Adaptive Performance adjusts rendering quality dynamically to maintain target frame rate on mobile devices."
+  },
+  {
+    "id": 203,
+    "question": "Which 2D feature creates parallax scrolling with multiple layers?",
+    "options": [
+      "Sprite scrolling script",
+      "Parallax Background with different Z positions",
+      "UI Canvas scrolling",
+      "Particle System"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Parallax effects are created by moving background layers at different speeds based on camera movement."
+  },
+  {
+    "id": 204,
+    "question": "What does 'UI TextMeshPro's 'Font Asset' enable?",
+    "options": [
+      "High-quality text with SDF rendering",
+      "Automatic text translation",
+      "Voice synthesis",
+      "Image embedding"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Font Assets in TextMeshPro use Signed Distance Field rendering for crisp text at any size with effects."
+  },
+  {
+    "id": 205,
+    "question": "Which animation feature blends facial expressions?",
+    "options": [
+      "Bone-based facial rigging",
+      "Texture animation",
+      "Blend Shapes with animation curves",
+      "Shader animation"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Blend Shapes (morph targets) controlled by animation curves create smooth facial expression transitions."
+  },
+  {
+    "id": 206,
+    "question": "What is 'ProBuilder's 'Vertex Colors as UV' used for?",
+    "options": [
+      "Texture painting",
+      "Using vertex colors for lightmap baking",
+      "Animation weighting",
+      "Collision generation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Vertex Colors can store additional data like lightmap UV channels for advanced baking workflows."
+  },
+  {
+    "id": 207,
+    "question": "Which VFX Graph spawning method creates particles along edges?",
+    "options": [
+      "Constant Spawn Rate",
+      "Spawn Over Distance along mesh edges",
+      "Burst spawning",
+      "GPUEvent On Trigger"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Spawn Over Distance with edge sampling creates particles along mesh contours for outline effects."
+  },
+  {
+    "id": 208,
+    "question": "What does 'Occlusion Culling Data' visualization show?",
+    "options": [
+      "Which objects are culled from each camera position",
+      "Texture memory usage",
+      "Animation curves",
+      "Physics collisions"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Occlusion Culling visualization helps debug visibility issues and optimize occluder placement."
+  },
+  {
+    "id": 209,
+    "question": "Which Cinemachine composer keeps multiple targets in frame?",
+    "options": [
+      "CinemachineHardLookAt",
+      "CinemachineGroupComposer",
+      "CinemachineFramingTransposer",
+      "CinemachinePOV"
+    ],
+    "correctAnswer": 1,
+    "explanation": "GroupComposer frames multiple targets simultaneously, adjusting to keep all within view."
+  },
+  {
+    "id": 210,
+    "question": "What is 'Custom Editor Tools' main benefit for artists?",
+    "options": [
+      "Creating specialized editing interfaces for custom assets",
+      "Automatically animating characters",
+      "Generating shaders",
+      "Optimizing builds"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Custom Editor Tools extend Unity's interface with specialized controls for asset types or workflows."
+  },
+  {
+    "id": 211,
+    "question": "Which Shader Graph master node setting enables tessellation?",
+    "options": [
+      "Vertex displacement",
+      "Tessellation factor in PBR Master Node",
+      "Alpha clipping",
+      "Surface options"
+    ],
+    "correctAnswer": 1,
+    "explanation": "PBR Master Node includes Tessellation settings for controlling subdivision and displacement."
+  },
+  {
+    "id": 212,
+    "question": "What does 'Reflection Probe Box Projection' enable?",
+    "options": [
+      "Accurate reflections in enclosed spaces",
+      "Spherical reflections only",
+      "Real-time probe updates",
+      "Higher resolution probes"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Box Projection fits reflections to room dimensions rather than infinite distance, correct for interior spaces."
+  },
+  {
+    "id": 213,
+    "question": "Which 2D feature creates automatic sprite animation from texture sequences?",
+    "options": [
+      "Timeline only",
+      "Both A and C",
+      "Import multiple textures as animation",
+      "Sprite Editor Animation preview"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sprite Editor can preview animations, and multiple textures can be imported as animation sequences."
+  },
+  {
+    "id": 214,
+    "question": "What does 'UI Mask' 'Show Mask Graphic' affect?",
+    "options": [
+      "Child element visibility",
+      "Whether the masking shape itself is visible",
+      "Animation speed",
+      "Input handling"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Show Mask Graphic toggles visibility of the masking shape while still masking children."
+  },
+  {
+    "id": 215,
+    "question": "Which animation technique creates physics-based secondary motion?",
+    "options": [
+      "Dynamic Bones or Physics-based animation",
+      "Keyframe animation only",
+      "Motion capture",
+      "Sprite animation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Physics-based components (like Dynamic Bones) create secondary motion for hair, clothing, or tails."
+  },
+  {
+    "id": 216,
+    "question": "What is 'Mesh Simplification' tool used for?",
+    "options": [
+      "Increasing texture resolution",
+      "Reducing polygon count while preserving shape",
+      "Adding vertex colors",
+      "Generating UVs"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Mesh Simplification (Progressive Mesh) reduces triangle count for LOD generation or optimization."
+  },
+  {
+    "id": 217,
+    "question": "Which VFX Graph block creates ribbon/trail effects?",
+    "options": [
+      "Quad Output",
+      "Strip Output",
+      "Mesh Output",
+      "Point Output"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Strip Output connects particles into continuous ribbons or trails."
+  },
+  {
+    "id": 218,
+    "question": "What does 'Shader Variant Collection' prevent?",
+    "options": [
+      "Shader compilation stutter at runtime",
+      "Texture compression",
+      "Animation errors",
+      "Physics glitches"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Shader Variant Collections pre-compile shader variants to eliminate runtime compilation hitches."
+  },
+  {
+    "id": 219,
+    "question": "Which Cinemachine extension adds procedural camera dithering?",
+    "options": [
+      "CinemachinePixelPerfect",
+      "CinemachineNoise with Perlin",
+      "CinemachineCollider",
+      "CinemachineComposer"
+    ],
+    "correctAnswer": 0,
+    "explanation": "CinemachinePixelPerfect ensures pixel-perfect rendering for 2D games with optional dithering effects."
+  },
+  {
+    "id": 220,
+    "question": "What is 'Asset Validation' workflow for?",
+    "options": [
+      "Ensuring assets meet project standards automatically",
+      "Creating assets",
+      "Animating characters",
+      "Designing shaders"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Asset Validation scripts check imported assets for compliance with technical requirements."
+  },
+  {
+    "id": 221,
+    "question": "Which Shader Graph node creates triplanar mapping?",
+    "options": [
+      "Texture Sample with world position",
+      "UV Node only",
+      "Both A and C",
+      "Triplanar Node"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Dedicated Triplanar Node or manual setup with world position creates seamless texture mapping on complex geometry."
+  },
+  {
+    "id": 222,
+    "question": "What does 'Screen Space Reflections' 'Iteration Count' affect?",
+    "options": [
+      "Reflection brightness",
+      "Quality and performance of SSR",
+      "Texture resolution",
+      "Animation speed"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Higher iteration counts improve SSR quality but increase computational cost."
+  },
+  {
+    "id": 223,
+    "question": "Which 2D feature enables sprite deformation via bones?",
+    "options": [
+      "2D Animation Package with Skinning Editor",
+      "Sprite Renderer",
+      "UI Image",
+      "Particle System"
+    ],
+    "correctAnswer": 0,
+    "explanation": "2D Animation Package provides bone-based deformation for flexible 2D character animation."
+  },
+  {
+    "id": 224,
+    "question": "What does 'UI Dropdown' 'Template' property define?",
+    "options": [
+      "The expanded dropdown list appearance",
+      "Background color",
+      "Animation speed",
+      "Input validation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Template is the Rect Transform containing dropdown items when expanded."
+  },
+  {
+    "id": 225,
+    "question": "Which animation feature syncs animation to audio beats?",
+    "options": [
+      "Animation Events triggered by audio analysis",
+      "Manual keyframing only",
+      "Both A and C",
+      "Timeline with Audio Track synchronization"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Timeline syncs animation to audio tracks, while scripts can trigger events based on audio analysis."
+  },
+  {
+    "id": 226,
+    "question": "What is 'Vertex Normal Editing' used for in mesh tools?",
+    "options": [
+      "Increasing polygon count",
+      "Controlling lighting appearance without changing geometry",
+      "Adding textures",
+      "Creating collisions"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Editing vertex normals changes how light interacts with surfaces without modifying actual geometry."
+  },
+  {
+    "id": 227,
+    "question": "Which VFX Graph event triggers particles on gameplay events?",
+    "options": [
+      "Spawn Over Time",
+      "GPUEvent On GameEvent",
+      "Constant Spawn",
+      "Burst"
+    ],
+    "correctAnswer": 1,
+    "explanation": "GPUEvent On GameEvent spawns particles in response to custom gameplay events."
+  },
+  {
+    "id": 228,
+    "question": "What does 'Static Batching' require?",
+    "options": [
+      "Dynamic objects",
+      "Objects marked as Static and sharing materials",
+      "Unique materials per object",
+      "Real-time lighting"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Static Batching combines static GameObjects with shared materials at build time for runtime efficiency."
+  },
+  {
+    "id": 229,
+    "question": "Which Cinemachine extension creates picture-in-picture effects?",
+    "options": [
+      "Render Textures with separate cameras",
+      "Post-processing only",
+      "Both A and C",
+      "Multiple cameras with CinemachineBrain blending"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Picture-in-picture uses multiple cameras with Cinemachine or Render Textures for secondary views."
+  },
+  {
+    "id": 230,
+    "question": "What is 'Asset Postprocessor' used for?",
+    "options": [
+      "Creating shaders",
+      "Automating tasks when assets are imported",
+      "Animating characters",
+      "Designing UI"
+    ],
+    "correctAnswer": 1,
+    "explanation": "AssetPostprocessor scripts run during import to automatically configure textures, models, or other assets."
+  },
+  {
+    "id": 231,
+    "question": "Which Shader Graph node creates hologram/sci-fi scan effects?",
+    "options": [
+      "Gradient Node",
+      "Scan Line Node with Time and Fresnel",
+      "Position Node",
+      "Normal Node"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Combining scan lines with time-based movement and fresnel creates holographic material effects."
+  },
+  {
+    "id": 232,
+    "question": "What does 'Light Probe Placement' 'Automatic' mode do?",
+    "options": [
+      "Disables probes",
+      "Increases probe resolution",
+      "Automatically distributes probes in static geometry",
+      "Manual probe placement only"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Automatic Light Probe Placement analyzes static scene geometry to position probes optimally."
+  },
+  {
+    "id": 233,
+    "question": "Which 2D feature creates sprite swapping for animation?",
+    "options": [
+      "Particle System only",
+      "Both A and C",
+      "Sprite Renderer with scripted sprite changes",
+      "Animation window with sprite keyframes"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sprite animation can be done via script or Animation window with sprite property keyframes."
+  },
+  {
+    "id": 234,
+    "question": "What does 'UI Toggle Group' ensure?",
+    "options": [
+      "All toggles are always selected",
+      "Color changes",
+      "Automatic animation",
+      "Only one toggle can be selected within the group"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Toggle Group creates radio-button behavior where only one toggle can be active at a time."
+  },
+  {
+    "id": 235,
+    "question": "Which animation technique creates ragdoll physics transitions?",
+    "options": [
+      "Sprite animation",
+      "Keyframe animation only",
+      "Shader animation",
+      "Animator with humanoid ragdoll blending"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Humanoid characters can blend between animated and ragdoll states for realistic death/impact reactions."
+  },
+  {
+    "id": 236,
+    "question": "What is 'UV Overlap' checking important for?",
+    "options": [
+      "Creating animations",
+      "Adding vertex colors",
+      "Preventing lightmap baking errors",
+      "Increasing texture resolution"
+    ],
+    "correctAnswer": 2,
+    "explanation": "UV overlap causes lightmap baking artifacts; tools check for overlapping UVs before baking."
+  },
+  {
+    "id": 237,
+    "question": "Which VFX Graph spawner creates particle explosions?",
+    "options": [
+      "Spawn over distance",
+      "Constant spawn",
+      "Burst with spherical distribution",
+      "GPUEvent On Kill"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Burst spawning with spherical shape creates instant explosion effects."
+  },
+  {
+    "id": 238,
+    "question": "What does 'Texture Compression Cache' improve?",
+    "options": [
+      "Physics accuracy",
+      "Animation smoothness",
+      "Runtime performance",
+      "Repeated texture import speed"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Compression Cache stores previously compressed textures to speed up re-imports."
+  },
+  {
+    "id": 239,
+    "question": "Which Cinemachine feature creates documentary-style camera work?",
+    "options": [
+      "CinemachineTransposer",
+      "CinemachineNoise",
+      "CinemachineStoryboard",
+      "CinemachineComposer"
+    ],
+    "correctAnswer": 2,
+    "explanation": "CinemachineStoryboard allows placing static images or pre-rendered sequences within the camera view."
+  },
+  {
+    "id": 240,
+    "question": "What is 'Custom Property Drawers' benefit for artists?",
+    "options": [
+      "Automatically animating characters",
+      "Generating shaders",
+      "Creating user-friendly inspector interfaces for custom data",
+      "Optimizing builds"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Custom Property Drawers create specialized editor interfaces for script variables."
+  },
+  {
+    "id": 241,
+    "question": "Which Shader Graph node creates water caustics effects?",
+    "options": [
+      "Position Node",
+      "Normal Node",
+      "Color Node",
+      "Caustics Node with light projection"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Specialized caustics nodes or noise-based projections create underwater light patterns."
+  },
+  {
+    "id": 242,
+    "question": "What does 'Shadowmask' lighting mode provide?",
+    "options": [
+      "Baked shadows only",
+      "Real-time shadows only",
+      "No shadows",
+      "Mixed real-time and baked shadows"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Shadowmask uses baked shadows for static objects and real-time shadows for dynamic objects simultaneously."
+  },
+  {
+    "id": 243,
+    "question": "Which 2D feature creates automatic sprite sorting by Y-position?",
+    "options": [
+      "UI Canvas sorting",
+      "Particle sorting",
+      "Manual layer sorting",
+      "Sprite Renderer with Transparency Sort Mode"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Transparency Sort Mode with Custom Axis enables pseudo-3D sorting for 2D perspective games."
+  },
+  {
+    "id": 244,
+    "question": "What does 'UI Scrollbar' 'Direction' control?",
+    "options": [
+      "Color scheme",
+      "Animation style",
+      "Input sensitivity",
+      "Vertical vs horizontal scrolling"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Direction sets whether scrollbar operates vertically (Bottom to Top) or horizontally (Left to Right)."
+  },
+  {
+    "id": 245,
+    "question": "Which animation tool creates lip-syncing from audio?",
+    "options": [
+      "Motion capture",
+      "Sprite animation",
+      "Timeline with audio analysis and blend shapes",
+      "Manual keyframing only"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Timeline can synchronize blend shape animations to audio waveforms for automatic lip-sync."
+  },
+  {
+    "id": 246,
+    "question": "What is 'Mesh Cleanup' tool for?",
+    "options": [
+      "Creating UVs",
+      "Painting textures",
+      "Removing duplicate vertices and degenerate triangles",
+      "Adding polygons"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Mesh Cleanup optimizes meshes by removing unnecessary geometry elements."
+  },
+  {
+    "id": 247,
+    "question": "Which VFX Graph operator creates buoyancy/floating effects?",
+    "options": [
+      "Vortex Force",
+      "Drag",
+      "Directional Force",
+      "Buoyancy Force"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Buoyancy Force simulates fluid buoyancy for particles rising or sinking in virtual fluids."
+  },
+  {
+    "id": 248,
+    "question": "What does 'Preloaded Shaders' setting prevent?",
+    "options": [
+      "Animation errors",
+      "Physics glitches",
+      "Texture compression",
+      "Shader loading hitches during gameplay"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Preloaded Shaders load shaders during loading screens rather than mid-gameplay."
+  },
+  {
+    "id": 249,
+    "question": "Which Cinemachine extension creates security camera sweep?",
+    "options": [
+      "CinemachineNoise",
+      "CinemachineComposer",
+      "CinemachineTransposer",
+      "CinemachinePath with dolly camera"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Dolly camera on a path with ping-pong mode creates automated security camera movements."
+  },
+  {
+    "id": 250,
+    "question": "What is 'Scriptable Objects' use for artists?",
+    "options": [
+      "Writing gameplay code",
+      "Designing levels",
+      "Animating characters",
+      "Creating reusable data assets (materials, color palettes)"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Scriptable Objects allow creating asset-based data containers for materials, settings, or other reusable data."
+  },
+  {
+    "id": 251,
+    "question": "Which Shader Graph node creates edge detection outlines?",
+    "options": [
+      "UV Node",
+      "Color Node",
+      "Gradient Node",
+      "Edge Detection Node with depth/normal sampling"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Edge detection uses depth or normal buffers to identify and highlight object boundaries."
+  },
+  {
+    "id": 252,
+    "question": "What does 'Light Probe Proxy Volume' 'Resolution' affect?",
+    "options": [
+      "Texture resolution",
+      "Reflection accuracy",
+      "Shadow quality",
+      "Detail of lighting interpolation for large objects"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Higher LPPV resolution provides more detailed lighting interpolation across large dynamic objects."
+  },
+  {
+    "id": 253,
+    "question": "Which 2D feature creates sprite swapping for damage states?",
+    "options": [
+      "Multiple sprite renderers",
+      "UI Image",
+      "Particle System",
+      "Sprite Renderer material property animation"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Material property animation can swap sprite textures without changing the Sprite Renderer component."
+  },
+  {
+    "id": 254,
+    "question": "What does 'UI Selectable' 'Transition' type control?",
+    "options": [
+      "Animation speed",
+      "Color scheme",
+      "Page navigation",
+      "Visual feedback style for interaction states"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Transition types (Color Tint, Sprite Swap, Animation) define how UI elements respond to interaction states."
+  },
+  {
+    "id": 255,
+    "question": "Which animation feature creates crowd/variation from single animation?",
+    "options": [
+      "Sprite animation",
+      "Unique animations per character",
+      "Motion capture for each",
+      "Animation offsetting with random start times"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Randomizing animation start times or speeds creates natural variation in crowds from identical animations."
+  },
+  {
+    "id": 256,
+    "question": "What is 'Vertex Cache Optimization' for?",
+    "options": [
+      "Creating animations",
+      "Adding polygons",
+      "Increasing texture resolution",
+      "Improving GPU vertex processing performance"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Vertex cache optimization reorders triangles to improve GPU vertex reuse and performance."
+  },
+  {
+    "id": 257,
+    "question": "Which VFX Graph spawn method creates particle trails behind movers?",
+    "options": [
+      "GPUEvent On Trigger",
+      "Burst spawning",
+      "Constant spawn",
+      "Spawn Over Distance with previous position sampling"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Spawn Over Distance using previous positions creates continuous trails behind moving emitters."
+  },
+  {
+    "id": 258,
+    "question": "What does 'Quality Settings' 'Pixel Light Count' limit?",
+    "options": [
+      "Particle count",
+      "Shadow count",
+      "Texture resolution",
+      "Number of per-pixel lights affecting an object"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Pixel Light Count caps how many lights use per-pixel calculations vs faster per-vertex calculations."
+  },
+  {
+    "id": 259,
+    "question": "Which Cinemachine composer creates over-the-shoulder views?",
+    "options": [
+      "CinemachinePOV",
+      "CinemachineGroupComposer",
+      "CinemachineHardLookAt",
+      "CinemachineFramingTransposer with offset"
+    ],
+    "correctAnswer": 3,
+    "explanation": "FramingTransposer with Tracked Object Offset creates over-the-shoulder camera positions."
+  },
+  {
+    "id": 260,
+    "question": "What is 'Editor Coroutines' use for artists?",
+    "options": [
+      "Physics simulation",
+      "Real-time rendering",
+      "Gameplay programming",
+      "Creating progressive processing in editor tools"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Editor Coroutines allow spreading asset processing over multiple frames to keep editor responsive."
+  },
+  {
+    "id": 261,
+    "question": "Which Shader Graph node creates dissolve with edge glow?",
+    "options": [
+      "Gradient Node",
+      "Position Node",
+      "Normal Node",
+      "Dissolve Node with Fresnel edge emission"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Combining dissolve cutoff with fresnel-based emission creates glowing edges on disappearing objects."
+  },
+  {
+    "id": 262,
+    "question": "What does 'Realtime GI' 'CPU Usage' setting control?",
+    "options": [
+      "Animation smoothness",
+      "Texture compression",
+      "Shadow quality",
+      "Performance vs quality trade-off for dynamic GI"
+    ],
+    "correctAnswer": 3,
+    "explanation": "CPU Usage settings (Low, Medium, High) balance real-time GI quality against performance impact."
+  },
+  {
+    "id": 263,
+    "question": "Which 2D feature creates animated texture sheets?",
+    "options": [
+      "Particle System",
+      "3D model animation",
+      "Single texture import",
+      "Sprite Editor with multiple sprite slices"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Sprite Editor slices texture sheets into individual frames for sprite animation."
+  },
+  {
+    "id": 264,
+    "question": "What does 'UI Canvas' 'Pixel Perfect' override?",
+    "options": [
+      "Animation timing",
+      "Input handling",
+      "Color scheme",
+      "Project-level pixel perfect settings"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Canvas-level Pixel Perfect overrides the global setting for specific UI canvases."
+  },
+  {
+    "id": 265,
+    "question": "Which animation technique creates cloth simulation?",
+    "options": [
+      "Keyframe animation only",
+      "Shader animation",
+      "Sprite animation",
+      "Cloth component with animation blending"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Cloth component simulates fabric physics, often blended with keyframed animations."
+  },
+  {
+    "id": 266,
+    "question": "What is 'Mesh Normal Recalculation' important for?",
+    "options": [
+      "Adding textures",
+      "Creating animations",
+      "Increasing polygon count",
+      "Correct lighting after mesh modification"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Recalculating normals ensures proper lighting after editing mesh geometry."
+  },
+  {
+    "id": 267,
+    "question": "Which VFX Graph creates weather effects like rain?",
+    "options": [
+      "UI particles",
+      "Shader effects",
+      "Sprite animation",
+      "Particle system with sheet emission and gravity"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Rain uses particle systems with rectangular emission volumes and downward forces."
+  },
+  {
+    "id": 268,
+    "question": "What does 'Build Report' show about textures?",
+    "options": [
+      "Physics settings",
+      "Script performance",
+      "Animation lengths",
+      "Texture memory usage and compression statistics"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Build Report analyzes texture memory, formats, and potential optimizations."
+  },
+  {
+    "id": 269,
+    "question": "Which Cinemachine feature creates time-lapse effects?",
+    "options": [
+      "Shader effects",
+      "Particle systems",
+      "Post-processing only",
+      "Cinemachine with time scaling"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Cinemachine combined with Time.timeScale adjustments creates accelerated camera movements."
+  },
+  {
+    "id": 270,
+    "question": "What is 'Custom Importers' use for artists?",
+    "options": [
+      "Designing UI",
+      "Animating characters",
+      "Creating shaders",
+      "Supporting proprietary or custom file formats"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Custom Importers allow Unity to handle non-standard file formats through scripting."
+  },
+  {
+    "id": 271,
+    "question": "Which Shader Graph node creates terrain blending?",
+    "options": [
+      "Color Node",
+      "Gradient Node",
+      "UV Node",
+      "Terrain Blend Node with height-based mixing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Terrain blending uses height or slope data to mix multiple textures seamlessly."
+  },
+  {
+    "id": 272,
+    "question": "What does 'Light Probe' 'Runtime Only' mode do?",
+    "options": [
+      "Increases probe count",
+      "Bakes probes into lightmaps",
+      "Disables probes",
+      "Provides runtime lighting without affecting bakes"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Runtime Only probes provide dynamic object lighting without contributing to baked GI calculations."
+  },
+  {
+    "id": 273,
+    "question": "Which 2D feature creates sprite reflection in water?",
+    "options": [
+      "Post-processing",
+      "3D reflection probe",
+      "Shader graph",
+      "Duplicate sprite with vertical flip and alpha gradient"
+    ],
+    "correctAnswer": 3,
+    "explanation": "2D water reflections often use flipped sprites with gradient transparency for simplicity."
+  },
+  {
+    "id": 274,
+    "question": "What does 'UI Layout Element' 'Minimum Size' enforce?",
+    "options": [
+      "Maximum size limit",
+      "Animation bounds",
+      "Color range",
+      "Smallest allowed dimensions regardless of parent constraints"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Minimum Size prevents UI elements from shrinking below specified dimensions in layout groups."
+  },
+  {
+    "id": 275,
+    "question": "Which animation feature creates mouse/follow cursor aiming?",
+    "options": [
+      "Keyframe animation only",
+      "Sprite animation",
+      "Motion capture",
+      "Inverse Kinematics with target following"
+    ],
+    "correctAnswer": 3,
+    "explanation": "IK with target following allows characters to aim weapons or look at cursor positions."
+  },
+  {
+    "id": 276,
+    "question": "What is 'Mesh Decimation' different from simplification?",
+    "options": [
+      "Painting textures",
+      "Creating UVs",
+      "Adding polygons",
+      "More aggressive polygon reduction with shape preservation"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Decimation reduces polygons more aggressively while attempting to preserve silhouette."
+  },
+  {
+    "id": 277,
+    "question": "Which VFX Graph creates fire with smoke?",
+    "options": [
+      "3D models",
+      "Sprite animation",
+      "Single particle system",
+      "Multi-system with particle interaction"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Fire typically uses multiple interacting particle systems for flames, embers, and smoke."
+  },
+  {
+    "id": 278,
+    "question": "What does 'Player Settings' 'Static Batching' checkbox enable?",
+    "options": [
+      "Dynamic batching",
+      "GPU instancing",
+      "Texture compression",
+      "Automatic static mesh combination at build time"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Static Batching setting enables automatic combination of static meshes during build process."
+  },
+  {
+    "id": 279,
+    "question": "Which Cinemachine creates drone/follow cam?",
+    "options": [
+      "CinemachinePOV",
+      "CinemachineStoryboard",
+      "CinemachineHardLookAt",
+      "CinemachineFreeLook with orbiting"
+    ],
+    "correctAnswer": 3,
+    "explanation": "FreeLook provides orbiting camera behavior ideal for third-person or drone follow cameras."
+  },
+  {
+    "id": 280,
+    "question": "What is 'Custom Attributes' use in shaders?",
+    "options": [
+      "Designing UI",
+      "Writing scripts",
+      "Creating animations",
+      "Adding tooltips and ranges to material properties"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Custom Attributes like [Header], [Tooltip], [Range] improve material inspector usability."
+  },
+  {
+    "id": 281,
+    "question": "Which Shader Graph node creates cel/toon shading?",
+    "options": [
+      "Normal Node",
+      "Gradient Node",
+      "Position Node",
+      "Posterize/Ramp Node with light step"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Cel shading uses stepped lighting via posterize or ramp sampling nodes."
+  },
+  {
+    "id": 282,
+    "question": "What does 'Light Probe' 'Blend Distance' control?",
+    "options": [
+      "Texture blending",
+      "Shadow distance",
+      "Probe brightness",
+      "How far probes influence surrounding objects"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Blend Distance defines the radius around probes where their lighting data interpolates with neighbors."
+  },
+  {
+    "id": 283,
+    "question": "Which 2D feature creates sprite masking for portals?",
+    "options": [
+      "3D clipping",
+      "UI Mask",
+      "Shader clipping",
+      "Sprite Mask component"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Sprite Mask restricts sprite rendering to defined shapes for portal or window effects."
+  },
+  {
+    "id": 284,
+    "question": "What does 'UI Graphic Raycaster' 'Blocking Objects' filter?",
+    "options": [
+      "Animation blocking",
+      "Color blocking",
+      "Sound blocking",
+      "Which object types block UI raycasts"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Blocking Objects determines if 2D, 3D, or both object types prevent UI input behind them."
+  },
+  {
+    "id": 285,
+    "question": "Which animation feature creates breathing/idle subtleties?",
+    "options": [
+      "Keyframe animation only",
+      "Sprite animation",
+      "Motion capture",
+      "Additive animation layers with noise"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Additive animation layers with subtle noise or sine waves create natural idle breathing/movement."
+  },
+  {
+    "id": 286,
+    "question": "What is 'Mesh LOD' 'Screen Relative Height' threshold?",
+    "options": [
+      "Texture resolution",
+      "Animation progress",
+      "World distance",
+      "When LOD switches based on screen space size"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Screen Relative Height triggers LOD changes when object occupies less than specified percentage of screen."
+  },
+  {
+    "id": 287,
+    "question": "Which VFX Graph creates magic spell effects?",
+    "options": [
+      "3D models only",
+      "Sprite animation",
+      "UI effects",
+      "Particle systems with custom shaders and trails"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Magic effects combine particles, trails, and custom shaders for mystical visual styles."
+  },
+  {
+    "id": 288,
+    "question": "What does 'Texture' 'Max Size' import setting limit?",
+    "options": [
+      "Animation length",
+      "File size",
+      "Particle count",
+      "Maximum dimension (width/height) of loaded texture"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Max Size caps texture dimensions to control memory usage (e.g., 1024, 2048, 4096 pixels)."
+  },
+  {
+    "id": 289,
+    "question": "Which Cinemachine creates surveillance camera grid?",
+    "options": [
+      "Shader effects",
+      "Post-processing",
+      "Single camera only",
+      "Multiple cameras with CinemachineBlendList"
+    ],
+    "correctAnswer": 3,
+    "explanation": "BlendList manages multiple camera switches for surveillance or security display grids."
+  },
+  {
+    "id": 290,
+    "question": "What is 'Custom Editors' for component visualization?",
+    "options": [
+      "Designing shaders",
+      "Animating characters",
+      "Writing gameplay code",
+      "Creating visual tools for component setup in Scene view"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Custom Editors can add visual handles and tools to components for easier setup."
+  },
+  {
+    "id": 291,
+    "question": "Which Shader Graph node creates scrolling UVs for animated textures?",
+    "options": [
+      "Static UV",
+      "Vertex position",
+      "Normal mapping",
+      "Tiling and Offset with Time node"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Adding Time to UV offset creates scrolling texture animations for water, clouds, or energy fields."
+  },
+  {
+    "id": 292,
+    "question": "What does 'Light' 'Render Mode' 'Important' do?",
+    "options": [
+      "Increases shadow quality",
+      "Makes light brighter",
+      "Enables baking",
+      "Forces pixel lighting for this light"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Important Render Mode ensures light uses per-pixel calculations regardless of Pixel Light Count limits."
+  },
+  {
+    "id": 293,
+    "question": "Which 2D feature creates destructible terrain?",
+    "options": [
+      "3D terrain only",
+      "UI Canvas",
+      "Particle System",
+      "Sprite Renderer with texture modification"
+    ],
+    "correctAnswer": 3,
+    "explanation": "2D destructible environments often modify sprite textures or use multiple sprite pieces."
+  },
+  {
+    "id": 294,
+    "question": "What does 'UI' 'Standalone Input Module' control?",
+    "options": [
+      "Touch input only",
+      "Animation input",
+      "Sound input",
+      "Mouse/keyboard input handling for UI"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Standalone Input Module processes mouse and keyboard input for UI interaction."
+  },
+  {
+    "id": 295,
+    "question": "Which animation feature creates procedural camera shakes?",
+    "options": [
+      "Sprite animation",
+      "Motion capture",
+      "Keyframe animation only",
+      "Noise profiles on camera animation"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Noise profiles create procedural camera shakes for impacts, earthquakes, or handheld effects."
+  },
+  {
+    "id": 296,
+    "question": "What is 'Mesh' 'Read/Write Enabled' cost?",
+    "options": [
+      "Reduces memory",
+      "Improves performance",
+      "Enables animation",
+      "Doubles memory but allows runtime modification"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Read/Write Enabled keeps CPU mesh copy for modification but doubles memory usage."
+  },
+  {
+    "id": 297,
+    "question": "Which VFX Graph creates blood/hit impact effects?",
+    "options": [
+      "3D models",
+      "UI effects",
+      "Sprite animation only",
+      "Particle system with decal projection"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Blood effects combine particle splatters with possible decal projection for surface stains."
+  },
+  {
+    "id": 298,
+    "question": "What does 'Quality Settings' 'VSync Count' affect?",
+    "options": [
+      "Animation smoothness",
+      "Texture quality",
+      "Physics accuracy",
+      "Frame pacing and screen tearing"
+    ],
+    "correctAnswer": 3,
+    "explanation": "VSync synchronizes frame rendering with display refresh to eliminate tearing."
+  },
+  {
+    "id": 299,
+    "question": "Which Cinemachine creates side-scroller camera?",
+    "options": [
+      "First-person camera",
+      "3D free camera",
+      "Orbital camera",
+      "CinemachineConfiner with 2D bounds"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Confiner restricts camera to 2D boundaries for side-scroller gameplay."
+  },
+  {
+    "id": 300,
+    "question": "What is 'Package Manager' for asset workflow?",
+    "options": [
+      "Designing shaders",
+      "Creating animations",
+      "Writing scripts",
+      "Managing and updating Unity packages and tools"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Package Manager installs and updates Unity packages like Shader Graph, VFX Graph, 2D tools, etc."
+  }
+]

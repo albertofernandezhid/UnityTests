@@ -28,37 +28,55 @@ class UnityCertSimulator {
         });
     }
     
+    shuffleQuestions(questions) {
+        return questions.map(question => {
+            const optionsWithIndex = question.options.map((text, index) => ({
+                text,
+                originalIndex: index
+            }));
+            
+            for (let i = optionsWithIndex.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [optionsWithIndex[i], optionsWithIndex[j]] = [optionsWithIndex[j], optionsWithIndex[i]];
+            }
+            
+            const shuffledOptions = optionsWithIndex.map(item => item.text);
+            
+            const newCorrectAnswer = optionsWithIndex.findIndex(
+                item => item.originalIndex === question.correctAnswer
+            );
+            
+            return {
+                ...question,
+                options: shuffledOptions,
+                correctAnswer: newCorrectAnswer
+            };
+        });
+    }
+    
     async loadQuestionBanks() {
         try {
-            console.log('Intentando cargar preguntas de Programmer...');
             const programmerResponse = await fetch('questions_programmer.json');
             if (programmerResponse.ok) {
                 const programmerData = await programmerResponse.json();
-                console.log('Datos cargados de Programmer:', programmerData);
-                this.questionBanks.programmer = programmerData;
-                console.log(`Cargadas ${this.questionBanks.programmer.length} preguntas de Programmer`);
+                this.questionBanks.programmer = this.shuffleQuestions(programmerData);
             } else {
                 console.error('Error al cargar questions_programmer.json:', programmerResponse.status);
             }
             
-            console.log('Intentando cargar preguntas de Artist...');
             const artistResponse = await fetch('questions_artist.json');
             if (artistResponse.ok) {
                 const artistData = await artistResponse.json();
-                console.log('Datos cargados de Artist:', artistData);
-                this.questionBanks.artist = artistData;
-                console.log(`Cargadas ${this.questionBanks.artist.length} preguntas de Artist`);
+                this.questionBanks.artist = this.shuffleQuestions(artistData);
             } else {
                 console.error('Error al cargar questions_artist.json:', artistResponse.status);
             }
             
             if (this.questionBanks.programmer.length === 0) {
-                console.warn('No se pudieron cargar las preguntas de Programmer, usando preguntas de ejemplo');
                 this.createFallbackQuestions('programmer');
             }
             
             if (this.questionBanks.artist.length === 0) {
-                console.warn('No se pudieron cargar las preguntas de Artist, usando preguntas de ejemplo');
                 this.createFallbackQuestions('artist');
             }
             
@@ -614,12 +632,14 @@ class UnityCertSimulator {
             return;
         }
         
-        const shuffledQuestions = [...questionBank].sort(() => Math.random() - 0.5);
+        const shuffledQuestions = this.shuffleQuestions([...questionBank]);
         
         for (let i = 0; i < Math.min(this.questionCount, shuffledQuestions.length); i++) {
             this.userAnswers.push(null);
             this.currentTest.push(shuffledQuestions[i]);
         }
+        
+        this.currentTest = this.shuffleQuestions(this.currentTest);
         
         if (this.currentTest.length < this.questionCount) {
             this.questionCount = this.currentTest.length;
