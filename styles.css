@@ -1159,6 +1159,41 @@ footer {
     flex: 1;
 }
 
+.review-mode-badge {
+    background: var(--warning-color);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.user-answer {
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(209, 52, 56, 0.05);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--incorrect-color);
+}
+
+.user-answer i.fa-times-circle {
+    color: var(--incorrect-color);
+}
+
+.user-answer i.fa-circle {
+    color: #808080;
+}
+
+.option.correct .option-letter {
+    background: var(--correct-color);
+}
+
+.option.incorrect .option-letter {
+    background: var(--incorrect-color);
+}
+
 @media (min-width: 768px) {
     body {
         padding: 20px;

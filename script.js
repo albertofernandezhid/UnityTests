@@ -6,6 +6,7 @@ class UnityCertSimulator {
         this.testStartTime = null;
         this.timerInterval = null;
         this.testCompleted = false;
+        this.isReviewMode = false;
         this.currentCert = '';
         this.currentMode = '';
         this.testTimeLimit = 90 * 60;
@@ -276,7 +277,7 @@ class UnityCertSimulator {
     
     setupKeyboardNavigation() {
         document.addEventListener('keydown', (e) => {
-            if (this.testCompleted) return;
+            if (this.testCompleted && !this.isReviewMode) return;
             
             if (this.elements.appContainer.style.display === 'flex') {
                 switch(e.key) {
@@ -294,16 +295,22 @@ class UnityCertSimulator {
                     case '2':
                     case '3':
                     case '4':
-                        const optionIndex = parseInt(e.key) - 1;
-                        this.selectOption(optionIndex);
+                        if (!this.isReviewMode) {
+                            const optionIndex = parseInt(e.key) - 1;
+                            this.selectOption(optionIndex);
+                        }
                         break;
                     case 'Enter':
-                        if (document.activeElement === this.elements.finishBtn) {
+                        if (document.activeElement === this.elements.finishBtn && !this.isReviewMode) {
                             this.finishTest();
                         }
                         break;
                     case 'Escape':
-                        this.abandonTest();
+                        if (this.isReviewMode) {
+                            this.returnFromReview();
+                        } else {
+                            this.abandonTest();
+                        }
                         break;
                 }
             }
@@ -332,6 +339,7 @@ class UnityCertSimulator {
     showMainMenu() {
         this.hideAllScreens();
         this.elements.mainMenu.style.display = 'flex';
+        this.resetTestState();
     }
     
     showCertSelection() {
@@ -580,6 +588,8 @@ class UnityCertSimulator {
     }
     
     startTest() {
+        this.resetTestState();
+        
         if (this.currentMode === 'exam') {
             this.showImmediateFeedback = false;
             this.questionCount = 40;
@@ -618,11 +628,24 @@ class UnityCertSimulator {
         this.updateNavigationButtons();
     }
     
+    resetTestState() {
+        this.currentTest = [];
+        this.userAnswers = [];
+        this.currentQuestionIndex = 0;
+        this.testCompleted = false;
+        this.isReviewMode = false;
+        this.testStartTime = null;
+        clearInterval(this.timerInterval);
+        this.elements.finishBtn.disabled = false;
+        this.elements.finishBtn.textContent = 'Finalizar test';
+    }
+    
     generateTest() {
         this.currentTest = [];
         this.userAnswers = [];
         this.currentQuestionIndex = 0;
         this.testCompleted = false;
+        this.isReviewMode = false;
         this.testStartTime = new Date();
         
         const questionBank = this.questionBanks[this.currentCert];
@@ -667,7 +690,7 @@ class UnityCertSimulator {
                 optionClass += ' selected';
             }
             
-            if (this.showImmediateFeedback && this.userAnswers[index] !== null) {
+            if (this.showImmediateFeedback && this.userAnswers[index] !== null && !this.isReviewMode) {
                 if (i === question.correctAnswer) {
                     optionClass += ' correct';
                 } else if (this.userAnswers[index] === i && i !== question.correctAnswer) {
@@ -675,7 +698,7 @@ class UnityCertSimulator {
                 }
             }
             
-            if (this.testCompleted) {
+            if (this.isReviewMode) {
                 if (i === question.correctAnswer) {
                     optionClass += ' correct';
                 } else if (this.userAnswers[index] === i && i !== question.correctAnswer) {
@@ -694,6 +717,7 @@ class UnityCertSimulator {
         this.elements.questionContainer.innerHTML = `
             <div class="question-number">
                 <i class="fas fa-question"></i> Pregunta ${index + 1} de ${this.questionCount}
+                ${this.isReviewMode ? '<span class="review-mode-badge">Revisión</span>' : ''}
             </div>
             <div class="question-text">${question.question}</div>
             <div class="options-container">${optionsHTML}</div>
@@ -701,7 +725,7 @@ class UnityCertSimulator {
         
         document.querySelectorAll('.option').forEach(option => {
             option.addEventListener('click', (e) => {
-                if (this.testCompleted) return;
+                if (this.testCompleted || this.isReviewMode) return;
                 this.selectOption(parseInt(e.currentTarget.dataset.index));
             });
         });
@@ -710,7 +734,7 @@ class UnityCertSimulator {
     }
     
     selectOption(optionIndex) {
-        if (this.testCompleted) return;
+        if (this.testCompleted || this.isReviewMode) return;
         
         this.userAnswers[this.currentQuestionIndex] = optionIndex;
         
@@ -743,9 +767,17 @@ class UnityCertSimulator {
             this.elements.nextBtn.style.display = 'flex';
         }
         
-        if (this.currentMode === 'exam' && !this.testCompleted) {
-            const answeredCount = this.userAnswers.filter(answer => answer !== null).length;
-            this.elements.finishBtn.disabled = answeredCount < this.questionCount;
+        if (this.isReviewMode) {
+            this.elements.finishBtn.style.display = 'none';
+            this.elements.abandonBtn.textContent = 'Volver a resultados';
+        } else {
+            this.elements.finishBtn.style.display = 'flex';
+            this.elements.abandonBtn.textContent = 'Abandonar test';
+            
+            if (this.currentMode === 'exam') {
+                const answeredCount = this.userAnswers.filter(answer => answer !== null).length;
+                this.elements.finishBtn.disabled = answeredCount < this.questionCount;
+            }
         }
     }
     
@@ -769,7 +801,7 @@ class UnityCertSimulator {
         const answeredQuestions = this.userAnswers.filter(answer => answer !== null).length;
         const progressPercent = Math.round((answeredQuestions / this.questionCount) * 100);
         
-        if (this.currentMode === 'exam' && !this.testCompleted) {
+        if (this.currentMode === 'exam' && !this.testCompleted && !this.isReviewMode) {
             this.elements.progressFill.style.width = `${progressPercent}%`;
             this.elements.progressPercent.textContent = `${progressPercent}%`;
             this.elements.correctCount.textContent = '--';
@@ -845,11 +877,14 @@ class UnityCertSimulator {
     }
     
     finishTest() {
+        if (this.isReviewMode) return;
+        
         if (!confirm('¿Estás seguro de que quieres finalizar el test? Esta acción no se puede deshacer.')) {
             return;
         }
         
         this.testCompleted = true;
+        this.isReviewMode = false;
         clearInterval(this.timerInterval);
         
         const endTime = new Date();
@@ -876,6 +911,8 @@ class UnityCertSimulator {
         
         const scorePercent = Math.round((correctAnswers / this.questionCount) * 100);
         
+        this.saveTestResult(scorePercent, correctAnswers, this.questionCount);
+        
         let message, submessage;
         if (scorePercent >= 80) {
             message = "¡Excelente trabajo!";
@@ -898,19 +935,30 @@ class UnityCertSimulator {
         this.elements.scoreSubmessage.textContent = submessage;
         
         this.displayFailedQuestions(correctAnswers, incorrectAnswers, skippedAnswers);
-        this.saveTestResult(scorePercent, correctAnswers, this.questionCount);
         
         this.elements.appContainer.style.display = 'none';
         this.elements.resultsPanel.style.display = 'block';
     }
     
     abandonTest() {
+        if (this.isReviewMode) {
+            this.returnFromReview();
+            return;
+        }
+        
         if (!confirm('¿Estás seguro de que quieres abandonar el test? No se guardarán las estadísticas.')) {
             return;
         }
         
         clearInterval(this.timerInterval);
+        this.resetTestState();
         this.showMainMenu();
+    }
+    
+    returnFromReview() {
+        this.isReviewMode = false;
+        this.elements.appContainer.style.display = 'none';
+        this.elements.resultsPanel.style.display = 'block';
     }
     
     newTestSame() {
@@ -963,12 +1011,14 @@ class UnityCertSimulator {
     }
     
     reviewTest() {
+        this.isReviewMode = true;
         this.testCompleted = true;
         this.currentQuestionIndex = 0;
         this.elements.appContainer.style.display = 'flex';
         this.elements.resultsPanel.style.display = 'none';
         this.displayQuestion(this.currentQuestionIndex);
         this.elements.finishBtn.disabled = true;
+        this.elements.finishBtn.style.display = 'none';
         this.updateNavigationButtons();
     }
     
