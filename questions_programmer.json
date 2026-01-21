@@ -1,0 +1,2822 @@
+[
+  {
+    "id": 1,
+    "question": "What is the primary purpose of the PBR (Physically Based Rendering) workflow in Unity?",
+    "options": [
+      "To create realistic materials that react consistently to different lighting conditions",
+      "To optimize game performance on mobile devices",
+      "To create 2D sprite animations",
+      "To manage audio spatialization"
+    ],
+    "correctAnswer": 0,
+    "explanation": "PBR uses physical principles to simulate how light interacts with materials, creating realistic and consistent results across various lighting environments."
+  },
+  {
+    "id": 2,
+    "question": "In the Unity Editor, what does the 'Hierarchy' window display?",
+    "options": [
+      "The file structure of the Project's assets",
+      "A list of every GameObject currently in the active Scene",
+      "The properties and components of the selected GameObject",
+      "The visual representation of the game world"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The Hierarchy window shows every GameObject in the current scene, organized by parent-child relationships."
+  },
+  {
+    "id": 3,
+    "question": "Which window allows you to modify the properties of a selected GameObject and its components?",
+    "options": [
+      "Project Window",
+      "Scene View",
+      "Inspector Window",
+      "Console Window"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The Inspector Window displays detailed information and editable settings for the selected GameObject or Asset."
+  },
+  {
+    "id": 4,
+    "question": "What is a 'Prefab' in Unity?",
+    "options": [
+      "A type of script used for physics calculations",
+      "A reusable GameObject asset stored in the Project window",
+      "A tool for baking lightmaps",
+      "A special material for UI elements"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Prefabs act as templates that allow you to create, configure, and store a GameObject with all its components and properties for reuse."
+  },
+  {
+    "id": 5,
+    "question": "Which lifecycle method is called once per frame in a MonoBehaviour script?",
+    "options": [
+      "Awake()",
+      "Start()",
+      "Update()",
+      "FixedUpdate()"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Update() is the most commonly used function to implement game logic that needs to run every frame."
+  },
+  {
+    "id": 6,
+    "question": "How do you correctly declare a variable that can be edited in the Unity Inspector but remains private to the script?",
+    "options": [
+      "public int health;",
+      "[SerializeField] private int health;",
+      "private int health;",
+      "[ShowInInspector] private int health;"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The [SerializeField] attribute forces Unity to serialize a private field, making it accessible in the Inspector."
+  },
+  {
+    "id": 7,
+    "question": "Which data type is most appropriate for a variable that only stores 'true' or 'false' values?",
+    "options": [
+      "int",
+      "float",
+      "string",
+      "bool"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Boolean (bool) variables are used for logical operations and can only hold true or false."
+  },
+  {
+    "id": 8,
+    "question": "Which component is required for a GameObject to be affected by gravity and physical forces?",
+    "options": [
+      "Box Collider",
+      "Mesh Renderer",
+      "Rigidbody",
+      "Transform"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The Rigidbody component puts the GameObject under the control of Unity's physics engine."
+  },
+  {
+    "id": 9,
+    "question": "What is the main difference between Update() and FixedUpdate()?",
+    "options": [
+      "Update is for physics; FixedUpdate is for input",
+      "Update runs every frame; FixedUpdate runs at a consistent time interval",
+      "Update is faster than FixedUpdate",
+      "FixedUpdate is only for 2D games"
+    ],
+    "correctAnswer": 1,
+    "explanation": "FixedUpdate is independent of frame rate and is used for reliable physics calculations."
+  },
+  {
+    "id": 10,
+    "question": "If you want two objects to collide but pass through each other while still triggering an event, which setting should you enable?",
+    "options": [
+      "Is Kinematic",
+      "Is Trigger",
+      "Use Gravity",
+      "Freeze Rotation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "When 'Is Trigger' is enabled, the collider no longer physically obstructs other objects but still calls OnTriggerEnter."
+  },
+  {
+    "id": 11,
+    "question": "Which method is called when a GameObject stops touching another object with a non-trigger collider?",
+    "options": [
+      "OnCollisionEnter",
+      "OnCollisionExit",
+      "OnTriggerExit",
+      "OnCollisionStay"
+    ],
+    "correctAnswer": 1,
+    "explanation": "OnCollisionExit is called when the contact between two colliders is broken."
+  },
+  {
+    "id": 12,
+    "question": "What happens when you check the 'Is Kinematic' property on a Rigidbody?",
+    "options": [
+      "The object falls faster",
+      "The object is no longer affected by forces or gravity, only by its Transform",
+      "The object becomes invisible",
+      "The object can only move in the X-axis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Kinematic rigidbodies are not moved by the physics engine, only by their Transform properties or scripts."
+  },
+  {
+    "id": 13,
+    "question": "Which function is used to apply a sudden burst of force to a Rigidbody?",
+    "options": [
+      "Rigidbody.AddForce(force, ForceMode.Impulse);",
+      "Rigidbody.MovePosition();",
+      "Rigidbody.velocity = force;",
+      "Rigidbody.AddTorque();"
+    ],
+    "correctAnswer": 0,
+    "explanation": "ForceMode.Impulse is used for instant forces like jumps or explosions."
+  },
+  {
+    "id": 14,
+    "question": "To detect a mouse click on a 3D object using a script, which method can be used?",
+    "options": [
+      "OnMouseOver()",
+      "OnMouseDown()",
+      "Update() with Input.GetMouseButtonDown()",
+      "Both OnMouseDown() and Raycasting"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Unity provides OnMouseDown for simplicity, but Raycasting is the standard way to detect clicks in 3D space."
+  },
+  {
+    "id": 15,
+    "question": "What is the purpose of the 'Time.deltaTime' variable?",
+    "options": [
+      "To count how many frames have passed",
+      "To make movement frame-rate independent",
+      "To speed up the game",
+      "To get the current system time"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Time.deltaTime is the time in seconds it took to complete the last frame, ensuring consistent movement speed regardless of FPS."
+  },
+  {
+    "id": 16,
+    "question": "Which class is used to create a laser-like detection line in physics?",
+    "options": [
+      "Physics.Raycast",
+      "Physics.LineTrace",
+      "Vector3.Forward",
+      "Debug.DrawLine"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Raycasting casts a 'ray' into the scene and returns information about what it hits."
+  },
+  {
+    "id": 17,
+    "question": "In a 2D game, which component should you use for physics-based collisions?",
+    "options": [
+      "Mesh Collider",
+      "Rigidbody",
+      "Rigidbody2D",
+      "Box Collider"
+    ],
+    "correctAnswer": 2,
+    "explanation": "2D games must use the specific 2D physics engine components like Rigidbody2D."
+  },
+  {
+    "id": 18,
+    "question": "¿Cuál es el componente raíz necesario para que cualquier elemento de UI (como botones o imágenes) sea visible en la escena?",
+    "options": [
+      "Event System",
+      "Canvas",
+      "Rect Transform",
+      "Panel"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Canvas es el componente que actúa como el área de visualización para todos los elementos de la interfaz de usuario."
+  },
+  {
+    "id": 19,
+    "question": "En el sistema de UI, ¿qué componente sustituye al 'Transform' estándar para permitir el anclaje y posicionamiento flexible?",
+    "options": [
+      "Box Transform",
+      "UI Transform",
+      "Rect Transform",
+      "Anchor Transform"
+    ],
+    "correctAnswer": 2,
+    "explanation": "El Rect Transform se utiliza para elementos de UI y permite definir anclajes (anchors) y pivotes para adaptarse a diferentes resoluciones."
+  },
+  {
+    "id": 20,
+    "question": "¿Qué objeto es indispensable en la jerarquía para que el usuario pueda interactuar con botones o sliders mediante clics o toques?",
+    "options": [
+      "Event System",
+      "Main Camera",
+      "Graphic Raycaster",
+      "Input Manager"
+    ],
+    "correctAnswer": 0,
+    "explanation": "El Event System gestiona todos los eventos de entrada (mouse, teclado, táctil) y los envía a los elementos de la UI."
+  },
+  {
+    "id": 21,
+    "question": "Al configurar un Canvas para que la UI se vea siempre pegada a la pantalla independientemente del movimiento de la cámara, ¿qué 'Render Mode' se debe usar?",
+    "options": [
+      "World Space",
+      "Screen Space - Camera",
+      "Screen Space - Overlay",
+      "Screen Space - Global"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Screen Space - Overlay coloca los elementos de la UI en la capa superior de la pantalla, sin importar la posición de la cámara."
+  },
+  {
+    "id": 22,
+    "question": "¿Cuál es la herramienta recomendada actualmente en Unity para mostrar texto de alta calidad y con estilos avanzados?",
+    "options": [
+      "UI Text (Legacy)",
+      "TextMeshPro",
+      "Dynamic Text",
+      "Font Renderer"
+    ],
+    "correctAnswer": 1,
+    "explanation": "TextMeshPro es el estándar actual de Unity porque ofrece mayor rendimiento y calidad visual mediante el uso de SDF (Signed Distance Fields)."
+  },
+  {
+    "id": 23,
+    "question": "En el Animator Controller, ¿qué nombre recibe la conexión que permite pasar de un estado de animación a otro?",
+    "options": [
+      "Link",
+      "State Connector",
+      "Transition",
+      "Animation Path"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Las transiciones (Transitions) definen cuándo y cómo se cambia entre dos estados de animación."
+  },
+  {
+    "id": 24,
+    "question": "¿Qué tipo de parámetro en el Animator es ideal para una acción instantánea como 'Saltar'?",
+    "options": [
+      "Float",
+      "Int",
+      "Bool",
+      "Trigger"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Un Trigger es un parámetro que se activa y se consume inmediatamente después de disparar una transición, ideal para acciones únicas."
+  },
+  {
+    "id": 25,
+    "question": "¿Cómo se llama la ventana donde se crean y organizan los estados de animación y sus parámetros?",
+    "options": [
+      "Animation Window",
+      "Animator Window",
+      "Timeline",
+      "Inspector"
+    ],
+    "correctAnswer": 1,
+    "explanation": "La ventana Animator permite visualizar la máquina de estados que controla las animaciones de un GameObject."
+  },
+  {
+    "id": 26,
+    "question": "¿Cuál es la función del componente 'Animator' en un GameObject?",
+    "options": [
+      "Grabar nuevas animaciones",
+      "Asignar un Animator Controller para reproducir animaciones en el objeto",
+      "Exportar animaciones a otros formatos",
+      "Controlar la velocidad de los fotogramas del juego"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El componente Animator vincula el GameObject con un Animator Controller que contiene la lógica de las animaciones."
+  },
+  {
+    "id": 27,
+    "question": "En la ventana 'Animation' (no Animator), ¿qué es un 'Keyframe'?",
+    "options": [
+      "Un botón para pausar la animación",
+      "Un punto en la línea de tiempo que marca un valor específico de una propiedad",
+      "La velocidad total de la animación",
+      "Un archivo de audio sincronizado"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los keyframes definen los valores de las propiedades (posición, rotación, etc.) en momentos específicos del tiempo."
+  },
+  {
+    "id": 28,
+    "question": "Para mezclar suavemente una animación de 'Caminar' a 'Correr' basada en la velocidad del jugador, ¿qué herramienta del Animator se utiliza?",
+    "options": [
+      "Animation Mixer",
+      "Blend Tree",
+      "State Machine Behaviour",
+      "Sub-State Machine"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los Blend Trees se utilizan para mezclar múltiples animaciones de forma fluida basándose en parámetros numéricos."
+  },
+  {
+    "id": 29,
+    "question": "¿Qué propiedad del Rect Transform determina el punto alrededor del cual el elemento escala y rota?",
+    "options": [
+      "Anchors",
+      "Pivot",
+      "Position",
+      "Offset"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Pivote (Pivot) es el punto central del objeto para transformaciones como rotación y escalado."
+  },
+  {
+    "id": 30,
+    "question": "¿Cuál es la ventaja principal de usar un 'Sprite Atlas' en Unity?",
+    "options": [
+      "Mejorar la resolución de las imágenes",
+      "Reducir las llamadas de dibujo (Draw Calls) agrupando múltiples texturas",
+      "Crear animaciones 3D automáticamente",
+      "Aumentar el tamaño de los archivos para mejor calidad"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los Sprite Atlas optimizan el rendimiento al combinar varios sprites en una sola textura, reduciendo el trabajo de la GPU."
+  },
+  {
+    "id": 31,
+    "question": "¿Qué método de la API de Unity se utiliza para crear una nueva instancia de un Prefab en tiempo de ejecución?",
+    "options": [
+      "CreateObject()",
+      "NewInstance()",
+      "Instantiate()",
+      "Spawn()"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Instantiate() crea una copia de un objeto o Prefab durante la ejecución del juego."
+  },
+  {
+    "id": 32,
+    "question": "Para eliminar un GameObject de la escena de forma definitiva, ¿qué método debemos llamar?",
+    "options": [
+      "Remove()",
+      "Destroy()",
+      "Delete()",
+      "Clear()"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Destroy() marca el objeto para ser eliminado y libera su memoria al final del frame actual."
+  },
+  {
+    "id": 33,
+    "question": "¿Cuál es la forma más eficiente de identificar un grupo de objetos (como 'Enemigos') en un script para interactuar con ellos?",
+    "options": [
+      "Por su nombre (GameObject.Find)",
+      "Por su Tag (CompareTag)",
+      "Por su posición en la jerarquía",
+      "Por el color de su material"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los Tags permiten categorizar objetos. Usar CompareTag() es más eficiente y rápido que buscar por nombre de texto."
+  },
+  {
+    "id": 34,
+    "question": "¿Qué componente es necesario para que el jugador pueda escuchar los sonidos en el mundo del juego?",
+    "options": [
+      "Audio Source",
+      "Audio Clip",
+      "Audio Listener",
+      "Audio Mixer"
+    ],
+    "correctAnswer": 2,
+    "explanation": "El Audio Listener actúa como los 'oídos' del juego. Generalmente se coloca en la Cámara Principal y solo debe haber uno activo por escena."
+  },
+  {
+    "id": 35,
+    "question": "¿Qué componente se debe añadir a un objeto para que este emita un sonido específico?",
+    "options": [
+      "Audio Listener",
+      "Audio Source",
+      "Sound Box",
+      "Speaker"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Audio Source reproduce un Audio Clip en el espacio 2D o 3D de la escena."
+  },
+  {
+    "id": 36,
+    "question": "Si quieres que un sonido de fondo (música) se repita infinitamente, ¿qué propiedad del Audio Source debes marcar?",
+    "options": [
+      "Play On Awake",
+      "Mute",
+      "Loop",
+      "Priority"
+    ],
+    "correctAnswer": 2,
+    "explanation": "La propiedad Loop reinicia el sonido automáticamente cada vez que termina."
+  },
+  {
+    "id": 37,
+    "question": "En el sistema de partículas, ¿qué módulo controla la duración de vida de cada partícula individual?",
+    "options": [
+      "Emission",
+      "Shape",
+      "Main module (Start Lifetime)",
+      "Renderer"
+    ],
+    "correctAnswer": 2,
+    "explanation": "El parámetro Start Lifetime en el módulo principal determina cuántos segundos existe una partícula antes de desaparecer."
+  },
+  {
+    "id": 38,
+    "question": "¿Cuál es la función del componente 'Skybox' en Unity?",
+    "options": [
+      "Generar colisiones en los límites del mapa",
+      "Renderizar el fondo de la escena (cielo, horizonte) alrededor de todo el mundo",
+      "Crear efectos de nubes volumétricas",
+      "Optimizar las texturas del suelo"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Skybox es un material de 6 caras o panorámico que envuelve la escena para dar apariencia de cielo o entorno lejano."
+  },
+  {
+    "id": 39,
+    "question": "Para encontrar una referencia a un componente específico (como un Rigidbody) dentro del mismo GameObject, ¿qué método usamos?",
+    "options": [
+      "GetComponent<T>()",
+      "FindComponent<T>()",
+      "SearchComponent()",
+      "AddUnit<T>()"
+    ],
+    "correctAnswer": 0,
+    "explanation": "GetComponent es la función estándar para acceder a otros componentes del mismo objeto desde un script."
+  },
+  {
+    "id": 40,
+    "question": "¿Qué sucede si intentas acceder a una variable de un objeto que ha sido destruido o no ha sido asignado?",
+    "options": [
+      "El juego se cierra automáticamente",
+      "Se produce un error de tipo 'NullReferenceException'",
+      "Unity crea el objeto automáticamente",
+      "La variable devuelve 0 por defecto"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Un NullReferenceException ocurre cuando el código intenta usar una referencia que no apunta a ningún objeto en memoria."
+  },
+  {
+    "id": 41,
+    "question": "¿Qué propiedad permite que un objeto sea 'hijo' de otro en la jerarquía?",
+    "options": [
+      "transform.parent",
+      "gameObject.link",
+      "transform.hierarchy",
+      "gameObject.master"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Al asignar un transform al campo 'parent', el objeto se moverá, rotará y escalará junto con su padre."
+  },
+  {
+    "id": 42,
+    "question": "¿Para qué sirve la ventana 'Console' en el editor de Unity?",
+    "options": [
+      "Para escribir el código C#",
+      "Para ver errores, advertencias y mensajes de depuración (Debug.Log)",
+      "Para configurar los controles del mando",
+      "Para publicar el juego en consolas como PlayStation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "La consola es fundamental para el programador, ya que muestra el feedback del sistema y los mensajes personalizados mediante Debug.Log."
+  },
+  {
+    "id": 43,
+    "question": "En el sistema de partículas, ¿qué propiedad controla cuántas partículas se crean por segundo?",
+    "options": [
+      "Burst",
+      "Rate over Time",
+      "Lifetime",
+      "Simulation Speed"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Rate over Time define el flujo constante de emisión de partículas."
+  },
+  {
+    "id": 44,
+    "question": "¿Qué método se llama automáticamente cuando un script se activa por primera vez, incluso antes de Start()?",
+    "options": [
+      "OnEnable()",
+      "Awake()",
+      "Update()",
+      "FixedUpdate()"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Awake() se usa para inicializar variables o estados antes de que el juego comience. Se llama siempre antes que Start()."
+  },
+  {
+    "id": 45,
+    "question": "Si quieres mover un objeto gradualmente de un punto A a un punto B de forma lineal, ¿qué función de Vector3 es la más adecuada?",
+    "options": [
+      "Vector3.MoveTowards",
+      "Vector3.Lerp",
+      "Vector3.Jump",
+      "Ambas A y B son correctas"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Tanto MoveTowards como Lerp (Linear Interpolation) sirven para transiciones suaves entre posiciones."
+  },
+  {
+    "id": 46,
+    "question": "¿Qué componente debe tener un GameObject para poder navegar de forma inteligente por un escenario usando el sistema de IA de Unity?",
+    "options": [
+      "NavMesh Obstacle",
+      "NavMesh Agent",
+      "AI Controller",
+      "Rigidbody"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El componente NavMesh Agent permite al objeto calcular rutas y evitar obstáculos sobre una superficie pre-calculada."
+  },
+  {
+    "id": 47,
+    "question": "¿Cómo se llama el proceso de pre-calcular las áreas transitables de una escena para la IA?",
+    "options": [
+      "Cooking",
+      "Baking",
+      "Mapping",
+      "Rendering"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El 'Baking' es el proceso donde Unity analiza la geometría de la escena para generar la malla de navegación (NavMesh)."
+  },
+  {
+    "id": 48,
+    "question": "Para que un objeto sea tomado en cuenta durante el proceso de 'Baking' del NavMesh, ¿qué propiedad debe estar marcada?",
+    "options": [
+      "Is Trigger",
+      "Navigation Static",
+      "Is Kinematic",
+      "Controllable"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Solo los objetos marcados como 'Static' (específicamente Navigation Static) son procesados para generar la malla de navegación."
+  },
+  {
+    "id": 49,
+    "question": "¿Qué ventana permite añadir o quitar escenas del ejecutable final del juego?",
+    "options": [
+      "Project Settings",
+      "Build Settings",
+      "Scene Manager",
+      "Inspector"
+    ],
+    "correctAnswer": 1,
+    "explanation": "En 'Build Settings' se arrastran las escenas que formarán parte del juego y se define su orden de carga (índice)."
+  },
+  {
+    "id": 50,
+    "question": "En el Input Manager clásico, ¿qué devuelve el método 'Input.GetAxis(\"Horizontal\")'?",
+    "options": [
+      "Un valor booleano (true/false)",
+      "Un valor float entre -1.0 y 1.0",
+      "Un número entero (int)",
+      "La posición exacta del ratón"
+    ],
+    "correctAnswer": 1,
+    "explanation": "GetAxis devuelve un valor suavizado entre -1 y 1, ideal para movimiento gradual con teclado o joysticks."
+  },
+  {
+    "id": 51,
+    "question": "¿Cuál es la diferencia entre GetKeyDown y GetKey?",
+    "options": [
+      "No hay diferencia",
+      "GetKeyDown se activa solo una vez al presionar; GetKey se mantiene activo mientras se pulsa",
+      "GetKeyDown es para mandos y GetKey para teclados",
+      "GetKey es más rápido que GetKeyDown"
+    ],
+    "correctAnswer": 1,
+    "explanation": "GetKeyDown detecta el evento inicial de pulsación, mientras que GetKey detecta el estado sostenido de la tecla."
+  },
+  {
+    "id": 52,
+    "question": "Si quieres que un objeto móvil bloquee el paso de otros agentes del NavMesh, ¿qué componente deberías usar?",
+    "options": [
+      "NavMesh Agent",
+      "NavMesh Obstacle",
+      "Box Collider",
+      "Mesh Renderer"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El NavMesh Obstacle permite que objetos que se mueven (como una puerta o un barril) afecten la navegación de la IA en tiempo real."
+  },
+  {
+    "id": 53,
+    "question": "¿Qué clase de C# permite cargar una nueva escena por código?",
+    "options": [
+      "SceneLoader",
+      "SceneManager",
+      "Application",
+      "GameController"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Se debe usar 'SceneManager.LoadScene()' del espacio de nombres UnityEngine.SceneManagement."
+  },
+  {
+    "id": 54,
+    "question": "Para guardar datos simples de forma persistente (como la puntuación máxima) entre sesiones de juego, ¿qué clase proporciona Unity?",
+    "options": [
+      "JSONUtility",
+      "PlayerPrefs",
+      "DataSave",
+      "MemoryStream"
+    ],
+    "correctAnswer": 1,
+    "explanation": "PlayerPrefs permite guardar y leer valores enteros, flotantes y cadenas de texto en el almacenamiento local de forma sencilla."
+  },
+  {
+    "id": 55,
+    "question": "¿Cuál es el propósito del componente 'Camera' en Unity?",
+    "options": [
+      "Capturar y mostrar el mundo del juego al jugador",
+      "Almacenar las texturas del juego",
+      "Controlar la iluminación global",
+      "Manejar la entrada del teclado"
+    ],
+    "correctAnswer": 0,
+    "explanation": "La cámara define qué parte del mundo es visible en la pantalla del usuario."
+  },
+  {
+    "id": 56,
+    "question": "En un script, ¿qué significa el término 'Namespace' (espacio de nombres)?",
+    "options": [
+      "El nombre del archivo",
+      "Una colección de clases relacionadas (como UnityEngine)",
+      "Un tipo de variable",
+      "Un error de compilación"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los namespaces organizan el código y evitan conflictos de nombres entre librerías."
+  },
+  {
+    "id": 57,
+    "question": "¿Qué herramienta permite depurar el código pausando la ejecución en una línea específica?",
+    "options": [
+      "Console",
+      "Breakpoint",
+      "Profiler",
+      "Step Forward"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Un 'Breakpoint' (punto de interrupción) en el editor de código permite detener el juego para inspeccionar el estado de las variables."
+  },
+  {
+    "id": 58,
+    "question": "¿Qué hace el componente 'Light' configurado como 'Directional'?",
+    "options": [
+      "Simula una linterna",
+      "Simula una bombilla",
+      "Simula la luz del sol (luz infinita y paralela)",
+      "Solo ilumina un objeto específico"
+    ],
+    "correctAnswer": 2,
+    "explanation": "La luz direccional actúa como el sol, afectando a todos los objetos de la escena por igual desde una dirección específica."
+  },
+  {
+    "id": 59,
+    "question": "¿Cuál es la extensión de archivo para los scripts de C# en Unity?",
+    "options": [
+      ".cpp",
+      ".unity",
+      ".cs",
+      ".script"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Los scripts de C# siempre llevan la extensión .cs."
+  },
+  {
+    "id": 60,
+    "question": "¿Qué propiedad del componente Camera define el área de visión (ángulo) de la misma?",
+    "options": [
+      "Clipping Planes",
+      "Field of View (FOV)",
+      "Culling Mask",
+      "Viewport Rect"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Field of View determina qué tan ancho es el ángulo de visión de la cámara."
+  },
+  {
+    "id": 61,
+    "question": "Si quieres que un script sea accesible desde otros scripts sin necesidad de una referencia directa, ¿qué patrón de diseño se usa comúnmente en Unity?",
+    "options": [
+      "Observer",
+      "Singleton",
+      "Factory",
+      "Decorator"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El patrón Singleton asegura que solo exista una instancia de un objeto y proporciona un punto de acceso global a ella (ej: GameManager.instance)."
+  },
+  {
+    "id": 62,
+    "question": "¿Qué representa un 'Vector3' en Unity?",
+    "options": [
+      "Una lista de tres colores",
+      "Un punto o dirección en un espacio 3D (X, Y, Z)",
+      "Un comando para mover la cámara",
+      "Un tipo de rotación en grados"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los Vector3 se usan para representar posiciones, direcciones y escalas en el espacio tridimensional."
+  },
+  {
+    "id": 63,
+    "question": "Para rotar un objeto en Unity a través de código, ¿qué tipo de dato se utiliza internamente para evitar el 'Gimbal Lock'?",
+    "options": [
+      "Vector3",
+      "Euler Angles",
+      "Quaternion",
+      "Matrix4x4"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Unity utiliza Quaternions para representar rotaciones internas porque son matemáticamente más estables que los ángulos de Euler."
+  },
+  {
+    "id": 64,
+    "question": "¿Cuál es la función del 'Post-Processing Stack' en Unity?",
+    "options": [
+      "Optimizar el código C#",
+      "Aplicar filtros visuales y efectos a la imagen final de la cámara (Bloom, Vignette, etc.)",
+      "Mejorar la velocidad de descarga del juego",
+      "Gestionar las animaciones de los personajes"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El post-procesamiento aplica efectos visuales a la pantalla después de que la escena ha sido renderizada."
+  },
+  {
+    "id": 65,
+    "question": "¿Qué herramienta de Unity se usa para analizar el rendimiento del juego e identificar qué proceso consume más recursos?",
+    "options": [
+      "Console",
+      "Profiler",
+      "Debugger",
+      "Project Settings"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Profiler permite ver en tiempo real el consumo de CPU, GPU, memoria y otros recursos del sistema."
+  },
+  {
+    "id": 66,
+    "question": "En un Material, ¿qué mapa de textura se utiliza para simular relieve y detalles en la superficie sin añadir polígonos?",
+    "options": [
+      "Albedo Map",
+      "Normal Map",
+      "Metallic Map",
+      "Emission Map"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los Normal Maps modifican cómo la luz rebota en la superficie para crear la ilusión de detalle y profundidad."
+  },
+  {
+    "id": 67,
+    "question": "Si necesitas ejecutar una función después de que pasen exactamente 2 segundos sin detener el resto del juego, ¿qué deberías usar?",
+    "options": [
+      "Un bucle 'while' infinito",
+      "Una Corrutina (Coroutine) con 'yield return new WaitForSeconds(2);'",
+      "El método Update() con un contador manual",
+      "Application.Quit()"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Las corrutinas permiten pausar la ejecución de una función y retomar en frames futuros sin bloquear el hilo principal."
+  },
+  {
+    "id": 68,
+    "question": "¿Qué hace el componente 'LOD Group' (Level of Detail)?",
+    "options": [
+      "Aumenta la resolución de las texturas automáticamente",
+      "Reduce la complejidad de la malla (polígonos) a medida que el objeto se aleja de la cámara",
+      "Mejora la calidad del audio en distancias largas",
+      "Gestiona las luces de la escena"
+    ],
+    "correctAnswer": 1,
+    "explanation": "LOD Group mejora el rendimiento renderizando versiones más simples de un modelo cuando este está lejos."
+  },
+  {
+    "id": 69,
+    "question": "¿Cuál es el propósito de la función 'Mathf.Clamp()'?",
+    "options": [
+      "Multiplicar dos valores",
+      "Restringir un valor entre un mínimo y un máximo",
+      "Redondear un número al entero más cercano",
+      "Calcular la raíz cuadrada de un número"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Clamp es vital para limitar valores, como evitar que la salud baje de 0 o que la cámara rote más de lo debido."
+  },
+  {
+    "id": 70,
+    "question": "Al importar un modelo 3D, ¿qué pestaña del Inspector permite configurar los 'Avatars' para animación humana?",
+    "options": [
+      "Model",
+      "Rig",
+      "Animation",
+      "Materials"
+    ],
+    "correctAnswer": 1,
+    "explanation": "En la pestaña Rig se define el tipo de esqueleto (Humanoide, Genérico) y se crea el Avatar."
+  },
+  {
+    "id": 71,
+    "question": "¿Qué componente se encarga de que los objetos se vean afectados por la iluminación global 'horneada' (Baked Lighting)?",
+    "options": [
+      "Mesh Filter",
+      "Lightmap Static",
+      "Mesh Renderer",
+      "Reflection Probe"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los objetos deben estar marcados como 'Static' para que Unity pueda calcular sus sombras y luces en un Lightmap."
+  },
+  {
+    "id": 72,
+    "question": "En C#, ¿qué palabra clave se usa para heredar de otra clase?",
+    "options": [
+      "extends",
+      "implements",
+      ": (dos puntos)",
+      "inherits"
+    ],
+    "correctAnswer": 2,
+    "explanation": "En C#, la herencia se denota con dos puntos, por ejemplo: `public class Player : MonoBehaviour`."
+  },
+  {
+    "id": 73,
+    "question": "¿Cuál es la diferencia entre un 'Global Space' y un 'Local Space'?",
+    "options": [
+      "No hay diferencia",
+      "Global es relativo al mundo; Local es relativo al propio objeto y su rotación/padre",
+      "Global es solo para 3D y Local para 2D",
+      "Local solo funciona dentro de scripts"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El espacio local tiene en cuenta la rotación y posición del padre del objeto, mientras que el global es el origen absoluto del mundo."
+  },
+  {
+    "id": 74,
+    "question": "¿Cómo se accede a la posición actual de un objeto en un script?",
+    "options": [
+      "gameObject.Position",
+      "this.Position",
+      "transform.position",
+      "Vector3.current"
+    ],
+    "correctAnswer": 2,
+    "explanation": "La propiedad 'position' del componente 'transform' contiene las coordenadas X, Y, Z del objeto."
+  },
+  {
+    "id": 75,
+    "question": "¿Qué hace el comando 'Debug.Log()'?",
+    "options": [
+      "Detiene el juego",
+      "Muestra un mensaje en la ventana de la Consola para fines de depuración",
+      "Guarda el progreso del jugador",
+      "Dibuja una línea en la pantalla de juego"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Debug.Log se usa para imprimir información y verificar que el código está funcionando correctamente."
+  },
+  {
+    "id": 76,
+    "question": "Al realizar un Raycast, ¿qué estructura de datos se utiliza para almacenar la información del objeto golpeado (como el nombre o el punto de impacto)?",
+    "options": [
+      "RaycastHit",
+      "HitInfo",
+      "CollisionData",
+      "RayTarget"
+    ],
+    "correctAnswer": 0,
+    "explanation": "La estructura 'RaycastHit' almacena detalles como el punto de impacto, la normal de la superficie y la distancia del choque."
+  },
+  {
+    "id": 77,
+    "question": "¿Cuál es la principal diferencia entre un Array (Arreglo) y una List (Lista) en C#?",
+    "options": [
+      "Los Arrays son más rápidos pero su tamaño es fijo; las Listas pueden cambiar de tamaño dinámicamente",
+      "Las Listas solo pueden almacenar números",
+      "Los Arrays son para objetos 3D y las Listas para texto",
+      "No hay diferencia, son sinónimos"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Un Array tiene una longitud fija definida al inicio, mientras que una List<T> permite añadir o eliminar elementos en tiempo de ejecución."
+  },
+  {
+    "id": 78,
+    "question": "En el sistema de Prefabs, ¿qué es una 'Prefab Variant'?",
+    "options": [
+      "Una copia exacta que no se puede modificar",
+      "Un nuevo Prefab que hereda la configuración de un 'Base Prefab' pero permite sobreescribir propiedades específicas",
+      "Una versión del Prefab para dispositivos móviles",
+      "Un script que cambia el color del objeto"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Las variantes permiten crear versiones de un objeto (ej: un enemigo base y un jefe) manteniendo un vínculo con el original para actualizaciones globales."
+  },
+  {
+    "id": 79,
+    "question": "¿Qué método se utiliza para detectar que un objeto ha entrado en un área definida como 'Trigger'?",
+    "options": [
+      "OnCollisionEnter",
+      "OnTriggerEnter",
+      "OnAreaEnter",
+      "OnOverlapBegin"
+    ],
+    "correctAnswer": 1,
+    "explanation": "OnTriggerEnter es el evento que se dispara cuando un Rigidbody entra en el volumen de un Collider marcado como 'Is Trigger'."
+  },
+  {
+    "id": 80,
+    "question": "Para optimizar un juego, ¿qué técnica se usa para evitar que la CPU calcule objetos que están completamente ocultos detrás de otros?",
+    "options": [
+      "Frustum Culling",
+      "Occlusion Culling",
+      "Backface Culling",
+      "LOD System"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Occlusion Culling desactiva el renderizado de objetos que no son visibles porque hay otros objetos (como paredes) tapándolos."
+  },
+  {
+    "id": 81,
+    "question": "En C#, ¿cómo se accede al primer elemento de una lista llamada 'enemigos'?",
+    "options": [
+      "enemigos[1]",
+      "enemigos.First()",
+      "enemigos[0]",
+      "enemigos.Get(0)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "En C#, al igual que en la mayoría de lenguajes, los índices de las colecciones comienzan en 0."
+  },
+  {
+    "id": 82,
+    "question": "¿Qué parámetro del Raycast permite que el rayo solo detecte objetos en una capa específica (como 'Suelo' o 'Agua')?",
+    "options": [
+      "LayerMask",
+      "TargetFilter",
+      "CollisionLayer",
+      "RayFilter"
+    ],
+    "correctAnswer": 0,
+    "explanation": "El LayerMask se utiliza para filtrar qué capas debe ignorar o detectar un Raycast, optimizando el rendimiento y la lógica."
+  },
+  {
+    "id": 83,
+    "question": "¿Cuál es el propósito del componente 'Canvas Scaler'?",
+    "options": [
+      "Cambiar el tamaño de los modelos 3D",
+      "Ajustar automáticamente el tamaño de la UI según la resolución de la pantalla",
+      "Mejorar la resolución de las imágenes",
+      "Controlar la velocidad de desplazamiento de los menús"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Canvas Scaler asegura que los botones y textos se vean de tamaño similar tanto en un monitor 4K como en un móvil pequeño."
+  },
+  {
+    "id": 84,
+    "question": "Si quieres rotar un objeto continuamente 90 grados por segundo en el eje Y, ¿qué código sería el correcto?",
+    "options": [
+      "transform.Rotate(0, 90, 0);",
+      "transform.Rotate(0, 90 * Time.deltaTime, 0);",
+      "transform.position += new Vector3(0, 90, 0);",
+      "transform.rotation = 90;"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Multiplicar por Time.deltaTime hace que la rotación sea constante por segundo, no por frame."
+  },
+  {
+    "id": 85,
+    "question": "¿Qué significa que una variable sea 'Static' en C#?",
+    "options": [
+      "Que no se puede cambiar su valor",
+      "Que la variable pertenece a la clase en sí, no a una instancia específica (objeto)",
+      "Que la variable solo funciona en el editor",
+      "Que la variable se guarda automáticamente en el disco"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Las variables estáticas son compartidas por todas las instancias de una clase. Muy útil para puntajes globales o Singletons."
+  },
+  {
+    "id": 86,
+    "question": "En el Animator, ¿qué hace la opción 'Has Exit Time' en una transición?",
+    "options": [
+      "Permite salir del juego al terminar la animación",
+      "La animación debe terminar o llegar a un punto específico antes de cambiar al siguiente estado",
+      "Hace que la animación se repita infinitamente",
+      "Detiene el tiempo cuando la animación termina"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Si 'Has Exit Time' está marcado, la transición no ocurrirá inmediatamente aunque se cumplan las condiciones; esperará a que el tiempo de salida se cumpla."
+  },
+  {
+    "id": 87,
+    "question": "¿Cuál de estas opciones es un ejemplo correcto de un bucle 'for' en C#?",
+    "options": [
+      "for (int i = 0; i < 10; i++) { }",
+      "for (i to 10) { }",
+      "repeat (10) { }",
+      "loop (int i = 0; 10) { }"
+    ],
+    "correctAnswer": 0,
+    "explanation": "La sintaxis estándar del bucle for incluye inicialización, condición de continuación e incremento."
+  },
+  {
+    "id": 88,
+    "question": "¿Qué ventana de Unity te permite ver la jerarquía de llamadas y el tiempo de ejecución de cada función para optimizar el código?",
+    "options": [
+      "Frame Debugger",
+      "Profiler (CPU Usage)",
+      "Memory Profiler",
+      "Console Explorer"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Profiler, específicamente la sección CPU Usage, muestra exactamente cuánto tiempo toma cada script y función."
+  },
+  {
+    "id": 89,
+    "question": "¿Qué sucede si aplicas un 'Unpack Prefab' en la jerarquía?",
+    "options": [
+      "El objeto se borra",
+      "El objeto se convierte en un GameObject normal y pierde su vínculo con el archivo Prefab original",
+      "El objeto se guarda como una nueva versión",
+      "Se abren todas las carpetas del proyecto"
+    ],
+    "correctAnswer": 1,
+    "explanation": "'Unpack' rompe la conexión con el activo del proyecto, lo que significa que los cambios en el Prefab original ya no afectarán a este objeto."
+  },
+  {
+    "id": 90,
+    "question": "¿Para qué sirve el componente 'Mesh Filter'?",
+    "options": [
+      "Para cambiar el color de un objeto",
+      "Para contener los datos de la geometría (vértices y caras) de un modelo 3D",
+      "Para filtrar las colisiones de malla",
+      "Para optimizar el rendimiento de las sombras"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Mesh Filter toma una malla de tus activos y la pasa al Mesh Renderer para que se dibuje en pantalla."
+  },
+  {
+    "id": 91,
+    "question": "En C#, ¿qué modificador de acceso permite que una variable sea vista por clases que heredan de ella, pero no por otras clases externas?",
+    "options": [
+      "public",
+      "private",
+      "protected",
+      "internal"
+    ],
+    "correctAnswer": 2,
+    "explanation": "El modificador 'protected' limita el acceso a la propia clase y a sus clases derivadas (herencia)."
+  },
+  {
+    "id": 92,
+    "question": "¿Qué propiedad del componente Audio Source define cómo disminuye el volumen a medida que la cámara se aleja del objeto?",
+    "options": [
+      "Pitch",
+      "Spatial Blend",
+      "Volume Rolloff",
+      "Doppler Level"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Volume Rolloff determina la curva de atenuación del sonido en relación con la distancia."
+  },
+  {
+    "id": 93,
+    "question": "Si quieres que un sonido se escuche completamente en 'estéreo' sin importar la posición 3D, ¿cómo debe configurarse el 'Spatial Blend'?",
+    "options": [
+      "En el valor 1 (3D)",
+      "En el valor 0 (2D)",
+      "En el valor 0.5",
+      "Activando el Doppler Effect"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Un Spatial Blend de 0 significa que el sonido es puramente 2D y se escuchará con la misma intensidad en toda la escena."
+  },
+  {
+    "id": 94,
+    "question": "¿Qué método se utiliza para forzar que una corrutina espere hasta el final del frame actual antes de continuar?",
+    "options": [
+      "yield return null;",
+      "yield break;",
+      "yield return new WaitForSeconds(0);",
+      "yield return new WaitForEndOfFrame();"
+    ],
+    "correctAnswer": 0,
+    "explanation": "'yield return null' es la forma más común de esperar exactamente un frame dentro de una corrutina."
+  },
+  {
+    "id": 95,
+    "question": "¿Cuál es la función del 'Shader' en un Material de Unity?",
+    "options": [
+      "Es el script que calcula el color de cada píxel basándose en la luz y las texturas",
+      "Es el archivo que contiene la malla 3D",
+      "Es el componente que maneja las colisiones",
+      "Es un filtro para el audio"
+    ],
+    "correctAnswer": 0,
+    "explanation": "El Shader es un programa matemático que determina cómo se renderiza la superficie del objeto."
+  },
+  {
+    "id": 96,
+    "question": "Al programar el movimiento de un personaje, ¿por qué es preferible usar 'Time.fixedDeltaTime' dentro de 'FixedUpdate'?",
+    "options": [
+      "Porque es más rápido que Time.deltaTime",
+      "Porque devuelve el intervalo de tiempo constante del sistema de física",
+      "Porque evita que el juego se bloquee",
+      "Porque solo funciona en dispositivos móviles"
+    ],
+    "correctAnswer": 1,
+    "explanation": "FixedUpdate se ejecuta en pasos de tiempo fijos; usar fixedDeltaTime asegura que los cálculos físicos sean precisos y estables."
+  },
+  {
+    "id": 97,
+    "question": "¿Qué sucede si olvidas incluir el espacio de nombres 'using UnityEngine.UI;' en un script que intenta modificar un botón?",
+    "options": [
+      "El juego funciona pero el botón no cambia de color",
+      "Se produce un error de compilación indicando que el tipo 'Button' no se encuentra",
+      "El botón se borra de la escena",
+      "Unity lo añade automáticamente al compilar"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Para acceder a las clases de la interfaz de usuario, es obligatorio importar el namespace correspondiente."
+  },
+  {
+    "id": 98,
+    "question": "¿Cuál es el propósito del componente 'Distance Joint 2D'?",
+    "options": [
+      "Hacer que dos objetos mantengan una distancia fija entre sí",
+      "Calcular la distancia entre el jugador y el enemigo",
+      "Teletransportar un objeto a una distancia específica",
+      "Eliminar objetos que estén muy lejos"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Los 'Joints' o articulaciones conectan Rigidbodies; el Distance Joint asegura que no se separen más de un límite."
+  },
+  {
+    "id": 99,
+    "question": "En un Animator Controller, ¿qué permite que un personaje pueda disparar mientras está caminando (mezclar dos animaciones)?",
+    "options": [
+      "Animation States",
+      "Avatar Masks y Animator Layers",
+      "Blend Trees",
+      "Transitions"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Las capas (Layers) con máscaras permiten que una parte del cuerpo (ej. piernas) use una animación mientras otra (ej. brazos) usa una distinta."
+  },
+  {
+    "id": 100,
+    "question": "¿Qué herramienta permite mover, rotar o escalar objetos con precisión usando teclas de acceso rápido (Q, W, E, R, T)?",
+    "options": [
+      "The Toolbar Gizmos",
+      "The Inspector Tools",
+      "The Navigation View",
+      "The Hierarchy Toggle"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Los Gizmos de la barra de herramientas son los controles visuales para manipular objetos en la Scene View."
+  },
+  {
+    "id": 101,
+    "question": "¿Para qué sirve el campo 'Tag' en un GameObject?",
+    "options": [
+      "Para cambiar el nombre del objeto",
+      "Para identificar y agrupar objetos de manera lógica para búsquedas o colisiones",
+      "Para aplicar un color diferente en la jerarquía",
+      "Para determinar la prioridad de renderizado"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los tags son etiquetas que permiten diferenciar tipos de objetos (ej: 'Player', 'Enemy', 'Finish')."
+  },
+  {
+    "id": 102,
+    "question": "En C#, ¿qué palabra clave se usa para crear una instancia de una clase que NO hereda de MonoBehaviour?",
+    "options": [
+      "Instantiate",
+      "new",
+      "Create",
+      "Build"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Las clases normales de C# se instancian con 'new'. Solo los MonoBehaviours o GameObjects usan 'Instantiate'."
+  },
+  {
+    "id": 103,
+    "question": "¿Qué propiedad del Rigidbody debes cambiar para que un objeto caiga más lentamente sin cambiar su masa?",
+    "options": [
+      "Drag",
+      "Angular Drag",
+      "Gravity Scale",
+      "Ambas A y C son correctas"
+    ],
+    "correctAnswer": 3,
+    "explanation": "El 'Drag' simula resistencia al aire, y 'Gravity Scale' (en 2D) o modificar la gravedad global afecta la velocidad de caída."
+  },
+  {
+    "id": 104,
+    "question": "¿Cómo se llama el archivo que Unity genera para recordar qué Assets están vinculados a qué GameObjects, evitando que se pierdan las referencias?",
+    "options": [
+      ".meta files",
+      ".json configs",
+      ".link files",
+      ".unityproj"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Los archivos .meta son críticos; contienen el GUID que Unity usa para rastrear los assets internamente."
+  },
+  {
+    "id": 105,
+    "question": "¿Cuál es la principal diferencia entre un componente 'Image' y un 'Raw Image' en la UI?",
+    "options": [
+      "Image usa Sprites; Raw Image usa Texturas normales",
+      "Raw Image es más rápido",
+      "Image solo funciona en móviles",
+      "No hay diferencia técnica"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Image está optimizado para Sprites y ofrece opciones como 'Sliced' o 'Filled'. Raw Image es para texturas sin procesar."
+  },
+  {
+    "id": 106,
+    "question": "¿Qué método de la API se utiliza para detectar si un rayo invisible toca un objeto en un juego 2D?",
+    "options": [
+      "Physics.Raycast",
+      "Physics2D.Raycast",
+      "Raycast3D.Detect",
+      "Collision2D.Ray"
+    ],
+    "correctAnswer": 1,
+    "explanation": "En Unity, las físicas 2D y 3D están en motores separados; para 2D se debe usar la clase Physics2D."
+  },
+  {
+    "id": 107,
+    "question": "¿Cuál es el resultado de la operación string 'scoreText = \"Puntos: \" + 10 + 5;'?",
+    "options": [
+      "Puntos: 15",
+      "Puntos: 105",
+      "Error de compilación",
+      "Puntos: 10 + 5"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Al concatenar strings con números, Unity los trata como texto. Primero une 'Puntos: 10' y luego añade '5', resultando en '105'."
+  },
+  {
+    "id": 108,
+    "question": "En el sistema de partículas, ¿qué módulo permite que las partículas reboten al chocar con el suelo o paredes?",
+    "options": [
+      "Sub Emitters",
+      "Collision",
+      "External Forces",
+      "Texture Sheet Animation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El módulo Collision permite que las partículas interactúen con colisionadores en la escena (World o Planar)."
+  },
+  {
+    "id": 109,
+    "question": "¿Qué propiedad del componente 'Video Player' permite que el video se use como textura en un objeto 3D?",
+    "options": [
+      "Audio Source",
+      "Render Mode (set to Material Override)",
+      "Play on Awake",
+      "Skip On Drop"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Al cambiar el Render Mode a Material Override o Render Texture, el video puede proyectarse sobre cualquier malla."
+  },
+  {
+    "id": 110,
+    "question": "¿Para qué sirve el método 'InvokeRepeating'?",
+    "options": [
+      "Para repetir una animación",
+      "Para llamar a una función después de un tiempo y luego repetirla en intervalos regulares",
+      "Para crear un bucle infinito",
+      "Para clonar un objeto varias veces"
+    ],
+    "correctAnswer": 1,
+    "explanation": "InvokeRepeating(\"NombreFuncion\", tiempoInicial, intervalo) es útil para eventos que ocurren periódicamente, como spawn de enemigos."
+  },
+  {
+    "id": 111,
+    "question": "En un bucle 'foreach', ¿qué sucede si intentas eliminar un elemento de la lista mientras la recorres?",
+    "options": [
+      "El elemento se borra sin problemas",
+      "Se produce un error de ejecución (InvalidOperationException)",
+      "El bucle se detiene automáticamente",
+      "La lista se vacía por completo"
+    ],
+    "correctAnswer": 1,
+    "explanation": "No se puede modificar la estructura de una colección (añadir/quitar) mientras se itera con foreach; para eso se usa un bucle 'for' inverso."
+  },
+  {
+    "id": 112,
+    "question": "¿Cuál es la función del 'Skybox Material' en los ajustes de iluminación?",
+    "options": [
+      "Iluminar solo los objetos dinámicos",
+      "Definir el color ambiental y el fondo lejano de la escena",
+      "Crear sombras en tiempo real",
+      "Optimizar el rendimiento de la CPU"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Skybox no solo es decorativo, también contribuye a la iluminación global (Ambient Light) de la escena."
+  },
+  {
+    "id": 113,
+    "question": "Si quieres que un objeto se mueva hacia adelante relativo a su propia rotación, ¿qué código usarías?",
+    "options": [
+      "transform.position += Vector3.forward;",
+      "transform.Translate(Vector3.forward * speed * Time.deltaTime);",
+      "transform.position = new Vector3(0, 0, 1);",
+      "transform.Translate(Vector3.up);"
+    ],
+    "correctAnswer": 1,
+    "explanation": "transform.Translate mueve el objeto en su espacio local por defecto, lo que significa 'hacia adelante' según su propia cara."
+  },
+  {
+    "id": 114,
+    "question": "¿Qué componente se utiliza para agrupar varios elementos de UI y aplicarles un diseño automático de filas o columnas?",
+    "options": [
+      "Layout Element",
+      "Vertical/Horizontal Layout Group",
+      "Canvas Group",
+      "Content Size Fitter"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los Layout Groups posicionan automáticamente a sus hijos en una estructura organizada sin moverlos manualmente."
+  },
+  {
+    "id": 115,
+    "question": "En C#, ¿cuál es la diferencia entre '==' y '.Equals()' al comparar strings?",
+    "options": [
+      "No hay diferencia en Unity/C# para tipos string",
+      " '==' es solo para números",
+      " '.Equals()' es más lento",
+      " '==' compara la memoria y '.Equals()' el contenido"
+    ],
+    "correctAnswer": 0,
+    "explanation": "En C#, el operador '==' para strings está sobrecargado para comparar el contenido del texto, igual que .Equals()."
+  },
+  {
+    "id": 116,
+    "question": "¿Qué hace la función 'OnDisable()'?",
+    "options": [
+      "Se llama cuando el objeto es destruido",
+      "Se llama cada vez que el componente o el GameObject se desactiva",
+      "Borra el script del objeto",
+      "Detiene el motor de física"
+    ],
+    "correctAnswer": 1,
+    "explanation": "OnDisable es útil para limpiar suscripciones a eventos o detener procesos cuando un objeto deja de estar activo."
+  },
+  {
+    "id": 117,
+    "question": "¿Cuál de estos es un valor válido para una variable de tipo 'float'?",
+    "options": [
+      "10.5",
+      "10.5f",
+      "10,5",
+      "\"10.5\""
+    ],
+    "correctAnswer": 1,
+    "explanation": "En C#, los literales flotantes deben llevar el sufijo 'f' para diferenciarlos de los 'double'."
+  },
+  {
+    "id": 118,
+    "question": "Si un Raycast no golpea nada, ¿qué devuelve el método 'Physics.Raycast'?",
+    "options": [
+      "null",
+      "0",
+      "false",
+      "Un error"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Physics.Raycast devuelve un valor booleano: true si impacta con un colisionador y false si no."
+  },
+  {
+    "id": 119,
+    "question": "¿Cómo se llama el proceso de combinar varias mallas estáticas en una sola para mejorar el rendimiento?",
+    "options": [
+      "Mesh Combining / Static Batching",
+      "Mesh Baking",
+      "Texture Packing",
+      "Object Grouping"
+    ],
+    "correctAnswer": 0,
+    "explanation": "El batching reduce las 'Draw Calls' al enviar menos objetos pero más grandes a la GPU."
+  },
+  {
+    "id": 120,
+    "question": "¿Qué propiedad permite que un Slider de la UI solo acepte números enteros?",
+    "options": [
+      "Decimal Restriction",
+      "Whole Numbers",
+      "Int Only",
+      "Stepped Value"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Al activar 'Whole Numbers' en un Slider, el valor saltará de 1 en 1 sin decimales."
+  },
+  {
+    "id": 121,
+    "question": "¿Qué método de la clase 'Application' se utiliza para cerrar el juego una vez que ha sido compilado?",
+    "options": [
+      "Application.Exit();",
+      "Application.Quit();",
+      "Application.Close();",
+      "Application.Stop();"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Application.Quit() cierra la aplicación. Nota: Este comando no cierra el modo 'Play' dentro del Editor de Unity."
+  },
+  {
+    "id": 122,
+    "question": "En C#, ¿qué bloque de código se utiliza para capturar una excepción y evitar que el juego se bloquee por un error?",
+    "options": [
+      "if / else",
+      "try / catch",
+      "check / error",
+      "debug / stop"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El bloque try/catch permite intentar ejecutar un código y, si falla, manejar el error en el bloque catch sin interrumpir la ejecución total."
+  },
+  {
+    "id": 123,
+    "question": "¿Cuál es la diferencia técnica entre 'Color' y 'Color32' en Unity?",
+    "options": [
+      "No hay diferencia",
+      "Color usa valores float (0 a 1); Color32 usa valores byte (0 a 255)",
+      "Color32 es solo para imágenes 2D",
+      "Color es más preciso para dispositivos móviles"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Color utiliza cuatro flotantes para RGBA. Color32 es más eficiente en memoria al usar bytes de 0 a 255 por canal."
+  },
+  {
+    "id": 124,
+    "question": "¿Qué propiedad de la clase 'Input' devuelve la posición actual del ratón en coordenadas de pantalla (píxeles)?",
+    "options": [
+      "Input.mousePosition",
+      "Input.cursorPoint",
+      "Input.screenMouse",
+      "Input.rawMouse"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Input.mousePosition devuelve un Vector3 con las coordenadas X e Y en píxeles y la Z suele ser 0."
+  },
+  {
+    "id": 125,
+    "question": "Si quieres que un objeto ignore las colisiones con todos los demás pero aún así sea detectado por scripts, ¿qué debes usar?",
+    "options": [
+      "Un Rigidbody cinemático",
+      "Un Trigger (Is Trigger)",
+      "Cambiar la capa a 'Ignore Raycast'",
+      "Desactivar el Mesh Renderer"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los Triggers permiten el paso de objetos pero disparan eventos como OnTriggerEnter para ejecutar lógica."
+  },
+  {
+    "id": 126,
+    "question": "¿Qué función de la API permite convertir una posición del mundo 3D a una posición en la pantalla (píxeles)?",
+    "options": [
+      "Camera.main.WorldToScreenPoint",
+      "Camera.main.PointToPixel",
+      "Vector3.ToScreen",
+      "Screen.FromWorld"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Esta función es esencial para colocar elementos de UI (como barras de vida) sobre objetos que se mueven en 3D."
+  },
+  {
+    "id": 127,
+    "question": "En el Inspector, ¿qué hace el botón 'Reset' en el menú de un componente?",
+    "options": [
+      "Borra el script del proyecto",
+      "Devuelve todas las propiedades del componente a sus valores por defecto",
+      "Reinicia el juego por completo",
+      "Cierra la ventana del Inspector"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Reset es útil para limpiar modificaciones manuales y volver a la configuración inicial del componente."
+  },
+  {
+    "id": 128,
+    "question": "¿Cuál es el propósito del componente 'Grid Layout Group' en la UI?",
+    "options": [
+      "Crear una cuadrícula de colisiones",
+      "Organizar elementos hijos automáticamente en una cuadrícula de filas y columnas",
+      "Optimizar el renderizado de texturas",
+      "Alinear el texto al centro"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Se usa comúnmente para inventarios, tiendas o galerías de selección de niveles."
+  },
+  {
+    "id": 129,
+    "question": "¿Qué palabra clave se usa en una función para indicar que NO devuelve ningún valor?",
+    "options": [
+      "null",
+      "empty",
+      "void",
+      "static"
+    ],
+    "correctAnswer": 2,
+    "explanation": "'void' indica que la función realiza una acción pero no entrega un resultado (como un número o texto) al código que la llamó."
+  },
+  {
+    "id": 130,
+    "question": "¿Cuál es la función principal del 'Event System' en una escena de Unity?",
+    "options": [
+      "Gestionar las colisiones de física",
+      "Enviar eventos de entrada (clic, hover) a los elementos de la interfaz de usuario",
+      "Controlar el ciclo de vida de los scripts",
+      "Organizar los archivos en el disco duro"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sin un Event System, los botones de la UI no responderían a los clics del usuario."
+  },
+  {
+    "id": 131,
+    "question": "En C#, ¿cuál es el operador para 'Distinto de' o 'No es igual a'?",
+    "options": [
+      "==",
+      "<>",
+      "!=",
+      "NOT="
+    ],
+    "correctAnswer": 2,
+    "explanation": "El operador != devuelve true si los dos valores comparados son diferentes."
+  },
+  {
+    "id": 132,
+    "question": "Si necesitas que un script realice una acción cada vez que el usuario presione la tecla 'Espacio', ¿dónde deberías poner la comprobación?",
+    "options": [
+      "Start()",
+      "Update()",
+      "FixedUpdate()",
+      "Awake()"
+    ],
+    "correctAnswer": 1,
+    "explanation": "La detección de Input debe hacerse en Update para asegurar que no se pierda ninguna pulsación entre frames."
+  },
+  {
+    "id": 133,
+    "question": "¿Qué componente se requiere para que un objeto emita luz en un punto específico, como una vela?",
+    "options": [
+      "Directional Light",
+      "Point Light",
+      "Spot Light",
+      "Area Light"
+    ],
+    "correctAnswer": 1,
+    "explanation": "La Point Light emite luz en todas las direcciones desde una posición central, similar a una bombilla."
+  },
+  {
+    "id": 134,
+    "question": "¿Cuál es la ventaja de usar 'CompareTag(\"Player\")' en lugar de 'tag == \"Player\"'?",
+    "options": [
+      "Es más fácil de escribir",
+      "Es más eficiente en memoria y evita errores si el tag no existe",
+      "Permite comparar múltiples tags a la vez",
+      "No hay diferencia, son idénticos"
+    ],
+    "correctAnswer": 1,
+    "explanation": "CompareTag es más rápido y seguro, ya que lanza una advertencia si el tag no está definido en el Tag Manager."
+  },
+  {
+    "id": 135,
+    "question": "En el Animator, ¿qué representa la 'Any State'?",
+    "options": [
+      "Un estado que solo ocurre al inicio",
+      "Un estado especial que permite transicionar a otro sin importar en qué animación se encuentre actualmente",
+      "El estado donde el personaje muere",
+      "Una carpeta para organizar animaciones"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Es útil para animaciones que pueden ocurrir en cualquier momento, como 'Recibir Daño' o 'Morir'."
+  },
+  {
+    "id": 136,
+    "question": "En C#, ¿para qué se utiliza el operador de módulo (%)?",
+    "options": [
+      "Para calcular un porcentaje",
+      "Para obtener el resto de una división entera",
+      "Para multiplicar valores flotantes",
+      "Para elevar un número a una potencia"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El operador módulo devuelve el remanente de una división. Es muy útil para lógica de turnos o para detectar si un número es par o impar."
+  },
+  {
+    "id": 137,
+    "question": "¿Qué función de la clase Mathf se utiliza para interpolar linealmente entre dos valores, útil para suavizar movimientos?",
+    "options": [
+      "Mathf.SmoothStep",
+      "Mathf.Lerp",
+      "Mathf.Clamp",
+      "Mathf.Repeat"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Mathf.Lerp(a, b, t) devuelve un valor entre A y B basado en un porcentaje T (0 a 1), permitiendo transiciones suaves."
+  },
+  {
+    "id": 138,
+    "question": "En el componente 'Light', ¿qué propiedad controla la nitidez o el difuminado de las sombras proyectadas?",
+    "options": [
+      "Shadow Strength",
+      "Shadow Type (Soft vs Hard)",
+      "Resolution",
+      "Bias"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Las 'Soft Shadows' crean bordes difuminados más realistas pero consumen más recursos que las 'Hard Shadows'."
+  },
+  {
+    "id": 139,
+    "question": "¿Cuál es la función del archivo 'ProjectSettings.asset'?",
+    "options": [
+      "Guardar las variables de un script",
+      "Almacenar configuraciones globales como capas, etiquetas e información del build",
+      "Optimizar los modelos 3D",
+      "Guardar el progreso del jugador"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Este archivo es fundamental para la consistencia del proyecto, guardando ajustes como la matriz de colisiones o la versión del juego."
+  },
+  {
+    "id": 140,
+    "question": "Si un objeto tiene un componente Rigidbody pero no tiene Colliders, ¿qué sucede cuando choca con otro objeto?",
+    "options": [
+      "El objeto rebota",
+      "El objeto atraviesa al otro sin detectar colisión",
+      "El juego se cierra con un error",
+      "Unity añade un Box Collider automáticamente"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Para que ocurra una colisión física, ambos objetos necesitan Colliders. El Rigidbody solo aporta la respuesta física (gravedad y masa)."
+  },
+  {
+    "id": 141,
+    "question": "¿Qué método de la API de Unity se llama en el último frame antes de que un objeto sea destruido?",
+    "options": [
+      "OnDestroy()",
+      "OnDisable()",
+      "OnFinalize()",
+      "OnQuit()"
+    ],
+    "correctAnswer": 0,
+    "explanation": "OnDestroy() es el lugar ideal para liberar recursos o notificar a otros sistemas antes de que el objeto desaparezca de la memoria."
+  },
+  {
+    "id": 142,
+    "question": "Para crear una variable que solo pueda ser '0' o '1' de forma eficiente en un shader, ¿qué tipo de dato se suele usar?",
+    "options": [
+      "float",
+      "fixed",
+      "half",
+      "int"
+    ],
+    "correctAnswer": 1,
+    "explanation": "En shaders (HLSL), 'fixed' es un tipo de baja precisión ideal para rangos pequeños como colores o valores booleanos, ahorrando ancho de banda en la GPU."
+  },
+  {
+    "id": 143,
+    "question": "En el sistema de UI, ¿qué hace la propiedad 'Raycast Target' en un elemento de imagen?",
+    "options": [
+      "Permite que el objeto emita rayos láser",
+      "Determina si el elemento puede recibir clics o interacciones del ratón",
+      "Detecta paredes en el mundo 3D",
+      "Mejora la resolución de la imagen"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Si 'Raycast Target' está desactivado, el ratón 'atravesará' el objeto, permitiendo hacer clic en lo que haya detrás."
+  },
+  {
+    "id": 144,
+    "question": "¿Qué hace el comando 'Application.OpenURL(\"url\")'?",
+    "options": [
+      "Descarga un archivo al ordenador del usuario",
+      "Abre el navegador web predeterminado en la dirección especificada",
+      "Permite jugar en línea",
+      "Actualiza el juego automáticamente"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Es la forma estándar de dirigir a los jugadores a redes sociales, encuestas o tiendas externas desde el juego."
+  },
+  {
+    "id": 145,
+    "question": "¿Cuál es la diferencia entre 'Destroy(gameObject)' y 'Destroy(this)' en un script?",
+    "options": [
+      "No hay diferencia",
+      "El primero borra todo el objeto; el segundo solo borra el componente de script",
+      "El primero borra al jugador; el segundo borra la cámara",
+      "El segundo es más rápido"
+    ],
+    "correctAnswer": 1,
+    "explanation": "'this' se refiere a la instancia del componente. Destruirlo deja al GameObject vivo pero sin ese script específico."
+  },
+  {
+    "id": 146,
+    "question": "¿Qué propiedad del Animator permite que una animación se reproduzca al revés?",
+    "options": [
+      "Mirror",
+      "Speed (valor negativo)",
+      "Backwards Toggle",
+      "Reverse Loop"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Poner el valor de 'Speed' en -1 hará que el estado de animación se reproduzca en sentido contrario."
+  },
+  {
+    "id": 147,
+    "question": "En una corrutina, ¿qué hace 'yield break;'?",
+    "options": [
+      "Pausa la corrutina por un frame",
+      "Detiene y finaliza la corrutina inmediatamente",
+      "Reinicia la corrutina desde el principio",
+      "Cierra el juego"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A diferencia de 'yield return null', 'yield break' termina la ejecución de la función de forma definitiva."
+  },
+  {
+    "id": 148,
+    "question": "¿Qué componente de luz es el más costoso para el rendimiento en tiempo real debido a su complejidad de cálculo?",
+    "options": [
+      "Directional Light",
+      "Point Light",
+      "Spot Light",
+      "Area Light"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Las Area Lights requieren muchos cálculos para simular luz emitida desde una superficie y suelen ser solo 'Baked' (horneadas)."
+  },
+  {
+    "id": 149,
+    "question": "¿Cuál es el propósito del 'Gizmo' en la Scene View?",
+    "options": [
+      "Es un enemigo del juego",
+      "Una representación visual para ayudar a depurar y posicionar objetos que no son visibles (como luces o cámaras)",
+      "Un tipo de textura",
+      "Un componente para el audio"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los Gizmos (iconos de cámaras, líneas de luz, etc.) solo se ven en el editor y ayudan al desarrollador a entender la escena."
+  },
+  {
+    "id": 150,
+    "question": "En C#, ¿cómo se define una constante que no puede ser modificada en tiempo de ejecución?",
+    "options": [
+      "static int valor = 10;",
+      "readonly int valor = 10;",
+      "const int valor = 10;",
+      "fixed int valor = 10;"
+    ],
+    "correctAnswer": 2,
+    "explanation": "La palabra clave 'const' define un valor que debe asignarse al declarar y que nunca cambiará."
+  },
+  {
+    "id": 151,
+    "question": "¿Qué directiva de preprocesador se utiliza en C# para ejecutar código solo cuando el juego se compila para dispositivos móviles (Android o iOS)?",
+    "options": [
+      "#if UNITY_MOBILE",
+      "#if UNITY_HANDHELD",
+      "#if UNITY_IOS || UNITY_ANDROID",
+      "#define MOBILE"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Las directivas de plataforma permiten que el compilador ignore o incluya bloques de código según el objetivo de compilación."
+  },
+  {
+    "id": 152,
+    "question": "En el componente Camera, ¿para qué sirve la propiedad 'Culling Mask'?",
+    "options": [
+      "Para elegir qué capas (Layers) de objetos debe renderizar esa cámara",
+      "Para ocultar la cara del personaje",
+      "Para optimizar la velocidad de los scripts",
+      "Para definir el color del cielo"
+    ],
+    "correctAnswer": 0,
+    "explanation": "La Culling Mask permite que una cámara ignore ciertas capas, útil para cámaras que solo ven la UI o cámaras de seguridad que ignoran efectos visuales."
+  },
+  {
+    "id": 153,
+    "question": "¿Cuál es la función principal de 'Cinemachine' en Unity?",
+    "options": [
+      "Crear efectos de sonido envolvente",
+      "Proporcionar un sistema de cámaras inteligentes y dinámicas que pueden seguir objetivos automáticamente",
+      "Exportar el juego como una película",
+      "Mejorar el rendimiento de la GPU"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Cinemachine es la herramienta estándar para manejar cámaras en tercera persona, transiciones y cámaras de seguimiento sin programar matemáticas complejas."
+  },
+  {
+    "id": 154,
+    "question": "Para cargar una escena de forma asíncrona (en segundo plano) para que el juego no se congele, ¿qué método se debe usar?",
+    "options": [
+      "SceneManager.LoadScene()",
+      "SceneManager.LoadSceneAsync()",
+      "Application.LoadLevel()",
+      "SceneManager.BackgroundLoad()"
+    ],
+    "correctAnswer": 1,
+    "explanation": "LoadSceneAsync devuelve una operación asíncrona que permite mostrar barras de carga mientras los datos se suben a la memoria."
+  },
+  {
+    "id": 155,
+    "question": "¿Qué componente de Cinemachine se asegura de que el objetivo siempre esté encuadrado en la pantalla?",
+    "options": [
+      "Cinemachine Brain",
+      "Cinemachine Virtual Camera",
+      "Cinemachine Composer",
+      "Cinemachine Follower"
+    ],
+    "correctAnswer": 2,
+    "explanation": "El Composer es el algoritmo dentro de la Virtual Camera que controla el encuadre (framing) del objetivo."
+  },
+  {
+    "id": 156,
+    "question": "¿Qué hace el componente 'Cinemachine Brain'?",
+    "options": [
+      "Calcula la IA de los enemigos",
+      "Se coloca en la Main Camera para monitorear y realizar transiciones entre Virtual Cameras",
+      "Controla el inventario del jugador",
+      "Es el motor de renderizado de Unity"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Cinemachine Brain es el vínculo entre la cámara real de Unity y todas las cámaras virtuales del sistema."
+  },
+  {
+    "id": 157,
+    "question": "En C#, ¿qué devuelve la propiedad 'Screen.width'?",
+    "options": [
+      "El ancho de la ventana del juego en metros",
+      "El ancho de la ventana del juego en píxeles",
+      "La resolución máxima del monitor",
+      "El ancho del Canvas de UI"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Screen.width y Screen.height proporcionan el tamaño actual de la pantalla donde se ejecuta el juego."
+  },
+  {
+    "id": 158,
+    "question": "¿Cuál es el propósito del 'Skybox Panoramic'?",
+    "options": [
+      "Crear un fondo 3D usando una sola textura de 360 grados",
+      "Hacer que el juego se vea en realidad virtual",
+      "Aumentar el brillo de la escena",
+      "Optimizar el dibujo de las nubes"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Un shader panorámico permite usar una imagen equirectangular (tipo mapa mundial) para envolver toda la escena."
+  },
+  {
+    "id": 159,
+    "question": "Si necesitas que un objeto no sea destruido al cambiar de una escena a otra, ¿qué comando debes usar?",
+    "options": [
+      "Object.KeepAlive(gameObject);",
+      "DontDestroyOnLoad(gameObject);",
+      "SceneManager.Merge(gameObject);",
+      "gameObject.Persist = true;"
+    ],
+    "correctAnswer": 1,
+    "explanation": "DontDestroyOnLoad mueve el objeto a una escena especial que sobrevive a las transiciones, ideal para música o controladores de red."
+  },
+  {
+    "id": 160,
+    "question": "¿Qué propiedad de la cámara permite crear un efecto de 'ojo de pez' o gran angular?",
+    "options": [
+      "Clipping Planes",
+      "Field of View (FOV)",
+      "Orthographic Size",
+      "Aspect Ratio"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Aumentar el Field of View (FOV) expande el ángulo de visión, distorsionando los bordes y creando un efecto gran angular."
+  },
+  {
+    "id": 161,
+    "question": "En una cámara 2D (Orthographic), ¿qué propiedad controla qué tan grande se ve el mundo en pantalla?",
+    "options": [
+      "Field of View",
+      "Orthographic Size",
+      "Camera Scale",
+      "Z Position"
+    ],
+    "correctAnswer": 1,
+    "explanation": "En modo ortográfico no hay perspectiva; la propiedad 'Size' define la mitad de la altura vertical de la cámara."
+  },
+  {
+    "id": 162,
+    "question": "¿Qué método se llama automáticamente cuando el ratón entra en el área de un colisionador en una PC?",
+    "options": [
+      "OnMouseClick",
+      "OnMouseEnter",
+      "OnMouseOver",
+      "OnHover"
+    ],
+    "correctAnswer": 1,
+    "explanation": "OnMouseEnter se dispara una sola vez en el momento en que el puntero cruza el límite del collider."
+  },
+  {
+    "id": 163,
+    "question": "En Cinemachine, ¿qué propiedad permite que la cámara tiemble (efecto de sacudida)?",
+    "options": [
+      "Noise",
+      "Body",
+      "Aim",
+      "Shake Script"
+    ],
+    "correctAnswer": 0,
+    "explanation": "El módulo Noise aplica desplazamientos aleatorios basados en Perlin Noise para simular una cámara en mano o temblores."
+  },
+  {
+    "id": 164,
+    "question": "¿Para qué se utiliza el 'Occlusion Area'?",
+    "options": [
+      "Para definir dónde debe ocurrir el cálculo de objetos ocultos",
+      "Para oscurecer una zona del mapa",
+      "Para crear niebla",
+      "Para bloquear el paso del jugador"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Ayuda a Unity a saber en qué zonas de la escena debe aplicar el sistema de Occlusion Culling para ahorrar recursos."
+  },
+  {
+    "id": 165,
+    "question": "¿Cuál es la diferencia entre 'Application.persistentDataPath' y 'Application.dataPath'?",
+    "options": [
+      "No hay diferencia",
+      "DataPath es la carpeta del juego; PersistentDataPath es una carpeta segura donde el juego tiene permiso de escritura siempre",
+      "DataPath es para Windows y Persistent es para Mac",
+      "PersistentDataPath se borra al cerrar el juego"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Para guardar partidas en móviles o PC, siempre se debe usar persistentDataPath para evitar problemas de permisos de administrador."
+  },
+  {
+    "id": 166,
+    "question": "¿Qué permite la función de 'Nested Prefabs' introducida en versiones recientes de Unity?",
+    "options": [
+      "Crear un Prefab que contiene otros Prefabs dentro de su jerarquía",
+      "Hacer que los Prefabs sean invisibles",
+      "Agrupar archivos de audio",
+      "Convertir scripts en modelos 3D"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Los Nested Prefabs permiten una mayor modularidad, facilitando que un objeto complejo (como un edificio) esté compuesto por otros prefabs (puertas, ventanas) que se pueden editar por separado."
+  },
+  {
+    "id": 167,
+    "question": "En el sistema de iluminación, ¿qué significa que una luz esté configurada como 'Baked'?",
+    "options": [
+      "Que se calcula en tiempo real cada frame",
+      "Que sus efectos de luz y sombra se pre-calculan y se guardan en texturas llamadas Lightmaps",
+      "Que la luz parpadea constantemente",
+      "Que solo afecta a los personajes móviles"
+    ],
+    "correctAnswer": 1,
+    "explanation": "La iluminación Baked no consume recursos de GPU en tiempo de ejecución, lo que la hace ideal para optimizar el rendimiento en dispositivos móviles."
+  },
+  {
+    "id": 168,
+    "question": "¿Qué componente se utiliza para que los objetos dinámicos (como el jugador) puedan recibir luz indirecta en una escena con iluminación Baked?",
+    "options": [
+      "Lightmap Static",
+      "Light Probes",
+      "Reflection Probes",
+      "Skybox"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los Light Probes capturan información de la luz en puntos del espacio y la aplican a los objetos que se mueven a través de ellos."
+  },
+  {
+    "id": 169,
+    "question": "¿Cuál es la función de los 'Reflection Probes'?",
+    "options": [
+      "Crear sombras",
+      "Capturar una vista de 360 grados del entorno para generar reflejos realistas en materiales metálicos",
+      "Hacer que los espejos funcionen automáticamente",
+      "Aumentar la resolución de la pantalla"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los Reflection Probes permiten que los objetos con materiales reflexivos muestren el entorno que los rodea de forma eficiente."
+  },
+  {
+    "id": 170,
+    "question": "Al importar una textura, ¿qué opción permite que Unity genere versiones más pequeñas de la misma para usarlas cuando el objeto está lejos?",
+    "options": [
+      "Alpha is Transparency",
+      "Generate Mip Maps",
+      "Read/Write Enabled",
+      "Filter Mode"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los Mip Maps reducen el parpadeo visual (aliasing) y mejoran el rendimiento al no cargar texturas gigantes para objetos lejanos."
+  },
+  {
+    "id": 171,
+    "question": "¿Qué sucede si aplicas un 'Override' a una instancia de un Prefab en la escena?",
+    "options": [
+      "El cambio se aplica a todos los Prefabs del proyecto",
+      "El cambio solo afecta a esa instancia específica en esa escena",
+      "Se borra el Prefab original",
+      "Unity bloquea el objeto para que no se mueva"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los Overrides permiten personalizar una instancia sin romper el vínculo con el Prefab original, a menos que decidas darle a 'Apply All'."
+  },
+  {
+    "id": 172,
+    "question": "En física 2D, ¿qué hace el componente 'Effector 2D' (como el Platform Effector)?",
+    "options": [
+      "Cambia el color de la plataforma",
+      "Añade comportamientos especiales como plataformas unidireccionales o cintas transportadoras",
+      "Detecta si el jugador está muerto",
+      "Optimiza el Rigidbody2D"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los Effectors modifican cómo las fuerzas actúan sobre los objetos que entran en contacto con ellos (ej. saltar a través de una plataforma desde abajo)."
+  },
+  {
+    "id": 173,
+    "question": "¿Cuál es el propósito del 'Physics Material' (o Physics Material 2D)?",
+    "options": [
+      "Cambiar la apariencia visual del objeto",
+      "Definir propiedades físicas como la fricción y el rebote (bounciness)",
+      "Crear explosiones",
+      "Hacer que un objeto sea invisible para el Raycast"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Se asigna a los Colliders para determinar si una superficie es resbaladiza como el hielo o rebotante como una pelota."
+  },
+  {
+    "id": 174,
+    "question": "En C#, ¿cómo se escribe un comentario de una sola línea?",
+    "options": [
+      "/* comentario */",
+      "// comentario",
+      "# comentario",
+      "<- comentario"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Las dos barras diagonales son el estándar para comentarios cortos que el compilador ignora."
+  },
+  {
+    "id": 175,
+    "question": "¿Qué propiedad del componente Rigidbody evita que un objeto ruede infinitamente al chocar?",
+    "options": [
+      "Mass",
+      "Angular Drag",
+      "Use Gravity",
+      "Interpolate"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Angular Drag aplica una resistencia a la rotación del objeto."
+  },
+  {
+    "id": 176,
+    "question": "En el sistema de UI, ¿qué hace el componente 'Canvas Group'?",
+    "options": [
+      "Permite controlar la transparencia (Alpha) y la interactividad de todo un grupo de elementos a la vez",
+      "Sirve para dibujar líneas en el canvas",
+      "Cambia la fuente de todos los textos",
+      "Organiza los botones en una lista"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Es extremadamente útil para hacer transiciones de desvanecimiento (fade out) de menús completos."
+  },
+  {
+    "id": 177,
+    "question": "¿Qué método se dispara cuando un objeto con Rigidbody comienza a dormir (deja de moverse para ahorrar rendimiento)?",
+    "options": [
+      "OnCollisionExit",
+      "OnRigidbodySleep",
+      "OnBecameInvisible",
+      "OnDisable"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Unity pone a 'dormir' los cuerpos rígidos que no se mueven para optimizar el motor de física."
+  },
+  {
+    "id": 178,
+    "question": "Si necesitas obtener una lista de todos los GameObjects que tienen un Tag específico, ¿qué método usas?",
+    "options": [
+      "GameObject.FindWithTag()",
+      "GameObject.FindGameObjectsWithTag()",
+      "GameObject.GetTags()",
+      "SceneManager.FindAll()"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Nota el plural en 'FindGameObjectsWithTag'; devuelve un array con todas las coincidencias encontradas."
+  },
+  {
+    "id": 179,
+    "question": "¿Cuál es la función del 'Frame Debugger'?",
+    "options": [
+      "Encontrar errores en los scripts de C#",
+      "Permitir ver paso a paso cómo se construye la imagen final del juego para depurar problemas de renderizado",
+      "Contar los fotogramas por segundo",
+      "Arreglar modelos 3D rotos"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Frame Debugger permite 'congelar' un frame y ver exactamente en qué orden se dibujaron los objetos."
+  },
+  {
+    "id": 180,
+    "question": "¿Qué significa que una variable sea 'public' en un script de Unity?",
+    "options": [
+      "Que cualquier otra clase puede acceder a ella y aparece editable en el Inspector",
+      "Que el gobierno puede ver tu código",
+      "Que la variable solo funciona en el menú principal",
+      "Que la variable se borra al cerrar el juego"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Las variables públicas son la forma más sencilla de conectar datos entre scripts y configurar valores desde el editor."
+  },
+  {
+    "id": 181,
+    "question": "¿Qué herramienta de Unity se utiliza para instalar y actualizar extensiones oficiales como Cinemachine, ProBuilder o el Post-Processing Stack?",
+    "options": [
+      "Asset Store",
+      "Package Manager",
+      "Project Settings",
+      "Build Manager"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Package Manager es el centro de gestión para módulos y librerías oficiales que no vienen instaladas por defecto en el núcleo de Unity."
+  },
+  {
+    "id": 182,
+    "question": "En el sistema de Post-procesado, ¿qué efecto simula que la luz 'sangra' o brilla intensamente desde las partes más claras de la imagen?",
+    "options": [
+      "Vignette",
+      "Bloom",
+      "Depth of Field",
+      "Chromatic Aberration"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Bloom crea un resplandor alrededor de las fuentes de luz intensas, aportando un aspecto más cinematográfico."
+  },
+  {
+    "id": 183,
+    "question": "Para detectar qué objeto de la UI ha sido clickeado específicamente, ¿qué interfaz de C# debe implementar tu script?",
+    "options": [
+      "ICollisionHandler",
+      "IPointerClickHandler",
+      "IInputManager",
+      "IMouseEvents"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Al implementar IPointerClickHandler (del namespace UnityEngine.EventSystems), puedes usar el método OnPointerClick para detectar interacciones precisas de UI."
+  },
+  {
+    "id": 184,
+    "question": "¿Cuál es la función del componente 'Mesh Renderer'?",
+    "options": [
+      "Definir la forma física del objeto",
+      "Tomar la geometría del Mesh Filter y dibujarla en la pantalla usando un Material",
+      "Calcular las sombras de los árboles",
+      "Optimizar el código C#"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sin el Mesh Renderer, el objeto tendría forma (vértices) pero sería invisible para la cámara."
+  },
+  {
+    "id": 185,
+    "question": "En C#, ¿qué palabra clave se utiliza para detener la ejecución de un bucle 'for' o 'while' antes de que se cumpla la condición principal?",
+    "options": [
+      "stop",
+      "break",
+      "exit",
+      "end"
+    ],
+    "correctAnswer": 1,
+    "explanation": "'break' finaliza inmediatamente el bucle actual y continúa con la siguiente línea de código fuera del mismo."
+  },
+  {
+    "id": 186,
+    "question": "Si quieres crear una cámara que solo vea el cielo y no los objetos del juego, ¿qué propiedad de 'Clear Flags' deberías usar?",
+    "options": [
+      "Solid Color",
+      "Skybox",
+      "Depth Only",
+      "Don't Clear"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Skybox llena los espacios vacíos del renderizado con el material de cielo configurado en la escena."
+  },
+  {
+    "id": 187,
+    "question": "¿Qué componente se utiliza para crear superficies 3D rápidas (prototipado) directamente dentro del editor de Unity?",
+    "options": [
+      "Terrain",
+      "ProBuilder",
+      "Polybrush",
+      "Mesh Editor"
+    ],
+    "correctAnswer": 1,
+    "explanation": "ProBuilder permite modelar, editar texturas y crear geometría optimizada sin salir de Unity."
+  },
+  {
+    "id": 188,
+    "question": "¿Cuál es el propósito del 'Depth of Field' (Profundidad de Campo) en post-procesado?",
+    "options": [
+      "Hacer que el juego sea más oscuro",
+      "Desenfocar los objetos que no están a la distancia de enfoque de la cámara",
+      "Aumentar la distancia de dibujado",
+      "Cambiar los colores del juego"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Simula el comportamiento de una lente de cámara real, enfocando un objetivo y desenfocando el fondo o el frente."
+  },
+  {
+    "id": 189,
+    "question": "En el sistema de Audio, ¿qué herramienta permite crear efectos como eco o distorsión y mezclarlos de forma global?",
+    "options": [
+      "Audio Source",
+      "Audio Mixer",
+      "Audio Echo Component",
+      "Sound Manager"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Audio Mixer actúa como una consola de estudio donde puedes agrupar sonidos y aplicar efectos a grupos enteros (ej. 'Música', 'SFX')."
+  },
+  {
+    "id": 190,
+    "question": "Para verificar si una tecla se ha soltado (después de ser presionada), ¿qué método de Input se debe usar?",
+    "options": [
+      "GetKey",
+      "GetKeyDown",
+      "GetKeyUp",
+      "GetButton"
+    ],
+    "correctAnswer": 2,
+    "explanation": "GetKeyUp detecta el frame exacto en el que el usuario deja de presionar la tecla."
+  },
+  {
+    "id": 191,
+    "question": "¿Qué componente de UI es necesario si quieres que un texto o imagen se mueva dentro de un área limitada (como una lista de créditos)?",
+    "options": [
+      "Scroll View (Scroll Rect)",
+      "Mask",
+      "Content Size Fitter",
+      "Grid Layout"
+    ],
+    "correctAnswer": 0,
+    "explanation": "El Scroll Rect permite que el contenido sea arrastrable y se mantenga dentro de los límites de un contenedor."
+  },
+  {
+    "id": 192,
+    "question": "Al crear un script, ¿qué significa que una clase 'herede' de MonoBehaviour?",
+    "options": [
+      "Que el script puede ser adjuntado como componente a un GameObject",
+      "Que el script es compatible con móviles",
+      "Que el script se borra automáticamente",
+      "Que el script no puede usar variables"
+    ],
+    "correctAnswer": 0,
+    "explanation": "MonoBehaviour es la clase base de la que deben derivar todos los scripts que necesiten interactuar con el ciclo de vida de Unity (Start, Update, etc.)."
+  },
+  {
+    "id": 193,
+    "question": "¿Qué propiedad del componente 'Video Player' controla la transparencia del video?",
+    "options": [
+      "Transparency Level",
+      "Target Camera Alpha",
+      "No existe; se debe usar un material con soporte para canal Alpha",
+      "Brightness"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Para que un video sea transparente, el clip debe tener canal Alpha y el material donde se proyecta debe usar un Shader compatible con transparencia."
+  },
+  {
+    "id": 194,
+    "question": "¿Cuál es la función de la ventana 'Timeline'?",
+    "options": [
+      "Ver cuánto tiempo llevas trabajando",
+      "Crear secuencias cinematográficas y eventos coordinados entre animaciones y sonidos",
+      "Programar los turnos de un juego de combate",
+      "Gestionar el historial de versiones"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Timeline es una herramienta de edición visual de pistas para crear 'cutscenes' o secuencias de juego complejas."
+  },
+  {
+    "id": 195,
+    "question": "En C#, ¿cómo se accede a la longitud (número de elementos) de un Array llamado 'niveles'?",
+    "options": [
+      "niveles.Count",
+      "niveles.Length",
+      "niveles.Size",
+      "niveles.Total"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los Arrays en C# usan la propiedad '.Length', mientras que las Listas usan '.Count'."
+  },
+  {
+    "id": 211,
+    "question": "En un juego 2D, ¿qué propiedad determina el orden de dibujado de los Sprites si todos están en la misma posición Z?",
+    "options": [
+      "Layer Mask",
+      "Sorting Order",
+      "Tag",
+      "Depth Buffer"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El 'Sorting Order' dentro de una 'Sorting Layer' define qué sprite se dibuja encima de otro. A mayor número, más al frente se verá."
+  },
+  {
+    "id": 212,
+    "question": "¿Qué proceso de C# se encarga de liberar automáticamente la memoria de objetos que ya no tienen referencias activas?",
+    "options": [
+      "Memory Cleaner",
+      "Garbage Collector (GC)",
+      "Asset Unloader",
+      "Cache Manager"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Recolector de Basura (Garbage Collector) identifica y elimina datos en el 'Heap' que el programa ya no utiliza para evitar fugas de memoria."
+  },
+  {
+    "id": 213,
+    "question": "En la ventana 'Quality Settings', ¿qué opción permite limitar los fotogramas por segundo para que coincidan con la frecuencia de refresco del monitor y evitar el 'tearing'?",
+    "options": [
+      "V-Sync Count",
+      "Frame Rate Limit",
+      "Anti-aliasing",
+      "Pixel Light Count"
+    ],
+    "correctAnswer": 0,
+    "explanation": "V-Sync (Sincronización Vertical) sincroniza los FPS del juego con el monitor para una imagen más suave sin cortes horizontales."
+  },
+  {
+    "id": 214,
+    "question": "¿Cuál es la función del componente 'Sprite Mask'?",
+    "options": [
+      "Cambiar el color del sprite",
+      "Ocultar o revelar partes de un sprite o grupo de sprites",
+      "Crear una colisión 2D",
+      "Animar el sprite automáticamente"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Funciona como una 'ventana' que permite ver solo el contenido del sprite que se encuentra dentro del área de la máscara."
+  },
+  {
+    "id": 215,
+    "question": "Si una variable en un script está marcada como '[HideInInspector] public int stamina;', ¿qué sucede?",
+    "options": [
+      "La variable no puede ser usada por otros scripts",
+      "La variable es pública y accesible por código, pero no aparece en la interfaz de Unity",
+      "La variable se vuelve privada automáticamente",
+      "Unity borra la variable al compilar"
+    ],
+    "correctAnswer": 1,
+    "explanation": "HideInInspector permite mantener la accesibilidad pública de una variable desde el código sin saturar la interfaz del Inspector."
+  },
+  {
+    "id": 216,
+    "question": "¿Qué método se recomienda para mover un objeto físico (con Rigidbody) de forma que no atraviese paredes a altas velocidades?",
+    "options": [
+      "transform.position += dirección;",
+      "Rigidbody.MovePosition();",
+      "Rigidbody.AddForce();",
+      "Rigidbody.velocity = dirección;"
+    ],
+    "correctAnswer": 1,
+    "explanation": "MovePosition respeta las colisiones y la interpolación física, siendo más seguro que modificar el Transform directamente."
+  },
+  {
+    "id": 217,
+    "question": "¿Cuál es el propósito de la 'Culling Mask' en una Luz?",
+    "options": [
+      "Definir qué objetos no proyectan sombras",
+      "Elegir qué capas (Layers) de objetos serán iluminadas por esa luz específica",
+      "Hacer que la luz sea más brillante",
+      "Optimizar el alcance de la luz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Al igual que en la cámara, permite que una luz afecte solo a ciertos elementos (ej. una luz que solo ilumine al jugador y no al suelo)."
+  },
+  {
+    "id": 218,
+    "question": "En el sistema de partículas, ¿qué hace la opción 'Prewarm'?",
+    "options": [
+      "Hace que el sistema empiece a emitir partículas antes de que el juego inicie",
+      "Simula que el sistema ya ha estado funcionando durante un ciclo completo al aparecer en escena",
+      "Calienta la GPU para evitar lag",
+      "Aumenta el tamaño de las partículas"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Es ideal para efectos como humo o fuego que deben verse 'completos' desde el segundo 1 de la escena."
+  },
+  {
+    "id": 219,
+    "question": "Al usar 'SceneManager.LoadScene', ¿qué parámetro permite cargar la nueva escena sin cerrar la escena actual?",
+    "options": [
+      "LoadSceneMode.Additive",
+      "LoadSceneMode.Single",
+      "LoadSceneMode.Multiple",
+      "LoadSceneMode.Background"
+    ],
+    "correctAnswer": 0,
+    "explanation": "El modo Aditivo permite tener varias escenas abiertas a la vez, común en juegos de mundo abierto o para cargar la UI por separado."
+  },
+  {
+    "id": 220,
+    "question": "¿Qué componente se encarga de agrupar varios Colliders de un mismo objeto para tratarlos como una sola forma de colisión más eficiente?",
+    "options": [
+      "Composite Collider 2D",
+      "Box Collider Group",
+      "Mesh Collider",
+      "Rigid Collider"
+    ],
+    "correctAnswer": 0,
+    "explanation": "El Composite Collider 2D une las geometrías de varios colliders hijos, mejorando el rendimiento y evitando errores en las uniones."
+  },
+  {
+    "id": 221,
+    "question": "En C#, ¿cuál es la diferencia entre un 'while' y un 'do-while'?",
+    "options": [
+      "while es más rápido",
+      "do-while garantiza que el código se ejecute al menos una vez",
+      "while solo funciona con números",
+      "No hay diferencia"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El do-while evalúa la condición al final, por lo que el primer ciclo siempre se cumple."
+  },
+  {
+    "id": 222,
+    "question": "¿Qué significa el término 'Draw Call'?",
+    "options": [
+      "Un comando enviado por la CPU a la GPU para que dibuje un objeto",
+      "Un script que dibuja líneas en la pantalla",
+      "El tiempo que tarda en cargar una textura",
+      "Un error de renderizado"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Reducir las Draw Calls (mediante batching o atlas de texturas) es la clave principal para optimizar el rendimiento gráfico."
+  },
+  {
+    "id": 223,
+    "question": "¿Cuál es la función del 'Anchor Presets' en el Rect Transform?",
+    "options": [
+      "Cambiar el color del botón",
+      "Definir rápidamente cómo se ancla un elemento de UI a las esquinas o bordes de su padre",
+      "Bloquear la posición de un objeto 3D",
+      "Guardar la posición de la cámara"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los Anchors permiten que la UI sea responsiva, manteniendo los botones en su lugar al cambiar de 16:9 a 4:3, por ejemplo."
+  },
+  {
+    "id": 224,
+    "question": "¿Qué propiedad del Audio Source permite simular el efecto de que el tono de un sonido cambia al acercarse o alejarse rápidamente (como una ambulancia)?",
+    "options": [
+      "Pitch",
+      "Doppler Level",
+      "Spread",
+      "Spatial Blend"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Efecto Doppler ajusta el tono basado en la velocidad relativa entre el Audio Source y el Audio Listener."
+  },
+  {
+    "id": 225,
+    "question": "En el Inspector, ¿qué indica un icono de un cubo azul al lado de un GameObject?",
+    "options": [
+      "Que el objeto es estático",
+      "Que el objeto es una instancia de un Prefab",
+      "Que el objeto tiene un error",
+      "Que el objeto es una luz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El icono azul identifica rápidamente los objetos que están vinculados a un Prefab en los assets del proyecto."
+  },
+  {
+    "id": 226,
+    "question": "¿Para qué sirve la ventana 'Navigation Static'?",
+    "options": [
+      "Para mover objetos por la escena",
+      "Para marcar qué objetos NO se mueven y deben ser incluidos en el cálculo del NavMesh",
+      "Para configurar el GPS del juego",
+      "Para optimizar la cámara"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Es un paso previo al 'Bake' de navegación; sin marcar los objetos como estáticos, la IA no sabrá que son obstáculos o suelo."
+  },
+  {
+    "id": 227,
+    "question": "¿Qué hace el componente 'Constant Force'?",
+    "options": [
+      "Añade una fuerza o torque constante a un Rigidbody en cada frame",
+      "Evita que el objeto se mueva",
+      "Calcula la masa automáticamente",
+      "Es un tipo de motor para vehículos"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Es útil para efectos persistentes como propulsores de cohetes o viento constante sobre un objeto físico."
+  },
+  {
+    "id": 228,
+    "question": "¿Cuál es el propósito del sistema de 'Layers' (Capas) en Unity?",
+    "options": [
+      "Organizar los archivos en carpetas",
+      "Controlar la visibilidad de la cámara, luces y colisiones de forma selectiva",
+      "Cambiar el orden de los scripts",
+      "Definir la dificultad del juego"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Las Layers permiten que ciertos objetos solo choquen entre sí o que solo ciertas cámaras vean ciertos objetos."
+  },
+  {
+    "id": 229,
+    "question": "En C#, ¿cómo se escribe un operador lógico 'Y' (AND)?",
+    "options": [
+      "||",
+      "&&",
+      "&",
+      "AND"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El operador && devuelve verdadero solo si ambas condiciones comparadas son verdaderas."
+  },
+  {
+    "id": 230,
+    "question": "¿Qué ventana permite ver una representación visual de la memoria que ocupan las texturas, mallas y sonidos?",
+    "options": [
+      "Profiler",
+      "Memory Profiler",
+      "Project Settings",
+      "Asset Database"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A diferencia del Profiler estándar, el Memory Profiler da un desglose detallado de qué archivos están llenando la RAM."
+  },
+  {
+    "id": 231,
+    "question": "¿Qué herramienta de Unity permite pintar niveles 2D usando 'bloques' o rejillas de forma similar a un editor de mapas?",
+    "options": [
+      "Grid Renderer",
+      "Tilemap",
+      "Sprite Painter",
+      "Mesh Baker"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El sistema de Tilemap permite crear niveles 2D de forma eficiente usando una rejilla (Grid) y una 'Paleta de Tiles' (Tile Palette)."
+  },
+  {
+    "id": 232,
+    "question": "En el sistema de Tilemap, ¿qué componente se encarga de gestionar la rejilla donde se colocan los Tiles?",
+    "options": [
+      "Tilemap Collider",
+      "Grid",
+      "Tilemap Renderer",
+      "Tile Palette"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El componente Grid es el padre que define el tamaño y la forma de las celdas para todos los Tilemaps hijos."
+  },
+  {
+    "id": 233,
+    "question": "¿Cuál es la función del 'Shader Graph' en Unity?",
+    "options": [
+      "Escribir código C# para gráficos",
+      "Crear shaders de forma visual mediante nodos sin necesidad de escribir código",
+      "Optimizar el tamaño de las texturas",
+      "Generar modelos 3D automáticamente"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Shader Graph permite a los artistas y programadores crear efectos visuales complejos conectando nodos en una interfaz gráfica."
+  },
+  {
+    "id": 234,
+    "question": "En C#, ¿qué es un 'UnityEvent'?",
+    "options": [
+      "Un error del sistema",
+      "Una forma de llamar a múltiples funciones desde el Inspector (similar al botón de UI)",
+      "Un tipo de variable para contar tiempo",
+      "Una actualización del motor Unity"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Los UnityEvents permiten exponer una lista de acciones en el Inspector que pueden ser configuradas visualmente sin tocar el código."
+  },
+  {
+    "id": 235,
+    "question": "¿Qué componente de UI se debe usar para permitir que el usuario escriba texto (como su nombre o una contraseña)?",
+    "options": [
+      "Text Area",
+      "Input Field",
+      "Label",
+      "Text Mesh Pro"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Input Field es el elemento de interfaz diseñado para recibir y procesar la entrada de texto del usuario."
+  },
+  {
+    "id": 236,
+    "question": "En el nuevo 'Input System Package', ¿cuál es la principal ventaja sobre el Input Manager clásico?",
+    "options": [
+      "Es más lento pero más seguro",
+      "Permite mapear controles para múltiples dispositivos (mando, teclado, touch) de forma flexible y orientada a eventos",
+      "Solo funciona en consolas",
+      "No requiere programación"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El nuevo sistema es más robusto y facilita enormemente el soporte para diferentes controladores mediante 'Input Actions'."
+  },
+  {
+    "id": 237,
+    "question": "¿Qué propiedad del material 'Standard Shader' controla qué tan metálica se ve una superficie?",
+    "options": [
+      "Smoothness",
+      "Metallic",
+      "Specular",
+      "Occlusion"
+    ],
+    "correctAnswer": 1,
+    "explanation": "La propiedad Metallic determina si la superficie se comporta como un metal (conductores) o como un dieléctrico (plástico, madera)."
+  },
+  {
+    "id": 238,
+    "question": "¿Qué hace la función 'Mathf.PingPong(t, length)'?",
+    "options": [
+      "Crea un juego de tenis",
+      "Devuelve un valor que oscila de ida y vuelta entre 0 y el valor de 'length'",
+      "Mueve un objeto de forma aleatoria",
+      "Calcula el rebote de una pelota física"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Es ideal para crear movimientos repetitivos o luces que parpadean suavemente de forma cíclica."
+  },
+  {
+    "id": 239,
+    "question": "En el sistema de animación, ¿qué es un 'State Machine Behaviour'?",
+    "options": [
+      "Un script que se añade a un estado del Animator para ejecutar lógica al entrar, salir o estar en ese estado",
+      "Una IA para los enemigos",
+      "Un tipo de transición",
+      "Un componente para mover al personaje"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Permite disparar código específico (como sonidos o partículas) cuando una animación específica comienza o termina."
+  },
+  {
+    "id": 240,
+    "question": "Al trabajar con Git o sistemas de control de versiones, ¿qué carpeta del proyecto Unity NO debe subirse porque se genera automáticamente?",
+    "options": [
+      "Assets",
+      "ProjectSettings",
+      "Library",
+      "Packages"
+    ],
+    "correctAnswer": 2,
+    "explanation": "La carpeta Library contiene datos importados y temporales que Unity regenera; subirla solo consume espacio y causa conflictos."
+  },
+  {
+    "id": 241,
+    "question": "¿Cuál es la función de un 'Prefab Overlay' cuando editas un Prefab en el modo aislado?",
+    "options": [
+      "Cambiar el fondo de la escena",
+      "Mostrar herramientas para guardar, auto-guardar o salir del modo de edición de Prefab",
+      "Aplicar filtros visuales",
+      "Bloquear la edición de componentes"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Es la pequeña barra de herramientas que aparece en la parte superior de la Scene View al editar un Prefab."
+  },
+  {
+    "id": 242,
+    "question": "En física, ¿qué sucede si marcas 'Freeze Rotation' en los ejes X, Y y Z de un Rigidbody?",
+    "options": [
+      "El objeto deja de caer",
+      "El objeto se moverá pero nunca rotará debido a colisiones o fuerzas",
+      "El objeto se vuelve invisible",
+      "El objeto se vuelve estático"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Es común en personajes 3D o 2D para evitar que 'rueden' o se caigan de lado al chocar con obstáculos."
+  },
+  {
+    "id": 243,
+    "question": "¿Qué hace el componente 'Audio Reverb Zone'?",
+    "options": [
+      "Aumenta el volumen de la música",
+      "Aplica un efecto de reverberación (eco ambiental) cuando el Audio Listener entra en su área",
+      "Limpia el ruido del micrófono",
+      "Detiene todos los sonidos"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Se usa para simular la acústica de lugares específicos, como una cueva, una catedral o una habitación pequeña."
+  },
+  {
+    "id": 244,
+    "question": "En C#, ¿qué operador se utiliza para realizar una comparación lógica 'O' (OR)?",
+    "options": [
+      "&&",
+      "||",
+      "!",
+      "OR"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El operador || devuelve verdadero si al menos una de las condiciones es verdadera."
+  },
+  {
+    "id": 245,
+    "question": "¿Qué componente de UI permite crear una lista desplegable con múltiples opciones (como una lista de resoluciones)?",
+    "options": [
+      "Toggle",
+      "Dropdown (TMP)",
+      "Slider",
+      "Scrollbar"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El Dropdown permite al usuario seleccionar un elemento de una lista que se despliega al hacer clic."
+  },
+  {
+    "id": 246,
+    "question": "Para mejorar el rendimiento en móviles, ¿qué tipo de Shader es preferible evitar en tiempo real?",
+    "options": [
+      "Unlit Shaders",
+      "Shaders con muchos pases de transparencia (Overdraw)",
+      "Mobile Diffuse",
+      "Standard Shader con texturas pequeñas"
+    ],
+    "correctAnswer": 1,
+    "explanation": "El 'Overdraw' ocurre cuando muchos píxeles transparentes se dibujan uno encima de otro, saturando el ancho de banda de la GPU móvil."
+  },
+  {
+    "id": 247,
+    "question": "En el Inspector de una textura, ¿qué hace la opción 'Alpha is Transparency'?",
+    "options": [
+      "Borra el color rojo",
+      "Usa el canal Alpha de la imagen para definir las zonas transparentes en el juego",
+      "Hace que la imagen sea invisible",
+      "Aumenta el brillo"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Es crucial activarlo en sprites o texturas con fondo transparente para que Unity no muestre bordes blancos o negros extraños."
+  },
+  {
+    "id": 248,
+    "question": "¿Qué clase se usa para crear temporizadores simples que se pueden ver en el inspector como barras de progreso?",
+    "options": [
+      "Time.deltaTime",
+      "No existe una clase específica; se suele usar un float y Mathf.Clamp",
+      "Timer.System",
+      "Clock.UI"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Aunque hay paquetes externos, nativamente los programadores usan un acumulador `tiempo += Time.deltaTime` y lo dividen por la duración total."
+  },
+  {
+    "id": 249,
+    "question": "En el componente 'Particle System', ¿qué hace el módulo 'Trails'?",
+    "options": [
+      "Hace que las partículas giren",
+      "Añade una estela o rastro detrás de cada partícula individual",
+      "Cambia el color de fondo",
+      "Borra las partículas viejas"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Se usa para efectos como cometas, proyectiles mágicos o chispas con movimiento fluido."
+  },
+  {
+    "id": 250,
+    "question": "¿Cuál es la función del archivo '.gitignore' en un proyecto de Unity?",
+    "options": [
+      "Aumentar la velocidad del juego",
+      "Indicar al sistema de control de versiones qué archivos y carpetas debe ignorar (como /Library o /Temp)",
+      "Borrar los errores de la consola",
+      "Esconder el código a otros usuarios"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Es vital para mantener los repositorios limpios y evitar subir archivos basura que pesan gigabytes y son temporales."
+  }
+]
