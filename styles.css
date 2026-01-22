@@ -1194,6 +1194,254 @@ footer {
     background: var(--incorrect-color);
 }
 
+/* Header optimizado */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.logo-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo i.fa-gamepad {
+    font-size: 2.5rem;
+    color: white;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.logo-text h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: white;
+    line-height: 1.2;
+}
+
+.logo-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.exam-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.exam-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all var(--transition-speed);
+}
+
+.exam-tag:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.exam-tag i {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Subtítulo con estilo de warning */
+.subtitle-warning {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px 10px 15px; 
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.subtitle-warning i {
+    color: #FFD700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+/* Storage notice similar al footer */
+.storage-notice {
+    text-align: center;
+    padding: 15px 25px;
+    border-top: 2px solid rgba(0, 122, 204, 0.2);
+    border-bottom: 2px solid rgba(0, 122, 204, 0.2);
+    color: var(--secondary-color);
+    opacity: 0.8;
+    font-size: 0.9rem;
+    margin: 10px auto 25px auto;
+    background: rgba(0, 122, 204, 0);
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 50%;
+}
+
+.storage-notice i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+/* Responsive optimizado */
+@media (max-width: 768px) {
+    .logo-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        width: 100%;
+    }
+    
+    .logo i.fa-gamepad {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.7rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 1rem;
+    }
+    
+    .exam-tag {
+        padding: 7px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .subtitle-warning {
+        font-size: 0.95rem;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .exam-tags {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+    
+    .exam-tag {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .header-right {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .theme-toggle {
+        align-self: flex-end;
+    }
+    
+    .subtitle-warning {
+        font-size: 0.9rem;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding: 10px 15px;
+    }
+    
+    .storage-notice {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    
+    .storage-notice i {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .header-right {
+        align-items: center;
+    }
+    
+    .exam-tags {
+        flex-direction: row;
+    }
+}
+
+/* Asegurar que el theme-toggle esté alineado */
+.theme-toggle {
+    flex-shrink: 0;
+}
+
 @media (min-width: 768px) {
     body {
         padding: 20px;
