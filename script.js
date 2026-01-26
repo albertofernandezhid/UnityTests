@@ -55,87 +55,77 @@ class UnityCertSimulator {
         });
     }
     
-    async loadQuestionBanks() {
-        try {
-            const programmerResponse = await fetch('questions_programmer.json');
-            if (programmerResponse.ok) {
-                const programmerData = await programmerResponse.json();
-                this.questionBanks.programmer = this.shuffleQuestions(programmerData);
-            } else {
-                console.error('Error al cargar questions_programmer.json:', programmerResponse.status);
-            }
-            
-            const artistResponse = await fetch('questions_artist.json');
-            if (artistResponse.ok) {
-                const artistData = await artistResponse.json();
-                this.questionBanks.artist = this.shuffleQuestions(artistData);
-            } else {
-                console.error('Error al cargar questions_artist.json:', artistResponse.status);
-            }
-            
-            if (this.questionBanks.programmer.length === 0) {
-                this.createFallbackQuestions('programmer');
-            }
-            
-            if (this.questionBanks.artist.length === 0) {
-                this.createFallbackQuestions('artist');
-            }
-            
-        } catch (error) {
-            console.error('Error cargando las preguntas:', error);
+async loadQuestionBanks() {
+    try {
+        const programmerResponse = await fetch('questions_programmer.json');
+        if (programmerResponse.ok) {
+            const programmerData = await programmerResponse.json();
+            // NO mezclar aquí, solo almacenar las preguntas originales
+            this.questionBanks.programmer = programmerData;
+        } else {
+            console.error('Error al cargar questions_programmer.json:', programmerResponse.status);
+        }
+        
+        const artistResponse = await fetch('questions_artist.json');
+        if (artistResponse.ok) {
+            const artistData = await artistResponse.json();
+            // NO mezclar aquí, solo almacenar las preguntas originales
+            this.questionBanks.artist = artistData;
+        } else {
+            console.error('Error al cargar questions_artist.json:', artistResponse.status);
+        }
+        
+        if (this.questionBanks.programmer.length === 0) {
             this.createFallbackQuestions('programmer');
+        }
+        
+        if (this.questionBanks.artist.length === 0) {
             this.createFallbackQuestions('artist');
         }
+        
+    } catch (error) {
+        console.error('Error cargando las preguntas:', error);
+        this.createFallbackQuestions('programmer');
+        this.createFallbackQuestions('artist');
     }
+}
     
-    createFallbackQuestions(cert) {
-        const questions = [];
-        const questionTypes = {
-            programmer: [
-                "¿Cuál es el propósito del método Start() en Unity?",
-                "¿Cómo se accede al componente Transform de un GameObject?",
-                "¿Qué hace la instrucción 'Instantiate' en Unity?",
-                "¿Cuál es la diferencia entre Update() y FixedUpdate()?",
-                "¿Cómo se detecta una colisión en Unity?",
-                "¿Qué es un prefab en Unity?",
-                "¿Cómo se cambia la posición de un GameObject?",
-                "¿Qué hace la función Vector3.Lerp()?",
-                "¿Cómo se crea una corrutina en Unity?",
-                "¿Qué es un ScriptableObject?"
+createFallbackQuestions(cert) {
+    const questions = [];
+    const questionTypes = {
+        programmer: [
+            "¿Cuál es el propósito del método Start() en Unity?",
+            "¿Cómo se accede al componente Transform de un GameObject?",
+            "¿Qué hace la instrucción 'Instantiate' en Unity?",
+            // ... más preguntas de programmer
+        ],
+        artist: [
+            "¿Qué es el PBR (Physically Based Rendering)?",
+            "¿Cómo se optimizan las texturas para móviles?",
+            "¿Qué es el UV mapping?",
+            // ... más preguntas de artist
+        ]
+    };
+    
+    questionTypes[cert].forEach((question, index) => {
+        questions.push({
+            id: index + 1,
+            question: question,
+            options: [
+                "Respuesta correcta (ejemplo)",
+                "Respuesta incorrecta (ejemplo)",
+                "Respuesta incorrecta (ejemplo)",
+                "Respuesta incorrecta (ejemplo)"
             ],
-            artist: [
-                "¿Qué es el PBR (Physically Based Rendering)?",
-                "¿Cómo se optimizan las texturas para móviles?",
-                "¿Qué es el UV mapping?",
-                "¿Cómo funciona el sistema de materiales en Unity?",
-                "¿Qué es el baking de luces?",
-                "¿Cómo se crea un shader personalizado?",
-                "¿Qué es LOD (Level of Detail)?",
-                "¿Cómo se importa un modelo 3D a Unity?",
-                "¿Qué es la compresión de texturas?",
-                "¿Cómo se crean partículas en el sistema VFX?"
-            ]
-        };
-        
-        questionTypes[cert].forEach((question, index) => {
-            questions.push({
-                id: index + 1,
-                question: question,
-                options: [
-                    "Respuesta correcta (ejemplo)",
-                    "Respuesta incorrecta (ejemplo)",
-                    "Respuesta incorrecta (ejemplo)",
-                    "Respuesta incorrecta (ejemplo)"
-                ],
-                correctAnswer: 0,
-                explanation: "Explicación de ejemplo para la pregunta.",
-                category: "General",
-                difficulty: "Media"
-            });
+            correctAnswer: 0,
+            explanation: `Explicación de ejemplo para la pregunta de ${cert}.`,
+            category: cert === 'programmer' ? 'Programación' : 'Arte',
+            difficulty: "Media"
         });
-        
-        this.questionBanks[cert] = questions;
-    }
+    });
+    
+    this.questionBanks[cert] = questions;
+}
     
     initElements() {
         this.elements = {
@@ -652,8 +642,14 @@ generateTest() {
     
     if (!questionBank || questionBank.length === 0) {
         alert(`Error: No hay preguntas disponibles para ${this.currentCert}. Por favor, verifica los archivos JSON.`);
+        console.error(`Banco de preguntas vacío para: ${this.currentCert}`);
+        console.log('Question banks disponibles:', this.questionBanks);
         return;
     }
+    
+    console.log(`Generando test para: ${this.currentCert}`);
+    console.log(`Preguntas disponibles: ${questionBank.length}`);
+    console.log(`Primera pregunta del banco:`, questionBank[0]?.question);
     
     const availableQuestions = [...questionBank];
     
@@ -662,7 +658,10 @@ generateTest() {
         [availableQuestions[i], availableQuestions[j]] = [availableQuestions[j], availableQuestions[i]];
     }
     
-    for (let i = 0; i < Math.min(this.questionCount, availableQuestions.length); i++) {
+    const questionsToUse = Math.min(this.questionCount, availableQuestions.length);
+    console.log(`Tomando ${questionsToUse} preguntas de ${availableQuestions.length} disponibles`);
+    
+    for (let i = 0; i < questionsToUse; i++) {
         this.userAnswers.push(null);
         
         const question = {...availableQuestions[i]}; 
@@ -693,6 +692,9 @@ generateTest() {
     if (this.currentTest.length < this.questionCount) {
         this.questionCount = this.currentTest.length;
     }
+    
+    console.log(`Test generado con ${this.currentTest.length} preguntas para ${this.currentCert}`);
+    console.log('Primeras 3 preguntas del test:', this.currentTest.slice(0, 3).map(q => q.question));
     
     this.displayQuestion(this.currentQuestionIndex);
     this.updateStats();
