@@ -640,41 +640,67 @@ class UnityCertSimulator {
         this.elements.finishBtn.textContent = 'Finalizar test';
     }
     
-    generateTest() {
-        this.currentTest = [];
-        this.userAnswers = [];
-        this.currentQuestionIndex = 0;
-        this.testCompleted = false;
-        this.isReviewMode = false;
-        this.testStartTime = new Date();
-        
-        const questionBank = this.questionBanks[this.currentCert];
-        
-        if (!questionBank || questionBank.length === 0) {
-            alert(`Error: No hay preguntas disponibles para ${this.currentCert}. Por favor, verifica los archivos JSON.`);
-            return;
-        }
-        
-        const shuffledQuestions = this.shuffleQuestions([...questionBank]);
-        
-        for (let i = 0; i < Math.min(this.questionCount, shuffledQuestions.length); i++) {
-            this.userAnswers.push(null);
-            this.currentTest.push(shuffledQuestions[i]);
-        }
-        
-        this.currentTest = this.shuffleQuestions(this.currentTest);
-        
-        if (this.currentTest.length < this.questionCount) {
-            this.questionCount = this.currentTest.length;
-        }
-        
-        this.displayQuestion(this.currentQuestionIndex);
-        this.updateStats();
-        
-        if (this.currentMode === 'exam') {
-            this.updateTimerDisplay();
-        }
+generateTest() {
+    this.currentTest = [];
+    this.userAnswers = [];
+    this.currentQuestionIndex = 0;
+    this.testCompleted = false;
+    this.isReviewMode = false;
+    this.testStartTime = new Date();
+    
+    const questionBank = this.questionBanks[this.currentCert];
+    
+    if (!questionBank || questionBank.length === 0) {
+        alert(`Error: No hay preguntas disponibles para ${this.currentCert}. Por favor, verifica los archivos JSON.`);
+        return;
     }
+    
+    const availableQuestions = [...questionBank];
+    
+    for (let i = availableQuestions.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [availableQuestions[i], availableQuestions[j]] = [availableQuestions[j], availableQuestions[i]];
+    }
+    
+    for (let i = 0; i < Math.min(this.questionCount, availableQuestions.length); i++) {
+        this.userAnswers.push(null);
+        
+        const question = {...availableQuestions[i]}; 
+        question.options = [...question.options]; 
+        
+        const originalOptions = question.options.map((opt, idx) => ({opt, idx}));
+        const shuffledOptions = [...originalOptions];
+        
+        for (let j = shuffledOptions.length - 1; j > 0; j--) {
+            const k = Math.floor(Math.random() * (j + 1));
+            [shuffledOptions[j], shuffledOptions[k]] = [shuffledOptions[k], shuffledOptions[j]];
+        }
+        
+        question.options = shuffledOptions.map(item => item.opt);
+        question.correctAnswer = shuffledOptions.findIndex(
+            item => item.idx === availableQuestions[i].correctAnswer
+        );
+        
+        this.currentTest.push(question);
+    }
+    
+    for (let i = this.currentTest.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [this.currentTest[i], this.currentTest[j]] = [this.currentTest[j], this.currentTest[i]];
+        [this.userAnswers[i], this.userAnswers[j]] = [this.userAnswers[j], this.userAnswers[i]];
+    }
+    
+    if (this.currentTest.length < this.questionCount) {
+        this.questionCount = this.currentTest.length;
+    }
+    
+    this.displayQuestion(this.currentQuestionIndex);
+    this.updateStats();
+    
+    if (this.currentMode === 'exam') {
+        this.updateTimerDisplay();
+    }
+}
     
     displayQuestion(index) {
         if (index >= this.currentTest.length) return;
